@@ -1,0 +1,23 @@
+# Raw source docx staging — canonical copies live as markdown in vault/00-Bibles/
+_source/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data / generated
+sandbox/
+*.sqlite3
+.chroma/
+chroma_db/
+
+# Secrets
+.env
+
+# OS
+.DS_Store
+Thumbs.db
