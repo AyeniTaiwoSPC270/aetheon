@@ -39,6 +39,20 @@ SAGA_GATE_OVERRIDES: list[tuple[str, int]] = [
     ("gravity spike", 3),
 ]
 
+# Substrings checked ONLY against a section's own heading text (never a bold
+# entry's body). power-system-bible.md has real H2 sections
+# "## Stage 2 — Control (Sagas 3-5)" and "## Stage 3 — Mastery (Sagas 6-8)"
+# describing Aldric's saga 3-8 power progression, and the heading text itself
+# is exactly the right signal to gate on. These needles must NOT be checked
+# against entry bodies: incidental prose like Aldric's "Stage 3 overuse
+# causes visible bleeding" (a mana-exhaustion flavor detail) or Gravity
+# Spike's "At Stage 2 mastery... At Stage 3 mastery..." would false-positive
+# and wrongly gate unrelated entries to a higher saga.
+HEADING_STAGE_OVERRIDES: list[tuple[str, int]] = [
+    ("stage 2", 3),
+    ("stage 3", 6),
+]
+
 
 def _strip_markdown_bold(text: str) -> str:
     return text.replace("**", "").strip()
@@ -54,10 +68,16 @@ class Chunk:
     hard_rule: bool = False
 
 
-def _gate_saga(label: str, body: str, floor: int) -> int:
+def _gate_saga(
+    label: str,
+    body: str,
+    floor: int,
+    extra_overrides: list[tuple[str, int]] | None = None,
+) -> int:
     haystack = f"{label} {body}".lower()
     saga = floor
-    for needle, gate in SAGA_GATE_OVERRIDES:
+    overrides = SAGA_GATE_OVERRIDES if extra_overrides is None else SAGA_GATE_OVERRIDES + extra_overrides
+    for needle, gate in overrides:
         if needle in haystack:
             saga = max(saga, gate)
     return saga
@@ -110,7 +130,7 @@ def chunk_bible_file(path: str, known_characters: list[str]) -> list[Chunk]:
 
     chunks: list[Chunk] = []
     for heading, section_body in sections:
-        section_saga = _gate_saga(heading, "", 1)
+        section_saga = _gate_saga(heading, "", 1, extra_overrides=HEADING_STAGE_OVERRIDES)
         for entry_label, entry_body in _split_entries(section_body):
             entry_saga = _gate_saga(entry_label, entry_body, section_saga)
             words = entry_body.split()

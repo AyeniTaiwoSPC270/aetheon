@@ -48,3 +48,12 @@ def test_gravity_spike_gated_but_siblings_are_not():
     pressure_field = [c for c in chunks if c.source.endswith("::Pressure Field")]
     assert gravity_spike and all(c.saga_available == 3 for c in gravity_spike)
     assert pressure_field and all(c.saga_available == 1 for c in pressure_field)
+
+
+def test_power_progression_stage_headings_gate_by_section_not_body():
+    bible = REPO_ROOT / "vault" / "00-Bibles" / "power-system-bible.md"
+    chunks = chunk_bible_file(str(bible), known_characters=[])
+    stage2_chunks = [c for c in chunks if "Stage 2" in c.source]
+    stage3_chunks = [c for c in chunks if "Stage 3" in c.source]
+    assert stage2_chunks and all(c.saga_available == 3 for c in stage2_chunks)
+    assert stage3_chunks and all(c.saga_available == 6 for c in stage3_chunks)
