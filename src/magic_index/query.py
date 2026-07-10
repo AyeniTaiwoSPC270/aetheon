@@ -12,7 +12,7 @@ from src.magic_index.embed import get_client, get_collection
 
 @dataclass
 class Chunk:
-    text: str
+    text: str  # label-prefixed by embed.py (e.g. "Pressure Field\n\n..."), not verbatim bible text
     source: str
     type: str
     saga_available: int

@@ -6,7 +6,7 @@
 
 **Architecture:** Bible markdown files are chunked (split on `#`/`##`/`###` headings, then further on bold "entry" sub-headings like `**PHASITE 2 — SERATH VOSS**`) and tagged with `saga_available` derived from keyword gates. Chunks are embedded locally (`bge-small`) into a persisted ChromaDB collection, queried via `query_lore(question, saga, characters, k)` with a `saga_available <= saga` filter. Separately, `check_chapter(text, saga)` runs regex/string/state checks for the rules that are genuinely deterministic; rules that need data this repo doesn't have yet (approved-plan diffs, beat maps, an LLM knowledge-boundary pass) raise `NotImplementedError` naming the phase that will complete them, rather than silently no-op.
 
-**Tech Stack:** Python 3.12 (repo has 3.12.10, plan requires ≥3.11 per CLAUDE.md), `uv`, `chromadb`, `sentence-transformers` (`BAAI/bge-small-en-v1.5`, local, $0), `watchdog`, `pytest`.
+**Tech Stack:** Python ≥3.11 per CLAUDE.md (repo environment resolved to 3.14.3 during execution), `uv`, `chromadb`, `sentence-transformers` (`BAAI/bge-small-en-v1.5`, local, $0), `watchdog`, `pytest`.
 
 ## Global Constraints
 
