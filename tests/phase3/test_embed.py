@@ -1,5 +1,21 @@
 # tests/phase3/test_embed.py
-from src.magic_index.embed import embed_bible_file, get_client, get_collection
+from src.magic_index.embed import _label_from_source, embed_bible_file, get_client, get_collection
+
+
+def test_label_from_source_entry_with_heading():
+    assert _label_from_source("lore-glossary-bible.md#Named Spells::Pressure Field") == "Pressure Field"
+
+
+def test_label_from_source_heading_only_no_entry():
+    assert _label_from_source("power-system-bible.md#SECTION V — THE 11 PHASITES") == "SECTION V — THE 11 PHASITES"
+
+
+def test_label_from_source_intro_fallback_suppressed():
+    assert _label_from_source("world-bible.md#intro") == ""
+
+
+def test_label_from_source_intro_heading_with_entry():
+    assert _label_from_source("world-bible.md#intro::Some Entry") == "Some Entry"
 
 
 def test_embed_single_file_replaces_old_chunks(tmp_path):
