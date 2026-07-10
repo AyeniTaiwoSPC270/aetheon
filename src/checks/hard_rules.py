@@ -92,7 +92,8 @@ def _check_hr07_spellings(text: str) -> list[Issue]:
         Issue(
             "HR-07", "critical", nm.found,
             f"Near-miss of canonical spelling '{nm.canonical}' "
-            f"(edit distance {nm.distance}); auto-corrected.",
+            f"(edit distance {nm.distance}); flagged for the wrapper to "
+            f"auto-correct — this checker does not rewrite text.",
         )
         for nm in find_near_misses(text)
     ]

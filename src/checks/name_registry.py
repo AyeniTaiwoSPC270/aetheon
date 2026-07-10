@@ -46,11 +46,26 @@ def _threshold(canonical: str) -> int:
     return max(1, -(-len(canonical) // 6))  # ceil(len / 6)
 
 
+# Below this many characters, edit-distance-1 fuzzy matching is unreliable:
+# a single substitution/insertion/deletion on a 4-6 character word covers
+# such a large fraction of same-length capitalized English words and
+# invented character names ("Ryan"/"Rynn", "Stolen"/"Solen", "Soren"/"Solen")
+# that virtually anything of similar shape collides. Names shorter than this
+# are matched exactly only (see the `candidate == canonical` check below);
+# fuzzy scanning is skipped for them entirely rather than lowering the
+# threshold, which would only weaken detection of genuine short-name typos.
+_MIN_FUZZY_NAME_LENGTH = 7
+
+
 def find_near_misses(text: str) -> list[NearMiss]:
     """Scan text for capitalized phrases that are a close-but-imperfect
-    match to a canonical name (HR-07). Exact matches are not reported."""
+    match to a canonical name (HR-07). Exact matches are not reported.
+    Canonical names shorter than _MIN_FUZZY_NAME_LENGTH are excluded from
+    fuzzy scanning (see comment above)."""
     results: list[NearMiss] = []
     for canonical in CANONICAL_NAMES:
+        if len(canonical) < _MIN_FUZZY_NAME_LENGTH:
+            continue
         word_count = len(canonical.split())
         pattern = (
             r"\b[A-Z][a-zA-Z']+" + r"(?:\s+[A-Z][a-zA-Z']+)" * (word_count - 1) + r"\b"
