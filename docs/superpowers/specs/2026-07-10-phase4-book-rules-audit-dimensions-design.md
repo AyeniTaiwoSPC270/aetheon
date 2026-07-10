@@ -28,6 +28,33 @@ builds the test harness BUILD_PLAN §9 specifies (T4.1–T4.4) to prove it
 works — adapting two of those tests where the original spec assumed data or
 components that don't exist in this repo yet.
 
+**Scope expansion:** the same Phase-2-import contamination is not confined
+to `book_rules.md`. `books/aethon/story/outline/story_frame.md` and
+`books/aethon/story/outline/volume_map.md` — both fed into every chapter's
+planning context alongside `book_rules.md` (confirmed via
+`chapter-0004.context.json`) — contain the same invented "Stage
+1/2/3/Master" cultivation-tier system and an invented Academy module system
+(Combat Application/Mana Theory/Circuit Cultivation/Practical Integration).
+`volume_map.md`'s Arc 4 section (chapters 14+, i.e. the next chapters to
+actually be written) plans entire beats around this invented system, and
+introduces a character, "Kael," who does not exist in the real roster.
+`book_rules.md` outranks these files in InkOS's precedence system (L1 vs.
+L3), but Arc 4's actual chapter-by-chapter plan is built entirely on the
+wrong system regardless — fixing `book_rules.md` alone would not stop Ch.14
+being planned against invented lore. This phase now also corrects
+`story_frame.md`'s "World-Tonal Ground" paragraph and rewrites
+`volume_map.md`'s Arc 4 section (only — Arcs 1–3 are accurate reviews of
+already-written, already-canonized chapters and are untouched).
+
+While checking Arc 4's "elf student" plot thread, a further, previously
+undocumented discrepancy surfaced: the real, already-approved text of
+Chapter 11 names this character "Lira Voss" — not "Kael" (`volume_map.md`'s
+invention) and not "Elyn Dawnveil" (the `character-bible.md` elf character,
+explicitly active only Sagas 5–8, i.e. not this early). This is exactly the
+class of unknown-named-entity discrepancy CLAUDE.md requires surfacing to
+the author rather than auto-resolving (the same posture as the existing
+Nessa Croft Ch.11/Ch.17 flag). See Decision 7.
+
 **Path note:** CLAUDE.md's target file-structure tree shows `book_rules.md`
 at the repo root. The real file InkOS reads is
 `books/aethon/story/book_rules.md` (confirmed via the actual `books/aethon/`
@@ -69,6 +96,20 @@ fix, out of scope for this build.
    accept a standalone text file. A disposable sandbox book, `aethon-fixtures`,
    is created for this — never the real `aethon` book — so poisoned test
    content never touches production state.
+6. **`story_frame.md` and `volume_map.md` are fixed in this same plan**, not
+   tracked as separate follow-up work — same root cause (Phase 2 import
+   invention), and Arc 4 is the immediate next chapters to be written, so
+   leaving it unfixed defeats the purpose of fixing `book_rules.md`. Only
+   `story_frame.md`'s one contaminated paragraph and `volume_map.md`'s Arc 4
+   section are touched; Arcs 1–3 (accurate reviews of already-canonized
+   chapters) are left exactly as-is.
+7. **"Lira Voss" is used going forward for the Ch.11 elf character**, since
+   that name is what the real, already-approved chapter text uses — but this
+   is recorded as a surfaced open question, not a resolved one. Whether she
+   is meant to be the same character as `character-bible.md`'s Elyn Dawnveil
+   (Sagas 5–8) or a distinct character is genuinely unclear and is the
+   author's call, not the implementation's. A note to this effect is added
+   wherever her name now appears in the rewritten planning docs.
 
 ## Components
 
@@ -116,15 +157,64 @@ operating on the same rule from two independent layers.
   hand-authored poisoned chapter source text is committed, under
   `tests/fixtures/poisoned/phase4_dimensions/`.
 
-### 3. Test suite: `tests/phase4/`
+### 4. `story_frame.md` fix
+
+Location: `books/aethon/story/outline/story_frame.md` (edited in place).
+
+Only the "World-Tonal Ground" paragraph is touched. Replace "clear power
+hierarchy based on mana capacity and cultivation stages... manifests in
+quantifiable tiers" with real-canon phrasing: mana capacity fixed at birth
+(Mana Channel), circuits, rank ladder F→E→D→C→B→A→S, mana as measurable but
+rank-based rather than "tiered cultivation." Everything else in the file
+(setting, tone, theme framing) is accurate and untouched.
+
+### 5. `volume_map.md` Arc 4 rewrite
+
+Location: `books/aethon/story/outline/volume_map.md` (edited in place).
+Arcs 1–3 untouched (verified accurate against the real chapters). Arc 4
+("Foundation Year Begins," chapters 14+) is rewritten using real canon from
+`vault/00-Bibles/world-bible.md` §III (The Greyveil Academy):
+
+- Real structure: six years total, entry via the three-stage exam (already
+  passed in Ch.13), **Years 1–2 "Foundation years"** — core theory,
+  elemental basics, circuit conditioning, physical training, all students
+  together regardless of rank — replaces the invented four-module system.
+  Grand Tournament occurs end of Year 1 and Year 3 (real, from the bible) —
+  usable as a real Arc 4/5 story beat instead of an invented "mid-foundation
+  assessment."
+- Real progression: advancement is rank-based (F→E→D→C→B→A→S, D = graduation
+  minimum) and circuit-density-based, not "Stage 1/2/3/Master cultivation
+  breakthroughs." Aldric's first real institutional milestone in Arc 4 is
+  reframed as rank/circuit-conditioning progress, not a fabricated
+  "breakthrough tier."
+- "Kael" → "Lira Voss" (per Decision 7), with an inline note flagging the
+  Elyn Dawnveil question as unresolved and author-decidable, not silently
+  answered.
+- Real faculty from the bible (Deputy Principal, three Combat instructors,
+  Theory Faculty including Maret, who "quietly documents Aldric's unusual
+  mana signature") replace any invented instructor details.
+
+### 6. Lightweight regression guard
+
+A `tests/phase4/test_no_invented_lore.py` deterministic check (pure Python,
+$0) greps `book_rules.md`, `story_frame.md`, and `volume_map.md` for the
+banned terms this phase removes ("Stage 1", "Stage 2", "Stage 3",
+"Pressure Threshold", "Circuit Stabilization", "Resonance" [tier sense],
+"Tier Transcendence", "Kael", "Circuit Cultivation", "Practical
+Integration"), asserting zero occurrences — a cheap regression guard against
+this contamination creeping back in (e.g. if `inkos import` or the Architect
+regenerates these files again later).
+
+### 7. Test suite: `tests/phase4/`
 
 | File | Covers | Mechanism | Cost |
 |---|---|---|---|
 | `test_fatigue_words.py` | T4.1 | Parse Fatigue-words list from `book_rules.md`; scan all 13 real chapters at `books/aethon/chapters/*.md` (not the sparse `tests/fixtures/golden/`, which only holds chapter 13) | $0 |
 | `test_audit_dimensions.py` | T4.2, T4.4 | `aethon-fixtures` sandbox book + `inkos audit --json`, per Component 2 | ~$0.01 total |
 | `test_golden_reaudit.py` | T4.3 (adapted, scoped per Decisions 2–4) | `inkos audit aethon <n>` for chapters 10–13 against the real book with new `book_rules.md` in effect; asserts voice ≥7, no CRITICAL | ~$0.02 total |
+| `test_no_invented_lore.py` | Regression guard (Component 6, not in BUILD_PLAN's numbering) | Grep `book_rules.md`/`story_frame.md`/`volume_map.md` for banned terms | $0 |
 
-All three run as normal `pytest tests/phase4/` — no manual gate, since no
+All four run as normal `pytest tests/phase4/` — no manual gate, since no
 Sonnet-tier call exists anywhere in this phase's scope.
 
 ## Explicitly out of scope
@@ -136,6 +226,11 @@ Sonnet-tier call exists anywhere in this phase's scope.
 - Fixing CLAUDE.md's stale `book_rules.md` root-path reference — a one-line
   doc correction, not a Phase 4 deliverable.
 - HR-04/05/06/10 (already-stubbed hard rules) — unrelated to this phase.
+- Resolving whether "Lira Voss" and "Elyn Dawnveil" are the same character —
+  genuinely open, author's call (Decision 7).
+- Rewriting Arcs 1–3 of `volume_map.md` — already accurate, untouched.
+- Chapters 1–13's actual prose text — already approved/canonized; this phase
+  only touches planning/rules files, never delivered chapters.
 
 ## Testing
 
