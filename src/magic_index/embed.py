@@ -9,7 +9,7 @@ from chromadb.api import ClientAPI
 from chromadb.utils import embedding_functions
 
 from src.checks.name_registry import KNOWN_CHARACTERS
-from src.magic_index.chunker import chunk_bible_file
+from src.magic_index.chunker import Chunk, chunk_bible_file
 
 VAULT_BIBLES_DIR = Path(__file__).resolve().parents[2] / "vault" / "00-Bibles"
 CHROMA_DIR = Path(__file__).resolve().parents[2] / ".chroma"
@@ -38,6 +38,19 @@ def get_collection(client: ClientAPI) -> chromadb.Collection:
     )
 
 
+def _label_from_source(source: str) -> str:
+    """Recover the heading/entry label chunk_bible_file encoded into
+    Chunk.source (format "stem.md#heading" or "stem.md#heading::entry"), so
+    it can be prepended to the embedded document text. Without this, a bold
+    entry's own name (e.g. "Pressure Field") lives only in metadata/source,
+    never in the text that's actually embedded or returned to callers —
+    which breaks both semantic recall of "what is X" queries and any text
+    match against the technique/entity name itself (see T3.1-T3.3 tuning)."""
+    fragment = source.split("#", 1)[-1] if "#" in source else ""
+    label = fragment.split("::", 1)[-1] if "::" in fragment else fragment
+    return "" if label in ("", "intro") else label
+
+
 def embed_bible_file(path: Path, client: ClientAPI | None = None) -> int:
     """(Re)embed one bible file: deletes its existing chunks by source
     file, then inserts freshly chunked+tagged text. Returns chunk count."""
@@ -53,9 +66,13 @@ def embed_bible_file(path: Path, client: ClientAPI | None = None) -> int:
     if not chunks:
         return 0
 
+    def document_text(c: Chunk) -> str:
+        label = _label_from_source(c.source)
+        return f"{label}\n\n{c.text}" if label else c.text
+
     collection.add(
         ids=[f"{stem}::{i}" for i in range(len(chunks))],
-        documents=[c.text for c in chunks],
+        documents=[document_text(c) for c in chunks],
         metadatas=[
             {
                 "source": c.source,
