@@ -1,0 +1,26 @@
+[project]
+name = "aethon-pipeline"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=0.5",
+    "sentence-transformers>=3.0",
+    "watchdog>=4.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.10",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.mypy]
+strict = true
