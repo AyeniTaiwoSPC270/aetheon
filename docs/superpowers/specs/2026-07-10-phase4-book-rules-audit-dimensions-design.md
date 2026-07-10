@@ -145,11 +145,18 @@ operating on the same rule from two independent layers.
   lore scale.
 - The new `book_rules.md` is copied into its story folder so its Auditor
   reads the same dimensions being tested.
-- Two poisoned chapters are hand-planted directly into its runtime files
-  (mirroring the structure seen under `books/aethon/story/runtime/` and
-  `books/aethon/chapters/`): one chapter with a joke placed at its climax
-  (violates humor-placement), one with three consecutive cliffhanger endings
-  (violates ending-variety, the third should be flagged per T4.4).
+- Chapter scaffolding is bootstrapped via `inkos draft` (not hand-constructed
+  — InkOS's runtime-file format for intent/plan/context/rule-stack/trace is
+  undocumented, and reverse-engineering it risks silent corruption or audit
+  failures unrelated to the actual test). This is a real, small Sonnet-tier
+  cost (tiny 500-word drafts on this disposable book, not a real 2500-word
+  chapter, but genuinely Sonnet-tier, not Haiku) — accepted as the cost of a
+  reliable path. After each draft, the resulting chapter's prose file is
+  overwritten with hand-authored poisoned text: one chapter with a joke
+  placed at its climax (violates humor-placement), one with three
+  consecutive cliffhanger endings (violates ending-variety, the third should
+  be flagged per T4.4). The runtime scaffold files (intent/plan/context/
+  rule-stack/trace) from the original draft are left as-is.
 - `inkos audit aethon-fixtures <n> --json` is run for real against each
   (Haiku-tier, ~$0.005/call) and the JSON report is asserted to flag the
   specific dimension.
@@ -198,19 +205,27 @@ Arcs 1–3 untouched (verified accurate against the real chapters). Arc 4
 
 A `tests/phase4/test_no_invented_lore.py` deterministic check (pure Python,
 $0) greps `book_rules.md`, `story_frame.md`, and `volume_map.md` for the
-banned terms this phase removes ("Stage 1", "Stage 2", "Stage 3",
-"Pressure Threshold", "Circuit Stabilization", "Resonance" [tier sense],
-"Tier Transcendence", "Kael", "Circuit Cultivation", "Practical
-Integration"), asserting zero occurrences — a cheap regression guard against
-this contamination creeping back in (e.g. if `inkos import` or the Architect
-regenerates these files again later).
+specific invented phrases this phase removes: "Pressure Threshold",
+"Circuit Stabilization", "Tier Transcendence", "Circuit Cultivation",
+"Practical Integration", "Kael". Asserting zero occurrences is a cheap
+regression guard against this contamination creeping back in (e.g. if
+`inkos import` or the Architect regenerates these files again later).
+
+**Important:** bare "Stage 1"/"Stage 2"/"Stage 3" is deliberately NOT on
+this list — it's legitimate real canon in two different contexts
+(`power-system-bible.md`'s Mana Exhaustion Stages 1–5, and Aldric's own
+Force Manipulation progression: Stage 1 Awakening Sagas 1–2, Stage 2
+Control Sagas 3–5, Stage 3 Mastery Sagas 6–8 — already correctly used this
+way in `src/checks/technique_registry.py`). Banning the bare term would
+false-flag real canon; only the invented universal-per-student-breakthrough
+compound phrases above are actually wrong.
 
 ### 7. Test suite: `tests/phase4/`
 
 | File | Covers | Mechanism | Cost |
 |---|---|---|---|
 | `test_fatigue_words.py` | T4.1 | Parse Fatigue-words list from `book_rules.md`; scan all 13 real chapters at `books/aethon/chapters/*.md` (not the sparse `tests/fixtures/golden/`, which only holds chapter 13) | $0 |
-| `test_audit_dimensions.py` | T4.2, T4.4 | `aethon-fixtures` sandbox book + `inkos audit --json`, per Component 2 | ~$0.01 total |
+| `test_audit_dimensions.py` | T4.2, T4.4 | `aethon-fixtures` sandbox book + `inkos audit --json`, per Component 2 | 2 tiny Sonnet drafts (bootstrap) + 2 Haiku audits, well under $0.10 total |
 | `test_golden_reaudit.py` | T4.3 (adapted, scoped per Decisions 2–4) | `inkos audit aethon <n>` for chapters 10–13 against the real book with new `book_rules.md` in effect; asserts voice ≥7, no CRITICAL | ~$0.02 total |
 | `test_no_invented_lore.py` | Regression guard (Component 6, not in BUILD_PLAN's numbering) | Grep `book_rules.md`/`story_frame.md`/`volume_map.md` for banned terms | $0 |
 
