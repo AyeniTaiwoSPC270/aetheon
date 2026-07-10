@@ -1,0 +1,53 @@
+{
+  "chapter": 4,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "Current Location",
+      "object": "Ashford village — south road and Presswick's house (morning); Vane household workroom and kitchen (midday/afternoon); eastern field and back fence (evening); Vane household (night)",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Protagonist State",
+      "object": "Age 17, baseline (pre-Stage 1); formal exam correspondence received and confirmed — Aldric Vane is now a scheduled candidate for the Greyveil assessment hall in Valdris Prime; departure imminent (four days travel, per Josse); Daran's envelope also arrived at the Vane household and Daran read it and said \"Confirmed\" — content of Daran's letter not disclosed on the page; fifth mana pressure event NOT recorded in this chapter (the chapter memo planned it but the written chapter does not include it — no pressure event occurred); no circuit opening achieved; physically healthy; emotionally controlled; the village-as-home frame has formally closed",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Goal",
+      "object": "Depart for Valdris Prime; attend formal Greyveil examination; implicit long-term: reach Greyveil Academy",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Constraint",
+      "object": "No formal mana training; boots inadequate for the journey (Josse's practical note); Daran's exam result unknown to the reader (his letter's content withheld); departure timeline approximately four days; no pressure event this chapter",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Alliances",
+      "object": "Daran (childhood friend, close; both received correspondence same afternoon; Daran's result not disclosed; the field scene closes their village-era dynamic without naming what is shifting; friendship intact on surface, fracture deepening beneath)",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Conflict",
+      "object": "Relational: Daran's letter arrived and he said \"Confirmed\" — but confirmed what? The reader registers the gap. The field scene carries the ghost of the broken promise without invoking it. The village as home has been formally relinquished.",
+      "validFromChapter": 4,
+      "validUntilChapter": null,
+      "sourceChapter": 4
+    }
+  ]
+}

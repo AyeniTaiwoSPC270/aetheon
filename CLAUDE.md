@@ -91,16 +91,32 @@ aethon-pipeline/
 
 ## MODEL ROUTING (config-driven, never hardcoded)
 
-> Updated 2026-07-10 against the real `@actalk/inkos@1.6.3` CLI (see
-> BUILD_PLAN.md Section 7 amendment note). Writer model bumped to
-> claude-sonnet-5 per author decision, superseding the original D3 pin
-> — watch T4.3 golden regression for voice drift against Ch.1-13.
+> Updated 2026-07-10 (v2) against the real `@actalk/inkos@1.6.3` CLI
+> (see BUILD_PLAN.md Section 7 amendment note — read it before touching
+> model config again). Gemini routing for the non-writer agents was
+> attempted and abandoned: a real InkOS bug means a per-agent override's
+> `service` inherits from the primary client's `service` rather than
+> being set independently, breaking the custom-transport path for any
+> cross-provider override regardless of CLI flags used. All four
+> non-writer agents route to Claude Haiku instead — same provider as
+> the writer, no override bug in play, and this was D3's documented
+> fallback anyway. Writer model reverted to claude-sonnet-4-6 after
+> claude-sonnet-5 turned out to not be in InkOS's bundled anthropic
+> model catalog (client-side rejection, confirmed via
+> `inkos config list-models anthropic`).
+>
+> **Cost lesson:** `chapter-analyzer` is a distinct agent from
+> writer/auditor/architect/radar and is easy to forget — it defaulted
+> to Sonnet during Ch.1-13 import and burned real money before being
+> caught and switched to Haiku. Check `inkos config show-models` for
+> every agent name actually in use before running any multi-chapter
+> command.
 
 | Component | Model | Notes |
 |---|---|---|
-| InkOS writer agent | `claude-sonnet-5` | via `inkos config set-global`; prose quality; prompt caching ON |
-| InkOS auditor/architect/radar | `gemini-2.5-flash` | via `inkos config set-model <agent> <model> --provider google`; fallback `claude-haiku-4-5`. Agent is "architect", not "planner" — v2.0 draft used the wrong name. |
-| Lore Checker (ours) | `gemini-2.5-flash` | fallback Haiku |
+| InkOS writer agent | `claude-sonnet-4-6` | via `inkos config set-global`; prose quality; prompt caching ON |
+| InkOS auditor/architect/radar/chapter-analyzer | `claude-haiku-4-5-20251001` | via `inkos config set-model <agent> claude-haiku-4-5-20251001 --provider anthropic`. Agent is "architect", not "planner" — v2.0 draft used the wrong name. Gemini routing abandoned — see BUILD_PLAN §7 amendment. |
+| Lore Checker (ours) | `gemini-2.5-flash` | fallback Haiku — not yet built (Phase 3); revisit Gemini viability then, this is InkOS-specific |
 | Embeddings | local sentence-transformers (bge-small) | $0 |
 
 Cost target ≤ $0.06/chapter. Log token usage per run; fail loudly if a single

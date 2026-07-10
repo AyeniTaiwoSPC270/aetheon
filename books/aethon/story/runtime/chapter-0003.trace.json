@@ -1,0 +1,100 @@
+{
+  "chapter": 3,
+  "plannerInputs": [
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\author_intent.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\current_focus.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\outline\\story_frame.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\outline\\volume_map.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\chapter_summaries.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\book_rules.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\current_state.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\pending_hooks.md",
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\memory.db"
+  ],
+  "composerInputs": [
+    "C:\\Users\\FEYISAYO ATINUKE\\Downloads\\aetheon\\books\\aethon\\story\\runtime\\chapter-0003.intent.md"
+  ],
+  "selectedSources": [
+    "runtime/chapter_memo",
+    "story/current_focus.md",
+    "story/author_intent.md",
+    "story/current_state.md",
+    "story/outline/story_frame.md#world-tonal-ground",
+    "story/outline/volume_map.md#arc-1-the-village-years-chapters-1-5",
+    "story/outline/volume_map.md#arc-2-the-incident-chapters-6-7",
+    "story/outline/volume_map.md#arc-3-the-academy-application-chapters-8-13",
+    "story/outline/volume_map.md#arc-4-foundation-year-begins-chapters-14",
+    "story/chapter_summaries.md#recent_titles",
+    "story/chapter_summaries.md#recent_mood_type_trail",
+    "story/chapters#recent_endings",
+    "runtime/hook_debt#H-01",
+    "runtime/hook_debt#H-02",
+    "runtime/hook_debt#H-03",
+    "runtime/hook_debt#H-04",
+    "story/current_state.md#current-conflict",
+    "story/current_state.md#current-goal",
+    "story/current_state.md#protagonist-state",
+    "story/current_state.md#current-constraint",
+    "story/chapter_summaries.md#1",
+    "story/chapter_summaries.md#2",
+    "story/pending_hooks.md#H-02",
+    "story/pending_hooks.md#H-01",
+    "story/pending_hooks.md#H-03",
+    "story/pending_hooks.md#H-04"
+  ],
+  "usedSkills": [
+    "longform-writing"
+  ],
+  "promptPacks": [
+    "longform.writer",
+    "longform.reviser",
+    "longform.auditor"
+  ],
+  "contextNeeds": [
+    "author-intent",
+    "current-focus",
+    "chapter-memo",
+    "story-frame",
+    "volume-map",
+    "active-hooks",
+    "episodic-memory"
+  ],
+  "contextTiers": {
+    "protectedSources": [
+      "runtime/chapter_memo",
+      "story/current_focus.md",
+      "story/author_intent.md",
+      "story/current_state.md",
+      "story/outline/story_frame.md#world-tonal-ground",
+      "story/outline/volume_map.md#arc-1-the-village-years-chapters-1-5",
+      "story/outline/volume_map.md#arc-2-the-incident-chapters-6-7",
+      "story/outline/volume_map.md#arc-3-the-academy-application-chapters-8-13",
+      "story/outline/volume_map.md#arc-4-foundation-year-begins-chapters-14",
+      "runtime/hook_debt#H-01",
+      "runtime/hook_debt#H-02",
+      "runtime/hook_debt#H-03",
+      "runtime/hook_debt#H-04",
+      "story/current_state.md#current-conflict",
+      "story/current_state.md#current-goal",
+      "story/current_state.md#protagonist-state",
+      "story/current_state.md#current-constraint",
+      "story/pending_hooks.md#H-02",
+      "story/pending_hooks.md#H-01",
+      "story/pending_hooks.md#H-03",
+      "story/pending_hooks.md#H-04"
+    ],
+    "compressibleSources": [
+      "story/chapter_summaries.md#recent_titles",
+      "story/chapter_summaries.md#recent_mood_type_trail",
+      "story/chapters#recent_endings",
+      "story/chapter_summaries.md#1",
+      "story/chapter_summaries.md#2"
+    ]
+  },
+  "tokenBudget": {
+    "protectedTokens": 9254,
+    "compressibleTokens": 898,
+    "totalSelectedTokens": 10152
+  },
+  "notes": []
+}

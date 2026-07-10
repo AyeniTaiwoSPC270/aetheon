@@ -1,0 +1,25 @@
+## Core_Tags
+Suppression-dominant, anomaly, bridge-figure, dry-humored under pressure, relentlessly self-accountable — these tags together describe a person who processes everything internally, refuses to perform his own pain, and holds himself to standards he does not apply to others with the same severity.
+
+## Contrast_Detail
+He is the most controlled person in any room he enters, and the one most likely to be quietly cataloguing everyone else's exits — but he keeps Maren's cooking instructions folded in his left boot, a habit so domestic it embarrasses him when anyone notices. He also cannot walk past a goblin laborer without making eye contact and nodding, a small gesture he cannot explain and does not try to.
+
+## Back_Story
+Maren and Josse Vane took him in as an infant in Ashford without explanation and without asking for one. He grew up knowing he was different in visible ways — white hair, red eyes — and in invisible ones: the way objects sometimes moved when he was frightened, the way his body responded to physical training with unusual acceleration. Grevan Tusk taught him the sword in the years before the academy application, and the discipline of swordwork became the template for how Aldric manages everything — methodical, patient, always looking for the structural weakness. Daran was his closest friend and his first experience of what a broken promise does to a person over time. The decision to apply to Greyveil, and what happened to Daran as a consequence, is the wound Aldric carries into every subsequent relationship.
+
+## Protagonist_Arc
+At the start, Aldric is a commoner-identified boy with noble blood he doesn't know about, a power he cannot fully control, and a friend he has already lost to a choice he made. His core flaw is that he processes cost privately and presents a controlled surface, which means the people around him rarely know when he is in genuine distress — and he is therefore often alone in the moments that matter most. His initial desire is uncomplicated: belong somewhere that can contain what he is. What he discovers is that belonging, for a person like him, is not a destination but a political condition that others will always try to manage.
+
+He lands at the series' end as a king who was never supposed to be one, carrying the permanent circuit limitation of what the final confrontation cost him, with Daran present but not resolved, Lirien beside him in a way that took six sagas to become possible, and the goblin wound named publicly for the first time by someone with the power to do something about it. The cost is specific: he will never again push Force Manipulation to its full ceiling without the limitation making itself felt. He is stronger than he was in Ashford in every measurable sense and permanently diminished in one way he cannot recover. He would not trade it back, and he does not say so, because he is Aldric and he does not perform his own conclusions.
+
+## Current_State
+At the opening of Arc 4 (Chapter 14), Aldric has just arrived at Valdris Prime for the first time. Daran has been rejected by Greyveil and has already left — the departure happened without a proper goodbye, and Aldric is carrying that fact the way he carries most things, which is to say without visibly carrying it at all. He is about to begin academy life alone. He is aware he does not know how the institution works, aware that his abilities are not yet under reliable control, and aware that the city is a different kind of problem than Ashford. His most recent worry is practical: he does not know where his dormitory is, and he is standing at the academy gate with everything he owns in one bag.
+
+## Relationship_Network
+Daran: the person whose absence defines the shape of Aldric's early academy chapters; the rivalry is a grief that neither of them has named. Rynn: the first genuine peer-friendship at Greyveil — hotheaded, fire-adjacent, loyal in a way that doesn't require explanation. Solen: the alliance that surprises Aldric; a minor noble who chooses him for reasons that take a volume to become clear. Lirien: cold and sharp at first contact, the relationship advances with a patience that mirrors the series' own slow-burn discipline. Maret: the instructor Aldric reads correctly as a watcher before he understands what she's watching for. Grevan Tusk: the sword mentor whose training is the foundation everything else is built on, present mostly in what Aldric's body remembers.
+
+## Inner_Driver
+He wants to be the thing the world says cannot exist — both sword and magic, both commoner and noble, both controlled and capable of full release — and to make it mean something beyond himself. He is willing to pay the cost of being the exception. He is not willing to pretend the cost is smaller than it is.
+
+## Growth_Arc
+Volumes 1-2: learning that belonging is political. Volumes 3-4: learning that institutions are not neutral. Volumes 5-6: learning that his identity is a weapon others can use before he can. Volumes 7-8: learning that what survives the process of becoming a legend is a choice, not a guarantee, and making that choice deliberately.

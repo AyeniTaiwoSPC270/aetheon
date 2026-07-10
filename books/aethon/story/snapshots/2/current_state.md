@@ -1,0 +1,9 @@
+| Field | Value |
+| --- | --- |
+| Current Chapter | 2 |
+| Current Location | Ashford village — Vane household (workroom, kitchen, back yard, Aldric's bedroom); back fence facing the eastern field |
+| Protagonist State | Age 17, baseline (pre-Stage 1); living with adoptive parents Maren and Josse in Ashford; has now experienced four mana pressure events total: two flickers (Ch. 1, concealed from Daran) and one sustained pressure event at night (Ch. 2, private, unwitnessed); pressure is developing — the Ch. 2 event was longer and more body-wide than the Ch. 1 flickers; no circuit opening achieved; physically healthy, emotionally settled; Maren has explicitly stated she knows he will get into the academy; Josse has offered the cryptic observation "you'll know when it changes — because you won't be able to set it aside"; Aldric continues to file the pressure sensation away without investigating |
+| Current Goal | Unstated formally; implicit: reach the academy (Greyveil); immediate: attend the spring preliminary assessor review (mentioned by Daran) |
+| Current Constraint | No formal mana training; no confirmed technique; pressure sensation is sporadic, uncontrolled, and still private; Aldric does not know what the sensation means; the Ch. 2 night event was unwitnessed — the planned "witness sees shimmer" beat from the chapter memo did NOT occur in the actual written chapter text |
+| Current Alliances | Daran (childhood friend, close, shared ambition to enter the academy; mentioned spring assessor review) |
+| Current Conflict | None active yet; internal: the pressure sensation is growing in duration and body-coverage but Aldric continues to suppress and file it away; Josse's words ("you won't be able to set it aside") function as a quiet foreshadow of the coming loss of that option |

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 2,
+  "language": "en",
+  "lastAppliedChapter": 4,
+  "projectionVersion": 1,
+  "migrationWarnings": [
+    "H-04:status normalized from \"near_payoff\" to \"open\""
+  ]
+}

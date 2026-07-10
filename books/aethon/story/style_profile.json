@@ -1,0 +1,24 @@
+{
+  "avgSentenceLength": 10.4,
+  "sentenceLengthStdDev": 11.7,
+  "avgParagraphLength": 23,
+  "paragraphLengthRange": {
+    "min": 0,
+    "max": 130
+  },
+  "vocabularyDiversity": 0.146,
+  "topPatterns": [
+    "he… (218)",
+    "the… (189)",
+    "aldric… (69)",
+    "daran… (40)",
+    "it… (39)"
+  ],
+  "rhetoricalFeatures": [
+    "simile (like/as if) (18)",
+    "tricolon (2)",
+    "short punchy rhythm (172)"
+  ],
+  "sourceName": "Aethon",
+  "analyzedAt": "2026-07-10T06:26:31.167Z"
+}

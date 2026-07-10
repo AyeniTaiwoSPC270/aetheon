@@ -271,42 +271,83 @@ flags," arc progress), **Templater**, **Obsidian Git** (auto-commit 30 min).
 
 ## 7. PHASE 2 — INKOS SETUP & AETHON BOOK CONFIG
 
-> **AMENDED 2026-07-10** — corrected against the real installed CLI
-> (`@actalk/inkos@1.6.3`). The block below was verified with
-> `inkos --help` / `inkos config --help` / `inkos book --help` etc.
-> before running anything for real. Differences from the original v2.0
-> draft, and why they matter:
-> - `inkos init` **defaults to `--lang zh`** — not mentioned in the
->   original draft at all. Must pass `--lang en` explicitly or the
->   project silently defaults to Chinese writing conventions.
-> - Genre value is `progression`, not `progression-fantasy`
->   (`inkos genre list` — 15 built-ins, no fantasy suffix).
+> **AMENDED 2026-07-10 (v2)** — corrected twice against the real
+> installed CLI (`@actalk/inkos@1.6.3`), the second time after actually
+> running the commands for real (not just `--help`). What actually
+> happened, and why it matters:
+> - `inkos init` **defaults to `--lang zh`** — must pass `--lang en`
+>   explicitly.
+> - Genre value is `progression`, not `progression-fantasy`.
 > - `config set-model` takes **positional** `<agent> <model>` with
 >   `--provider`, not `--agent X --service Y --model Z`.
-> - `--service google` **is** accepted in practice for Gemini even
->   though `--help` only documents openai/anthropic/custom as
->   `--provider` values — confirmed working via a throwaway probe
->   project, not assumed.
-> - License is **AGPL-3.0-only**, not MIT as D1 states. Matters if the
->   Aethon pipeline code (Telegram bot / daemon wrapper) is ever hosted
->   as a network service — AGPL's network-use clause could require
->   disclosing source. D1 should be read with this correction.
-> - **Writer model updated to `claude-sonnet-5`** (author decision,
->   2026-07-10), superseding D3/D11's original `claude-sonnet-4-6` pin.
->   Not yet tested against the Ch.1-13 voice fingerprint — flag any
->   voice-consistency regression at the T4.3 golden-regression test.
-> - `book create --brief` was already correct in the original draft;
->   an earlier web-search pass suggested `--chapter-words`/
->   `--target-chapters` weren't valid on `create`, but the installed
->   CLI's own `--help` confirms they are. Ignore that search result.
+> - **`--service google` / `--provider google` looked like it worked
+>   but is NOT valid** — `set-model`'s own setter accepts it silently
+>   (no validation), but `import chapters`/`book create` reject it with
+>   a Zod enum error (`anthropic | openai | custom` only). Confirming a
+>   *setter* doesn't error is not the same as confirming the value is
+>   usable — verify against a command that actually *reads* the config.
+> - Even after fixing the provider value, **Gemini routing hit a real
+>   InkOS bug**: a per-agent model override's `service` field is
+>   inherited from the *primary/default* client's `service`
+>   (`base?.service ?? "custom"` in `pipeline/runner.js`), not set
+>   independently. Since the primary client's service is `"anthropic"`
+>   (correctly, for the Sonnet writer), every Gemini override silently
+>   inherited `service: "anthropic"` too, which fails the
+>   `shouldUseNativeCustomTransport` check in `llm/provider.js`
+>   regardless of what `--provider`/`--base-url` is passed to
+>   `set-model`. No CLI flag exposes `service` on an override. Setting
+>   the *primary* config's `service` to `"custom"` shifted the error
+>   (needed `INKOS_LLM_BASE_URL` in env too) but the Gemini call still
+>   failed identically — there may be a separate code path for
+>   foundation-generation/chapter-analysis that doesn't go through
+>   `chatCompletion()`'s dispatcher at all. Not fully root-caused.
+> - Separately: `gemini-2.5-flash` and `gemini-2.5-flash-lite` return
+>   `404 "no longer available to new users"` for a fresh Gemini API key
+>   even though they still appear in `/models` — Google restricts new
+>   keys from certain dated snapshots. `gemini-flash-latest` works.
+>   Neither fact was knowable without hitting the live API directly.
+> - **Given the above, Gemini routing was abandoned** for auditor /
+>   architect / radar / chapter-analyzer. All four now use
+>   `claude-haiku-4-5-20251001` on the native Anthropic path (same
+>   provider as the writer, no cross-provider override, sidesteps the
+>   bug entirely) — this was always D3's documented fallback anyway,
+>   just arrived at directly instead of via Gemini. Revisit Gemini only
+>   if InkOS ships a fix for the override-service inheritance bug.
+> - **Writer model stays `claude-sonnet-4-6`**, not `claude-sonnet-5` —
+>   attempted per an author decision but InkOS's bundled model catalog
+>   for the anthropic service only goes up to `claude-sonnet-4-6`
+>   (`inkos config list-models anthropic`) and rejects `claude-sonnet-5`
+>   client-side. Reverted; matches D3/D11's original pin after all.
+> - License is **AGPL-3.0-only**, not MIT as D1 states.
+> - `book create --brief` (`--chapter-words`/`--target-chapters`) was
+>   already correct in the original draft.
+> - **Real cost incident:** `chapter-analyzer` (used by
+>   `import chapters`'s per-chapter reverse-engineering) was left on
+>   the default (Sonnet) model because it's a distinct agent from
+>   writer/auditor/architect/radar and wasn't in D3's original list.
+>   13 chapters of Sonnet-tier "analyze this ~2,500-word chapter"
+>   calls burned real money fast. Import was killed after chapter 4;
+>   chapters 5-13 were added via `scripts/manual_finish_import.py`
+>   (deterministic file copy + index.json entries, zero LLM calls) —
+>   so `character_matrix`/`current_state`/hooks are only accurate
+>   through Ch.4, not fully reverse-engineered through Ch.13. Revisit
+>   with `chapter-analyzer` now correctly pinned to Haiku
+>   (`inkos config set-model chapter-analyzer claude-haiku-4-5-20251001
+>   --provider anthropic`) if/when the author wants full state
+>   reconstruction for Ch.5-13. **Lesson: every agent name InkOS
+>   actually uses (check `config show-models` after any book action,
+>   not just the names in this doc) must be routed before running a
+>   multi-chapter command, or it silently defaults to the expensive
+>   model.**
 
 ```bash
 npm i -g @actalk/inkos
 inkos init --lang en
-inkos config set-global --provider anthropic --model claude-sonnet-5 --api-key <key>   # run by the author directly, not pasted into an agent transcript
-inkos config set-model auditor  gemini-2.5-flash --provider google --api-key-env GEMINI_API_KEY
-inkos config set-model architect gemini-2.5-flash --provider google --api-key-env GEMINI_API_KEY
-inkos config set-model radar    gemini-2.5-flash --provider google --api-key-env GEMINI_API_KEY   # or disable radar
+inkos config set-global --provider anthropic --model claude-sonnet-4-6 --api-key <key>   # run by the author directly, not pasted into an agent transcript
+inkos config set-model auditor          claude-haiku-4-5-20251001 --provider anthropic
+inkos config set-model architect        claude-haiku-4-5-20251001 --provider anthropic
+inkos config set-model radar            claude-haiku-4-5-20251001 --provider anthropic
+inkos config set-model chapter-analyzer claude-haiku-4-5-20251001 --provider anthropic
 inkos book create --title "Aethon" --genre progression --lang en \
   --chapter-words 2500 --target-chapters 500 --brief aethon-brief.md
 ```

@@ -1,0 +1,53 @@
+{
+  "chapter": 1,
+  "facts": [
+    {
+      "subject": "protagonist",
+      "predicate": "Current Location",
+      "object": "Ashford village — eastern field beyond the fence; earlier: Vane household kitchen, village streets",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Protagonist State",
+      "object": "Age 17, baseline (pre-Stage 1); living with adoptive parents Maren and Josse in Ashford; has experienced two brief, uncontrolled mana pressure flickers (sternum sensation) during hand-position practice; has not achieved any circuit opening; concealed both pressure events from Daran; physically healthy, emotionally settled, privately curious about the pressure sensation",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Goal",
+      "object": "Unstated formally; implicit: reach the academy (Greyveil); immediate chapter goal was errands + afternoon practice with Daran",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Constraint",
+      "object": "No formal mana training; no confirmed technique; pressure sensation is sporadic and uncontrolled; Aldric does not know what the sensation means or whether it is real",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Alliances",
+      "object": "Daran (childhood friend, close, shared ambition to enter the academy)",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    },
+    {
+      "subject": "protagonist",
+      "predicate": "Current Conflict",
+      "object": "None active yet; internal: curiosity about the mana pressure sensation vs. habit of filing things away without investigating",
+      "validFromChapter": 1,
+      "validUntilChapter": null,
+      "sourceChapter": 1
+    }
+  ]
+}

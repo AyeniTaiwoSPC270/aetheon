@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "language": "en",
   "llm": {
-    "provider": "openai",
-    "service": "custom",
+    "provider": "anthropic",
+    "service": "anthropic",
     "configSource": "studio",
-    "baseUrl": "",
-    "model": "",
+    "baseUrl": "https://api.anthropic.com",
+    "model": "claude-sonnet-4-6",
     "apiFormat": "chat",
     "stream": true
   },
@@ -19,5 +19,23 @@
       "writeCron": "*/15 * * * *"
     },
     "maxConcurrentBooks": 3
+  },
+  "modelOverrides": {
+    "auditor": {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic"
+    },
+    "architect": {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic"
+    },
+    "radar": {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic"
+    },
+    "chapter-analyzer": {
+      "model": "claude-haiku-4-5-20251001",
+      "provider": "anthropic"
+    }
   }
 }

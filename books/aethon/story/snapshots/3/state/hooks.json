@@ -1,0 +1,64 @@
+{
+  "hooks": [
+    {
+      "hookId": "H-01",
+      "startChapter": 1,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "The nature and origin of Aldric's mana pressure sensation — why it manifests, what it means, why it is different from standard cultivation",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 1: two brief flickers (sternum, concealed from Daran). Ch. 2: one sustained, body-wide pressure event at night (still private, unwitnessed). Ch. 3: assessor checks instrument a second time during practical — first external witness to the anomaly; same night, pressure event produces involuntary finger movement (first motor manifestation); Aldric connects both facts and files them. Status upgraded from open to pressured: anomaly is now externally detectable and physically escalating."
+    },
+    {
+      "hookId": "H-02",
+      "startChapter": 1,
+      "type": "relationship",
+      "status": "open",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "Daran's declaration \"We'll both get in\" — the promise that will be broken when Daran fails the practical mana assessment",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 3: both boys attend preliminary assessment same morning; parity intact on surface; assessor's differential reaction felt by Aldric but not named; hairline fracture in parity planted. Promise itself not invoked. Defer explicit rupture to Ch. 6–7."
+    },
+    {
+      "hookId": "H-03",
+      "startChapter": 2,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "Josse's observation \"you'll know when it changes — because you won't be able to set it aside\" — what does Josse know or suspect about Aldric's pressure sensation?",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 3: Josse appears briefly at dinner (asks how it went, accepts \"preliminary, no verdict\"); no explanatory line given; his Ch. 2 observation echoes structurally in Aldric's night experience (the hand moving without him is exactly the kind of change Josse described) but is not quoted or explained. Deferred to Ch. ~5 departure scene or Arc 2."
+    },
+    {
+      "hookId": "H-04",
+      "startChapter": 2,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "Maren's explicit statement \"You're going to get in\" — delivered with certainty, not hope; what does Maren know or believe about Aldric that grounds this certainty?",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 3: Maren present at dinner but does not ask about the assessment; no explanatory line. Deferred to Arc 1 close or Arc 2."
+    },
+    {
+      "hookId": "H-05",
+      "startChapter": 3,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "The assessor's double-check — she recalibrated the rod and made a note in the ledger after reading Aldric's ambient output; what did the instrument show, and what did she write?",
+      "payoffTiming": "mid-arc",
+      "notes": "Opened Ch. 3. The assessor's reaction is witnessed by Aldric but the content of the note is withheld. First institutional figure to register Aldric's anomaly. Expected payoff: Arc 3 (academy application/exam) or later when institutional knowledge of certain bloodlines becomes relevant."
+    },
+    {
+      "hookId": "H-06",
+      "startChapter": 3,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "Aldric's involuntary hand movement — his fingers curled and released without his volition during the night pressure event; this is the first time the pressure has produced external physical action",
+      "payoffTiming": "mid-arc",
+      "notes": "Opened Ch. 3. Aldric connects this to the assessor's reaction and files both away. The pressure is no longer purely internal — it is beginning to act. Expected payoff: Arc 2 (the incident on the road) when the shimmer becomes visible to Daran."
+    }
+  ]
+}

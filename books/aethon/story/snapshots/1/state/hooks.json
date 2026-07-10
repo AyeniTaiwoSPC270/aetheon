@@ -1,0 +1,22 @@
+{
+  "hooks": [
+    {
+      "hookId": "H-01",
+      "startChapter": 1,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "The nature and origin of Aldric's mana pressure sensation — why it manifests, what it means, why it is different from standard cultivation",
+      "notes": "Pressure flickered twice this chapter during hand-position practice; Aldric concealed both instances from Daran; no explanation offered; reader's question forms naturally"
+    },
+    {
+      "hookId": "H-02",
+      "startChapter": 1,
+      "type": "relationship",
+      "status": "open",
+      "lastAdvancedChapter": 1,
+      "expectedPayoff": "Daran's declaration \"We'll both get in\" — the promise that will be broken when Daran fails the practical mana assessment",
+      "notes": "Stated with the inflection of certainty, not hope; the gap between this moment and the rejection is the wound the series carries"
+    }
+  ]
+}

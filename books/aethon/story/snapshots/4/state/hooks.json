@@ -1,0 +1,84 @@
+{
+  "hooks": [
+    {
+      "hookId": "H-01",
+      "startChapter": 1,
+      "type": "mystery",
+      "status": "progressing",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "The nature and origin of Aldric's mana pressure sensation — why it manifests, what it means, why it is different from standard cultivation",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 1: two brief flickers (sternum, concealed from Daran). Ch. 2: one sustained, body-wide pressure event at night (still private, unwitnessed). Ch. 3: assessor checks instrument a second time — first external witness to anomaly; same night, pressure event produces involuntary finger movement (first motor manifestation). Ch. 4: no pressure event occurred — chapter memo planned a fifth event but the written chapter does not include one; status held at progressing, not advanced this chapter. Next visible beat: Arc 2 (the incident on the road)."
+    },
+    {
+      "hookId": "H-02",
+      "startChapter": 1,
+      "type": "relationship",
+      "status": "open",
+      "lastAdvancedChapter": 4,
+      "expectedPayoff": "Daran's declaration \"We'll both get in\" — the promise that will be broken when Daran fails the practical mana assessment",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 3: parity cracked but promise not invoked. Ch. 4: Daran's envelope arrives at the Vane household; he reads it and says \"Confirmed\" — content withheld; the field scene carries the ghost of the promise without invoking it; Daran says \"We're different. It's fine.\" — a line that will read differently on reread after his rejection is known. Rupture deferred to Ch. 6–7."
+    },
+    {
+      "hookId": "H-03",
+      "startChapter": 2,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 2,
+      "expectedPayoff": "Josse's observation \"you'll know when it changes — because you won't be able to set it aside\" — what does Josse know or suspect about Aldric's pressure sensation?",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 3: Josse at dinner, no explanation. Ch. 4: Josse present — delivers practical boot advice, goes back outside; warm but gives nothing away. Deferred to Ch. ~5 departure scene or Arc 2."
+    },
+    {
+      "hookId": "H-04",
+      "startChapter": 2,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 4,
+      "expectedPayoff": "Maren's explicit statement \"You're going to get in\" — delivered with certainty, not hope; what does Maren know or believe about Aldric that grounds this certainty?",
+      "payoffTiming": "mid-arc",
+      "notes": "Ch. 3: Maren silent at dinner. Ch. 4: letter arrives; Maren appears in the workroom doorway and looks at Aldric's face, not the letter; says \"Good\" — one word, quiet, certain; the gap between her calm and the moment's weight is now undeniable; she does not explain herself. Status advanced from open to near_payoff. Explanation deferred to Arc 1 close or Arc 2."
+    },
+    {
+      "hookId": "H-05",
+      "startChapter": 3,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "The assessor's double-check — she recalibrated the rod and made a note in the ledger after reading Aldric's ambient output; what did the instrument show, and what did she write?",
+      "payoffTiming": "mid-arc",
+      "notes": "Not touched Ch. 4. Institutional consequences belong to the academy arc. Expected payoff: Arc 3 or later."
+    },
+    {
+      "hookId": "H-06",
+      "startChapter": 3,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 3,
+      "expectedPayoff": "Aldric's involuntary hand movement — his fingers curled and released without his volition during the night pressure event; this is the first time the pressure has produced external physical action",
+      "payoffTiming": "mid-arc",
+      "notes": "Not touched Ch. 4. Next visible beat: Arc 2 (the incident on the road) when the shimmer becomes visible to Daran."
+    },
+    {
+      "hookId": "H-07",
+      "startChapter": 4,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 4,
+      "expectedPayoff": "Josse's parting practical advice (\"Start thinking about your boots. Yours won't make it.\") — a concrete, grounded gesture whose full significance is not explained; plants a future payoff when the object or habit's meaning becomes clear in a later arc",
+      "payoffTiming": "mid-arc",
+      "notes": "Opened Ch. 4. Josse does not give a physical object in the written chapter (the memo planned one; the chapter delivers practical boot advice instead). The gesture is warm and specific and unexplained. Do not explain this chapter."
+    },
+    {
+      "hookId": "H-08",
+      "startChapter": 4,
+      "type": "mystery",
+      "status": "open",
+      "lastAdvancedChapter": 4,
+      "expectedPayoff": "Daran's unseen result — his envelope arrived and he said \"Confirmed\" but the content of his letter never surfaces on the page; the reader registers the gap",
+      "payoffTiming": "mid-arc",
+      "notes": "Opened Ch. 4. Daran reads his letter, says \"Confirmed,\" and immediately opens the pamphlet. What he confirmed is not stated. Explicit rupture deferred to Ch. 6–7 where the wound opens."
+    }
+  ]
+}

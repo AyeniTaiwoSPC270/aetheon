@@ -1,0 +1,4 @@
+| hook_id | start_chapter | type | status | last_advanced_chapter | expected_payoff | payoff_timing | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| H-01 | 1 | mystery | open | 1 | The nature and origin of Aldric's mana pressure sensation — why it manifests, what it means, why it is different from standard cultivation | Arc 4 breakthrough (Ch. ~29–35) | Pressure flickered twice this chapter during hand-position practice; Aldric concealed both instances from Daran; no explanation offered; reader's question forms naturally |
+| H-02 | 1 | relationship | open | 1 | Daran's declaration "We'll both get in" — the promise that will be broken when Daran fails the practical mana assessment | Arc 3 (Ch. 8–13) | Stated with the inflection of certainty, not hope; the gap between this moment and the rejection is the wound the series carries |
