@@ -15,6 +15,9 @@ sandbox/
 .chroma/
 chroma_db/
 
+# Disposable InkOS sandbox book (Phase 4 T4.2/T4.4 test harness, tests/phase4/)
+books/aethon-fixtures/
+
 # Secrets
 .env
 
