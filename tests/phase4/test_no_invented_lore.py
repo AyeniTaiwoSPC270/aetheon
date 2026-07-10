@@ -26,6 +26,7 @@ BANNED_PHRASES = [
 
 CHECKED_FILES = [
     REPO_ROOT / "books/aethon/story/book_rules.md",
+    REPO_ROOT / "books/aethon/story/outline/story_frame.md",
 ]
 
 
@@ -33,3 +34,9 @@ def test_book_rules_has_no_invented_lore():
     text = CHECKED_FILES[0].read_text(encoding="utf-8")
     found = [p for p in BANNED_PHRASES if p in text]
     assert not found, f"invented phrases found in {CHECKED_FILES[0]}: {found}"
+
+
+def test_story_frame_has_no_invented_lore():
+    text = CHECKED_FILES[1].read_text(encoding="utf-8")
+    found = [p for p in BANNED_PHRASES if p in text]
+    assert not found, f"invented phrases found in {CHECKED_FILES[1]}: {found}"
