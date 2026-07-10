@@ -26,10 +26,12 @@ def get_client(persist_dir: Path = CHROMA_DIR) -> ClientAPI:
 
 def get_collection(client: ClientAPI) -> chromadb.Collection:
     # NOTE: the ignore below works around a chromadb 1.5.9 stub issue, not a
-    # real type error. Its EmbeddingFunction generic is invariant, so
-    # SentenceTransformerEmbeddingFunction (EmbeddingFunction[list[str]])
-    # doesn't structurally satisfy get_or_create_collection's parameter type
-    # (EmbeddingFunction[list[str] | list[ndarray]]) even though this is the
+    # real type error. Its EmbeddingFunction generic is contravariant, so
+    # EmbeddingFunction[list[str]] is only a subtype of
+    # EmbeddingFunction[list[str] | list[ndarray]] if the latter is a subtype
+    # of list[str] — which it isn't (list[ndarray] doesn't qualify). So
+    # SentenceTransformerEmbeddingFunction doesn't structurally satisfy
+    # get_or_create_collection's parameter type even though this is the
     # library's own documented usage.
     return client.get_or_create_collection(
         name=COLLECTION_NAME, embedding_function=_embedding_fn  # type: ignore[arg-type]
