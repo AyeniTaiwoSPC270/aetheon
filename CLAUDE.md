@@ -91,10 +91,15 @@ aethon-pipeline/
 
 ## MODEL ROUTING (config-driven, never hardcoded)
 
+> Updated 2026-07-10 against the real `@actalk/inkos@1.6.3` CLI (see
+> BUILD_PLAN.md Section 7 amendment note). Writer model bumped to
+> claude-sonnet-5 per author decision, superseding the original D3 pin
+> — watch T4.3 golden regression for voice drift against Ch.1-13.
+
 | Component | Model | Notes |
 |---|---|---|
-| InkOS writer agent | `claude-sonnet-4-6` | via `inkos config set-global`; prose quality; prompt caching ON |
-| InkOS auditor/planner/radar | `gemini-2.5-flash` | via `inkos config set-model --agent …`; fallback `claude-haiku-4-5` |
+| InkOS writer agent | `claude-sonnet-5` | via `inkos config set-global`; prose quality; prompt caching ON |
+| InkOS auditor/architect/radar | `gemini-2.5-flash` | via `inkos config set-model <agent> <model> --provider google`; fallback `claude-haiku-4-5`. Agent is "architect", not "planner" — v2.0 draft used the wrong name. |
 | Lore Checker (ours) | `gemini-2.5-flash` | fallback Haiku |
 | Embeddings | local sentence-transformers (bge-small) | $0 |
 

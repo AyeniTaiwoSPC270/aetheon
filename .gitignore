@@ -24,3 +24,4 @@ Thumbs.db
 
 # Claude Code local session state
 .claude/
+node_modules/

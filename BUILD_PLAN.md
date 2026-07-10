@@ -271,25 +271,76 @@ flags," arc progress), **Templater**, **Obsidian Git** (auto-commit 30 min).
 
 ## 7. PHASE 2 — INKOS SETUP & AETHON BOOK CONFIG
 
+> **AMENDED 2026-07-10** — corrected against the real installed CLI
+> (`@actalk/inkos@1.6.3`). The block below was verified with
+> `inkos --help` / `inkos config --help` / `inkos book --help` etc.
+> before running anything for real. Differences from the original v2.0
+> draft, and why they matter:
+> - `inkos init` **defaults to `--lang zh`** — not mentioned in the
+>   original draft at all. Must pass `--lang en` explicitly or the
+>   project silently defaults to Chinese writing conventions.
+> - Genre value is `progression`, not `progression-fantasy`
+>   (`inkos genre list` — 15 built-ins, no fantasy suffix).
+> - `config set-model` takes **positional** `<agent> <model>` with
+>   `--provider`, not `--agent X --service Y --model Z`.
+> - `--service google` **is** accepted in practice for Gemini even
+>   though `--help` only documents openai/anthropic/custom as
+>   `--provider` values — confirmed working via a throwaway probe
+>   project, not assumed.
+> - License is **AGPL-3.0-only**, not MIT as D1 states. Matters if the
+>   Aethon pipeline code (Telegram bot / daemon wrapper) is ever hosted
+>   as a network service — AGPL's network-use clause could require
+>   disclosing source. D1 should be read with this correction.
+> - **Writer model updated to `claude-sonnet-5`** (author decision,
+>   2026-07-10), superseding D3/D11's original `claude-sonnet-4-6` pin.
+>   Not yet tested against the Ch.1-13 voice fingerprint — flag any
+>   voice-consistency regression at the T4.3 golden-regression test.
+> - `book create --brief` was already correct in the original draft;
+>   an earlier web-search pass suggested `--chapter-words`/
+>   `--target-chapters` weren't valid on `create`, but the installed
+>   CLI's own `--help` confirms they are. Ignore that search result.
+
 ```bash
 npm i -g @actalk/inkos
-inkos config set-global --provider anthropic --api-key-env ANTHROPIC_API_KEY --model claude-sonnet-4-6
-inkos config set-model --agent auditor  --service google --model gemini-2.5-flash
-inkos config set-model --agent planner  --service google --model gemini-2.5-flash
-inkos config set-model --agent radar    --service google --model gemini-2.5-flash   # or disable radar
-inkos book create --title "Aethon" --genre progression-fantasy \
+inkos init --lang en
+inkos config set-global --provider anthropic --model claude-sonnet-5 --api-key <key>   # run by the author directly, not pasted into an agent transcript
+inkos config set-model auditor  gemini-2.5-flash --provider google --api-key-env GEMINI_API_KEY
+inkos config set-model architect gemini-2.5-flash --provider google --api-key-env GEMINI_API_KEY
+inkos config set-model radar    gemini-2.5-flash --provider google --api-key-env GEMINI_API_KEY   # or disable radar
+inkos book create --title "Aethon" --genre progression --lang en \
   --chapter-words 2500 --target-chapters 500 --brief aethon-brief.md
 ```
-`aethon-brief.md` = Master Plan condensed + §3 of this document, so the
-Architect generates from YOUR setting, never from scratch.
+`aethon-brief.md` (repo root) = Master Plan condensed + §3 of this
+document, so the Architect generates from YOUR setting, never from
+scratch.
 
-Daemon config (`.inkos/config`):
+Real agent names confirmed via `inkos config set-model --help`: writer,
+auditor, reviser, architect, radar, chapter-analyzer. BUILD_PLAN v2.0's
+"planner" does not exist as an agent name — the equivalent is
+`architect`.
+
+Daemon config lives in **`inkos.json`** at the project root (not
+`.inkos/config` as the original draft assumed), written by `inkos init`.
+Confirmed real shape:
 ```json
-{ "daemon": { "intervalMinutes": 1440, "dailyChapterLimit": 1, "parallelBooks": 1 },
-  "webhook": { "events": ["chapter-complete", "audit-failed", "pipeline-error"] } }
+{ "daemon": { "schedule": { "radarCron": "0 */6 * * *", "writeCron": "*/15 * * * *" },
+              "maxConcurrentBooks": 3 } }
 ```
+There is no native `dailyChapterLimit` or backpressure field — D8
+(backpressure) and D10 (1 chapter/night) are NOT InkOS-native and must
+be enforced by our own wrapper (Phase 6), e.g. by setting `writeCron` to
+a once-daily cron and having the wrapper check unapproved-chapter count
+before calling `inkos write next`. This confirms rather than contradicts
+BUILD_PLAN's own claim in Section 2 that backpressure is something we
+build — just correcting where the config actually lives.
 
-Then run Phase 0 Step 0.4 (chapter import).
+Then run Phase 0 Step 0.4 (chapter import) — note `import chapters
+--from` also accepts a directory of .md/.txt files directly, so
+`vault/02-Chapters/Saga-1/` can be pointed at without concatenating
+first, though the per-chapter YAML frontmatter in those files should be
+stripped first (or import from `_source/AETHON_SAGA1_CHAPTERS_1-13.md`
+instead, which has no frontmatter) so it isn't mistaken for chapter
+prose.
 
 **TESTS — Phase 2**
 | # | Test | Pass criteria |
