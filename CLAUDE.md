@@ -91,32 +91,64 @@ aethon-pipeline/
 
 ## MODEL ROUTING (config-driven, never hardcoded)
 
-> Updated 2026-07-10 (v2) against the real `@actalk/inkos@1.6.3` CLI
-> (see BUILD_PLAN.md Section 7 amendment note — read it before touching
-> model config again). Gemini routing for the non-writer agents was
-> attempted and abandoned: a real InkOS bug means a per-agent override's
-> `service` inherits from the primary client's `service` rather than
-> being set independently, breaking the custom-transport path for any
-> cross-provider override regardless of CLI flags used. All four
-> non-writer agents route to Claude Haiku instead — same provider as
-> the writer, no override bug in play, and this was D3's documented
-> fallback anyway. Writer model reverted to claude-sonnet-4-6 after
-> claude-sonnet-5 turned out to not be in InkOS's bundled anthropic
-> model catalog (client-side rejection, confirmed via
-> `inkos config list-models anthropic`).
+> Updated 2026-07-10 (v3) — **Anthropic key retired, everything routes
+> through Gemini now.** The author stopped using the Anthropic key
+> entirely (budget); only the Gemini key remains in use. All InkOS
+> agents (writer, auditor, architect, radar, chapter-analyzer) now go
+> through Gemini via `scripts/inkos-gemini.sh` (bash) /
+> `scripts/inkos-gemini.ps1` (PowerShell) — **use these wrappers instead
+> of calling `inkos` directly**, e.g. `./scripts/inkos-gemini.sh draft
+> aethon` not `inkos draft aethon`.
 >
-> **Cost lesson:** `chapter-analyzer` is a distinct agent from
-> writer/auditor/architect/radar and is easy to forget — it defaulted
-> to Sonnet during Ch.1-13 import and burned real money before being
-> caught and switched to Haiku. Check `inkos config show-models` for
+> **Why a wrapper script instead of persistent config:** `inkos.json`'s
+> `llm.provider` field and the `INKOS_LLM_PROVIDER`/`INKOS_LLM_API_KEY`
+> env vars were both tried and neither actually got picked up by InkOS
+> (`inkos doctor` kept reporting `LLM API Key: Missing` and connecting to
+> the old Anthropic default regardless). What **does** work, verified via
+> `inkos doctor`: the top-level per-run CLI flags — `--service google
+> --model gemini-2.5-flash --api-key-env GEMINI_API_KEY --api-format
+> responses`. The wrapper scripts exist so these four flags don't have to
+> be retyped on every command. If a future InkOS version fixes the
+> env-var path, this can be simplified — not urgent, the wrapper works.
+>
+> **Known quirk:** `gemini-2.5-flash` occasionally returns empty text on
+> very short/structured prompts (health checks, likely short auditor/
+> chapter-analyzer JSON responses too) — hidden "thinking" tokens can
+> consume the entire tiny output budget, leaving nothing for the visible
+> reply. InkOS retries automatically and it resolved every time in
+> testing (settling on `models/gemini-flash-latest` after a few
+> attempts), but if this ever causes a hard failure (not just retries),
+> try `gemini-2.0-flash-001` instead — no hidden reasoning tokens by
+> default.
+>
+> **The 4 previous Anthropic-Haiku model overrides (auditor/architect/
+> radar/chapter-analyzer) were removed** (`inkos config remove-model
+> <agent>`) rather than repointed at Gemini per-agent — with the
+> Anthropic key gone, everything uses the same Gemini model via the
+> wrapper's top-level flags, so there's no cross-provider mismatch to
+> route around (the earlier per-agent-override bug — see git history —
+> was specifically about a per-agent override's `service` silently
+> inheriting the *primary* client's `service`; with nothing left on
+> Anthropic, that class of bug no longer applies here).
+>
+> Historical context (pre-2026-07-10 v3, while Anthropic was still in
+> use): writer was `claude-sonnet-4-6`, non-writer agents were
+> `claude-haiku-4-5-20251001`, and Gemini per-agent overrides had been
+> attempted and abandoned due to the cross-provider bug above. See git
+> history for that config if the Anthropic key ever comes back into use.
+>
+> **Cost lesson (still applies):** check `inkos config show-models` for
 > every agent name actually in use before running any multi-chapter
-> command.
+> command — an agent left on an unexpected default has burned real money
+> before (Ch.1-13 import, `chapter-analyzer` silently defaulted to
+> Sonnet). Gemini's free tier makes this lower-stakes than an Anthropic
+> mis-route, but still check.
 
 | Component | Model | Notes |
 |---|---|---|
-| InkOS writer agent | `claude-sonnet-4-6` | via `inkos config set-global`; prose quality; prompt caching ON |
-| InkOS auditor/architect/radar/chapter-analyzer | `claude-haiku-4-5-20251001` | via `inkos config set-model <agent> claude-haiku-4-5-20251001 --provider anthropic`. Agent is "architect", not "planner" — v2.0 draft used the wrong name. Gemini routing abandoned — see BUILD_PLAN §7 amendment. |
-| Lore Checker (ours) | `gemini-2.5-flash` | fallback Haiku — not yet built (Phase 3); revisit Gemini viability then, this is InkOS-specific |
+| InkOS writer agent | `gemini-2.5-flash` | via `scripts/inkos-gemini.sh`/`.ps1`; only Gemini key in use |
+| InkOS auditor/architect/radar/chapter-analyzer | `gemini-2.5-flash` | same wrapper, same model — no per-agent overrides configured (see note above) |
+| Lore Checker (ours) | `gemini-2.5-flash` | not yet built (Phase 3 design deferred it — see docs/superpowers/specs); this is InkOS-specific, unrelated to our own future Lore Checker's model choice |
 | Embeddings | local sentence-transformers (bge-small) | $0 |
 
 Cost target ≤ $0.06/chapter. Log token usage per run; fail loudly if a single
@@ -173,14 +205,14 @@ If a feature or test requires a canon fact not in BUILD_PLAN §3, **read
 ## RUNNING THINGS
 
 ```bash
-uv sync                                     # python deps
-npm i -g @actalk/inkos && inkos doctor      # engine
-uv run python scripts/convert_bibles.py     # docx → vault/00-Bibles/*.md
-uv run python -m src.magic_index.embed      # (re)embed bibles
-uv run pytest tests/phase3/                 # a phase's test table
+uv sync                                          # python deps
+npm i -g @actalk/inkos && ./scripts/inkos-gemini.sh doctor   # engine (see MODEL ROUTING — use the wrapper, not bare `inkos`)
+uv run python scripts/convert_bibles.py          # docx → vault/00-Bibles/*.md
+uv run python -m src.magic_index.embed           # (re)embed bibles
+uv run pytest tests/phase3/                      # a phase's test table
 uv run python -m src.wrapper.run --dry-run --chapter 14   # full pass, no delivery, writes to sandbox/
-uv run python -m src.wrapper.run --once     # one real pipeline pass
-inkos up                                    # daemon (go-live only, after Gauntlet)
+uv run python -m src.wrapper.run --once          # one real pipeline pass
+./scripts/inkos-gemini.sh up                     # daemon (go-live only, after Gauntlet)
 ```
 
 `--dry-run` must never touch InkOS truth files, the vault, or Telegram — it

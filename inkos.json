@@ -19,23 +19,5 @@
       "writeCron": "*/15 * * * *"
     },
     "maxConcurrentBooks": 3
-  },
-  "modelOverrides": {
-    "auditor": {
-      "model": "claude-haiku-4-5-20251001",
-      "provider": "anthropic"
-    },
-    "architect": {
-      "model": "claude-haiku-4-5-20251001",
-      "provider": "anthropic"
-    },
-    "radar": {
-      "model": "claude-haiku-4-5-20251001",
-      "provider": "anthropic"
-    },
-    "chapter-analyzer": {
-      "model": "claude-haiku-4-5-20251001",
-      "provider": "anthropic"
-    }
   }
 }
