@@ -42,8 +42,10 @@ async def _auth_gate(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
 
 
 async def _status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    assert update.message is not None
-    await update.message.reply_text(build_status_message(BOOK_ID, REPO_ROOT))
+    message = update.effective_message
+    if message is None:
+        return
+    await message.reply_text(build_status_message(BOOK_ID, REPO_ROOT))
 
 
 def build_application(token: str) -> Application[Any, Any, Any, Any, Any, Any]:
