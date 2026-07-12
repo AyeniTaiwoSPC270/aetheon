@@ -111,15 +111,21 @@ aethon-pipeline/
 > be retyped on every command. If a future InkOS version fixes the
 > env-var path, this can be simplified — not urgent, the wrapper works.
 >
-> **Known quirk:** `gemini-2.5-flash` occasionally returns empty text on
+> **Known quirk:** the flash models occasionally return empty text on
 > very short/structured prompts (health checks, likely short auditor/
 > chapter-analyzer JSON responses too) — hidden "thinking" tokens can
 > consume the entire tiny output budget, leaving nothing for the visible
 > reply. InkOS retries automatically and it resolved every time in
 > testing (settling on `models/gemini-flash-latest` after a few
-> attempts), but if this ever causes a hard failure (not just retries),
-> try `gemini-2.0-flash-001` instead — no hidden reasoning tokens by
-> default.
+> attempts).
+>
+> **2026-07-12: `gemini-2.0-flash-001` retired for new API usage** (hard
+> 404: "no longer available to new users") — hit mid-session while
+> drafting Ch.14. Wrapper scripts switched to `gemini-2.0-flash-001`,
+> confirmed working via `inkos doctor` (still exhibits the empty-text
+> retry quirk above, still resolves on retry). If this model also dies,
+> check Google's current model list before picking a replacement —
+> flash-tier model names have already rotated once.
 >
 > **The 4 previous Anthropic-Haiku model overrides (auditor/architect/
 > radar/chapter-analyzer) were removed** (`inkos config remove-model
@@ -146,9 +152,9 @@ aethon-pipeline/
 
 | Component | Model | Notes |
 |---|---|---|
-| InkOS writer agent | `gemini-2.5-flash` | via `scripts/inkos-gemini.sh`/`.ps1`; only Gemini key in use |
-| InkOS auditor/architect/radar/chapter-analyzer | `gemini-2.5-flash` | same wrapper, same model — no per-agent overrides configured (see note above) |
-| Lore Checker (ours) | `gemini-2.5-flash` | not yet built (Phase 3 design deferred it — see docs/superpowers/specs); this is InkOS-specific, unrelated to our own future Lore Checker's model choice |
+| InkOS writer agent | `gemini-2.0-flash-001` | via `scripts/inkos-gemini.sh`/`.ps1`; only Gemini key in use |
+| InkOS auditor/architect/radar/chapter-analyzer | `gemini-2.0-flash-001` | same wrapper, same model — no per-agent overrides configured (see note above) |
+| Lore Checker (ours) | `gemini-2.0-flash-001` | not yet built (Phase 3 design deferred it — see docs/superpowers/specs); this is InkOS-specific, unrelated to our own future Lore Checker's model choice |
 | Embeddings | local sentence-transformers (bge-small) | $0 |
 
 Cost target ≤ $0.06/chapter. Log token usage per run; fail loudly if a single
