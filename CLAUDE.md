@@ -127,6 +127,30 @@ aethon-pipeline/
 > check Google's current model list before picking a replacement —
 > flash-tier model names have already rotated once.
 >
+> **2026-09-01: `gemini-2.0-flash-001` hard-404'd too**, hit while
+> bootstrapping Phase 4 sandbox chapters. Google's error pointed at
+> `models/gemini-3.6-flash`, but that name isn't in InkOS's own
+> google-service model registry (`@actalk/inkos-core`'s
+> `dist/llm/providers/endpoints/google.js`) and gets rejected
+> client-side ("模型 gemini-3.6-flash 不属于 google 服务") before the
+> request even reaches Google — so a model can be real on Google's side
+> and still unusable here until InkOS's own registry lists it. Switched
+> to **`gemini-flash-latest`**, a stable alias already present in that
+> registry (rather than a dated snapshot name), confirmed working via a
+> real `inkos audit` call. Prefer `*-latest` aliases over dated snapshots
+> going forward — dated snapshots are what keeps rotating out from under
+> us. If this also stops working, read `google.js` directly for the
+> current valid model list rather than trusting `inkos doctor` (its
+> `API Connectivity` check has been unreliable — see next quirk) or
+> guessing from Google's own error text.
+>
+> **`inkos doctor` quirk (2026-09-01):** with `gemini-flash-latest` and
+> correct top-level flags, `doctor` still reported `LLM API Key: Missing`
+> and a truncated `API Connectivity: [` error — despite a real `audit`
+> call against the same flags succeeding immediately after. Don't trust
+> `doctor`'s LLM checks as a gate; verify with one real cheap call
+> (`audit` on an existing chapter) instead.
+>
 > **The 4 previous Anthropic-Haiku model overrides (auditor/architect/
 > radar/chapter-analyzer) were removed** (`inkos config remove-model
 > <agent>`) rather than repointed at Gemini per-agent — with the
@@ -152,9 +176,9 @@ aethon-pipeline/
 
 | Component | Model | Notes |
 |---|---|---|
-| InkOS writer agent | `gemini-2.0-flash-001` | via `scripts/inkos-gemini.sh`/`.ps1`; only Gemini key in use |
-| InkOS auditor/architect/radar/chapter-analyzer | `gemini-2.0-flash-001` | same wrapper, same model — no per-agent overrides configured (see note above) |
-| Lore Checker (ours) | `gemini-2.0-flash-001` | not yet built (Phase 3 design deferred it — see docs/superpowers/specs); this is InkOS-specific, unrelated to our own future Lore Checker's model choice |
+| InkOS writer agent | `gemini-flash-latest` | via `scripts/inkos-gemini.sh`/`.ps1`; only Gemini key in use |
+| InkOS auditor/architect/radar/chapter-analyzer | `gemini-flash-latest` | same wrapper, same model — no per-agent overrides configured (see note above) |
+| Lore Checker (ours) | `gemini-flash-latest` | not yet built (Phase 3 design deferred it — see docs/superpowers/specs); this is InkOS-specific, unrelated to our own future Lore Checker's model choice |
 | Embeddings | local sentence-transformers (bge-small) | $0 |
 
 Cost target ≤ $0.06/chapter. Log token usage per run; fail loudly if a single

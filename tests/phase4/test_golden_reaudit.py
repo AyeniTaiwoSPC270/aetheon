@@ -43,10 +43,18 @@ CANON_KEYWORDS = [
 ]
 
 
+GEMINI_ROUTING_FLAGS = [
+    "--service", "google",
+    "--model", "gemini-flash-latest",
+    "--api-key-env", "GEMINI_API_KEY",
+    "--api-format", "responses",
+]
+
+
 def _run_audit(chapter: int) -> dict:
     assert INKOS, "inkos CLI not found on PATH"
     result = subprocess.run(
-        [INKOS, "audit", BOOK_ID, str(chapter), "--json"],
+        [INKOS, *GEMINI_ROUTING_FLAGS, "audit", BOOK_ID, str(chapter), "--json"],
         capture_output=True, text=True, check=True,
     )
     return json.loads(result.stdout)
