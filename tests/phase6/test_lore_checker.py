@@ -117,3 +117,74 @@ def test_run_includes_retrieved_chunks_in_prompt(monkeypatch):
     sent_prompt = fake_client.models.last_call["contents"]
     assert "Mana exhaustion has 5 stages." in sent_prompt
     assert "power_system.md" in sent_prompt
+
+
+def test_run_parses_new_entity_when_present(monkeypatch):
+    monkeypatch.setattr(lore_checker, "query_lore", lambda **kwargs: [])
+    payload = {
+        "verdict": "FLAG",
+        "issues": [
+            {
+                "severity": "flag",
+                "quote": "the Ashgrave Concord assembled at dawn",
+                "rule": "no prior mention of the Ashgrave Concord",
+                "fix_instruction": "Confirm this faction is intentional new canon.",
+                "new_entity": {
+                    "name": "Ashgrave Concord",
+                    "target_bible": "world-bible.md",
+                    "proposed_text": "The Ashgrave Concord is a faction that assembles at dawn.",
+                },
+            }
+        ],
+    }
+    fake_client = _FakeClient(json.dumps(payload))
+
+    result = lore_checker.run(
+        chapter_text="The Ashgrave Concord assembled at dawn.",
+        saga=1, book_id="aethon", character_knowledge_states="", client=fake_client,
+    )
+
+    assert result.verdict == "FLAG"
+    issue = result.issues[0]
+    assert issue.new_entity == lore_checker.NewEntity(
+        name="Ashgrave Concord", target_bible="world-bible.md",
+        proposed_text="The Ashgrave Concord is a faction that assembles at dawn.",
+    )
+
+
+def test_run_parses_missing_new_entity_key_as_none(monkeypatch):
+    monkeypatch.setattr(lore_checker, "query_lore", lambda **kwargs: [])
+    payload = {
+        "verdict": "PASS",
+        "issues": [],
+    }
+    fake_client = _FakeClient(json.dumps(payload))
+
+    result = lore_checker.run(
+        chapter_text="Ordinary chapter text.",
+        saga=1, book_id="aethon", character_knowledge_states="", client=fake_client,
+    )
+
+    assert result.issues == []
+
+
+def test_run_parses_explicit_null_new_entity_as_none(monkeypatch):
+    monkeypatch.setattr(lore_checker, "query_lore", lambda **kwargs: [])
+    payload = {
+        "verdict": "FLAG",
+        "issues": [
+            {
+                "severity": "flag", "quote": "q",
+                "rule": "insufficient canon — propose or query author",
+                "fix_instruction": "fix", "new_entity": None,
+            }
+        ],
+    }
+    fake_client = _FakeClient(json.dumps(payload))
+
+    result = lore_checker.run(
+        chapter_text="text", saga=1, book_id="aethon", character_knowledge_states="",
+        client=fake_client,
+    )
+
+    assert result.issues[0].new_entity is None

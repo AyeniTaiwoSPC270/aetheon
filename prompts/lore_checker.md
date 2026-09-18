@@ -13,7 +13,10 @@ Output STRICT JSON only:
 {"verdict": "PASS" | "FLAG" | "CRITICAL",
  "issues": [{"severity": "flag|critical", "quote": "<exact offending text>",
    "rule": "<canon rule violated, cite chunk source>",
-   "fix_instruction": "<one-sentence revision instruction>"}]}
+   "fix_instruction": "<one-sentence revision instruction>",
+   "new_entity": null | {"name": "<entity name exactly as written>",
+     "target_bible": "<one filename from: character-bible.md, character-profiles.md, lore-glossary-bible.md, master-plan.md, power-system-bible.md, saga-1-bible-complete.md, saga-2-bible-complete.md, world-bible.md>",
+     "proposed_text": "<one or two sentence canon entry, suitable to append to the bible file as-is>"}}]}
 ```
 
 CRITICAL = violates HR-01..HR-11 or contradicts explicit canon.
@@ -21,6 +24,13 @@ FLAG = plausible but unverified new detail → becomes a canon proposal.
 Never flag style. Never invent canon absent from retrieved chunks.
 Insufficient chunks to judge → FLAG with rule "insufficient canon — propose
 or query author".
+
+Populate `new_entity` only on a FLAG issue where the flagged detail is a
+new named location, faction, race, spell, or event not present in the
+retrieved canon chunks (HR-06). Character names are handled separately
+(HR-01/HR-07) — never populate `new_entity` for a character name. Leave
+`new_entity` as `null` for every CRITICAL issue and every other FLAG
+(including "insufficient canon" flags).
 
 <!--
 Not yet wired to a live model call — see CLAUDE.md model routing table

@@ -20,11 +20,19 @@ MODEL = "gemini-flash-latest"
 
 
 @dataclass(frozen=True)
+class NewEntity:
+    name: str
+    target_bible: str
+    proposed_text: str
+
+
+@dataclass(frozen=True)
 class LoreIssue:
     severity: str
     quote: str
     rule: str
     fix_instruction: str
+    new_entity: NewEntity | None = None
 
 
 @dataclass
@@ -46,6 +54,18 @@ def _format_chunks(chunks: list[Chunk]) -> str:
     if not chunks:
         return "(no canon chunks retrieved)"
     return "\n\n".join(f"[{chunk.source}]\n{chunk.text}" for chunk in chunks)
+
+
+def _parse_issue(raw: dict[str, Any]) -> LoreIssue:
+    new_entity_raw = raw.get("new_entity")
+    new_entity = NewEntity(**new_entity_raw) if new_entity_raw else None
+    return LoreIssue(
+        severity=raw["severity"],
+        quote=raw["quote"],
+        rule=raw["rule"],
+        fix_instruction=raw["fix_instruction"],
+        new_entity=new_entity,
+    )
 
 
 def run(
@@ -72,5 +92,5 @@ def run(
     response_text = response.text
     assert response_text is not None, "Gemini returned an empty response"
     payload = json.loads(response_text)
-    issues = [LoreIssue(**issue) for issue in payload.get("issues", [])]
+    issues = [_parse_issue(issue) for issue in payload.get("issues", [])]
     return LoreCheckResult(verdict=payload["verdict"], issues=issues)
