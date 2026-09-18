@@ -215,8 +215,8 @@ def test_build_application_wires_all_new_handlers():
     application = bot.build_application("123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11")
 
     handlers = [h for group in application.handlers.values() for h in group]
-    # auth gate (-1) + status, chapter, book, skip, regen, callback query, pending-note = 8
-    assert len(handlers) == 8
+    # auth gate (-1) + status, chapter, book, skip, regen, query, callback query, pending-note = 9
+    assert len(handlers) == 9
 
 
 def test_auth_gate_still_runs_in_its_own_group_ahead_of_every_new_handler():
@@ -230,4 +230,49 @@ def test_auth_gate_still_runs_in_its_own_group_ahead_of_every_new_handler():
     assert list(application.handlers.keys()) == [-1, 0]
     assert len(application.handlers[-1]) == 1
     assert application.handlers[-1][0].callback is bot._auth_gate
-    assert len(application.handlers[0]) == 7
+    assert len(application.handlers[0]) == 8
+
+
+def test_query_command_replies_with_the_lore_query_result(monkeypatch, tmp_path):
+    config_path = tmp_path / "config.yaml"
+    config_path.write_text(
+        "current_saga: 2\ncurrent_arc: 1\nbackpressure_max_unapproved: 2\n"
+        "proposal_backlog_max: 5\nmax_revision_loops: 3\n",
+        encoding="utf-8",
+    )
+    captured = {}
+    replies = []
+
+    def fake_build_query_reply(question, saga, k=4):
+        captured["question"] = question
+        captured["saga"] = saga
+        return "🔍 Query result"
+
+    async def fake_reply_text(self, text, **kwargs):
+        replies.append(text)
+
+    from src.telegram import lore_query
+    monkeypatch.setattr(lore_query, "build_query_reply", fake_build_query_reply)
+    monkeypatch.setattr(Message, "reply_text", fake_reply_text)
+
+    asyncio.run(bot._query_command(
+        _command_update("/query Can Aldric use Circuit Threading?"),
+        _RecordingContext(["Can", "Aldric", "use", "Circuit", "Threading?"]),
+    ))
+
+    assert captured["question"] == "Can Aldric use Circuit Threading?"
+    assert captured["saga"] == 2
+    assert replies == ["🔍 Query result"]
+
+
+def test_query_command_without_a_question_shows_usage(monkeypatch, tmp_path):
+    replies = []
+
+    async def fake_reply_text(self, text, **kwargs):
+        replies.append(text)
+
+    monkeypatch.setattr(Message, "reply_text", fake_reply_text)
+
+    asyncio.run(bot._query_command(_command_update("/query"), _RecordingContext([])))
+
+    assert replies == ["Usage: /query <lore question>"]

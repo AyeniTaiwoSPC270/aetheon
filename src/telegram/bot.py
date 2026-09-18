@@ -21,10 +21,11 @@ from telegram.ext import (
     filters,
 )
 
-from src.telegram import actions, pdf_export, pending_action, proposals
+from src.telegram import actions, lore_query, pdf_export, pending_action, proposals
 from src.telegram.auth import is_authorized
 from src.telegram.pending_action import PendingAction
 from src.telegram.status import build_status_message
+from src.wrapper.config import load_config
 from src.wrapper.halts import SETTLED_STATUSES
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -146,6 +147,18 @@ async def _regen_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     await message.reply_text(f"Regenerating Ch.{chapter_number}...")
 
 
+async def _query_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    message = update.effective_message
+    if message is None:
+        return
+    if not context.args:
+        await message.reply_text("Usage: /query <lore question>")
+        return
+    question = " ".join(context.args)
+    saga = load_config(REPO_ROOT / "config.yaml").current_saga
+    await message.reply_text(lore_query.build_query_reply(question, saga))
+
+
 def _find_proposal(repo_root: Path, filename: str) -> proposals.Proposal | None:
     for proposal in proposals.list_pending(repo_root):
         if proposal.path.name == filename:
@@ -229,6 +242,7 @@ def build_application(token: str) -> Application[Any, Any, Any, Any, Any, Any]:
     application.add_handler(CommandHandler("book", _book_command))
     application.add_handler(CommandHandler("skip", _skip_command))
     application.add_handler(CommandHandler("regen", _regen_command))
+    application.add_handler(CommandHandler("query", _query_command))
     application.add_handler(CallbackQueryHandler(_callback_query_handler))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, _pending_note_handler))
     return application
