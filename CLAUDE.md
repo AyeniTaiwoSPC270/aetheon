@@ -240,8 +240,8 @@ npm i -g @actalk/inkos && ./scripts/inkos-gemini.sh doctor   # engine (see MODEL
 uv run python scripts/convert_bibles.py          # docx → vault/00-Bibles/*.md
 uv run python -m src.magic_index.embed           # (re)embed bibles
 uv run pytest tests/phase3/                      # a phase's test table
-uv run python -m src.wrapper.run --dry-run --chapter 14   # full pass, no delivery, writes to sandbox/
-uv run python -m src.wrapper.run --once          # one real pipeline pass
+uv run python -m src.wrapper.run --dry-run       # full pass, skips git snapshot/rollback (see wrapper spec)
+uv run python -m src.wrapper.run --once          # one real pipeline pass (run_once() always drafts "whatever's next" -- there's no --chapter flag)
 ./scripts/inkos-gemini.sh up                     # daemon (go-live only, after Gauntlet)
 ```
 

@@ -4,8 +4,10 @@ no business logic of its own, only sequencing calls into the other
 src/wrapper modules and src/checks."""
 from __future__ import annotations
 
+import argparse
 import json
 import subprocess
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, cast
@@ -165,3 +167,34 @@ def run_once(
             snapshot.rollback(repo_root, snap_hash, [f"books/{book_id}/", "vault/"])
         log.log_event(log_path, {"event": "exception", "error": str(exc)})
         raise
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Run one pass of the Aethon wrapper pipeline.")
+    parser.add_argument("--book-id", default="aethon", help="Book ID (default: aethon)")
+    parser.add_argument(
+        "--dry-run", action="store_true",
+        help="Skip the git snapshot/rollback; halt checks still run for real",
+    )
+    parser.add_argument(
+        "--once", action="store_true",
+        help="No-op flag for compatibility with cron/daemon invocations -- run_once() always runs exactly once",
+    )
+    args = parser.parse_args(argv)
+
+    result = run_once(args.book_id, dry_run=args.dry_run)
+
+    if result.halted:
+        print(f"Halted: {result.halt_reason}")
+        return 1
+
+    print(f"Chapter {result.chapter_number} delivered (revision loops: {result.revision_loops})")
+    if result.needs_author_eyes:
+        print("NEEDS AUTHOR EYES -- revision loop exhausted without a clean pass")
+        return 2
+
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
