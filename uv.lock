@@ -17,6 +17,7 @@ dependencies = [
     { name = "chromadb" },
     { name = "python-dotenv" },
     { name = "python-telegram-bot" },
+    { name = "pyyaml" },
     { name = "sentence-transformers" },
     { name = "watchdog" },
 ]
@@ -33,6 +34,7 @@ requires-dist = [
     { name = "chromadb", specifier = ">=0.5" },
     { name = "python-dotenv", specifier = ">=1.0" },
     { name = "python-telegram-bot", specifier = ">=21.0" },
+    { name = "pyyaml", specifier = ">=6.0" },
     { name = "sentence-transformers", specifier = ">=3.0" },
     { name = "watchdog", specifier = ">=4.0" },
 ]

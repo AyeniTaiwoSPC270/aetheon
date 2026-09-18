@@ -1,0 +1,10 @@
+# Phase 6 wrapper config (docs/superpowers/specs/2026-09-01-phase6-wrapper-core-design.md,
+# decision 8). No InkOS-native saga/arc tracker exists -- bump these two by
+# hand at each saga/arc boundary, there is no auto-detection.
+current_saga: 1
+current_arc: 1
+
+# Halt/loop thresholds (same spec, decisions 2 and 4).
+backpressure_max_unapproved: 2
+proposal_backlog_max: 5
+max_revision_loops: 3
