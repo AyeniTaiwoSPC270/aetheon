@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 from telegram import CallbackQuery, Chat, InputFile, Message, Update, User
 
-from src.telegram import actions, bot, pending_action, proposals
+from src.telegram import actions, bot, pending_action
 from src.telegram.pending_action import PendingAction
 
 CHAT_ID = 123456789

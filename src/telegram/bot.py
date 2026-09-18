@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
-from telegram import InputFile, Update
+from telegram import InputFile, Message, Update
 from telegram.ext import (
     Application,
     ApplicationHandlerStop,
@@ -184,7 +184,7 @@ async def _callback_query_handler(update: Update, context: ContextTypes.DEFAULT_
             int(target), entry["title"], text_path.read_text(encoding="utf-8")
         )
         message = query.message
-        if message is not None:
+        if isinstance(message, Message):
             await message.reply_document(document=InputFile(pdf_bytes, filename=f"ch{target}.pdf"))
     elif action == "approve_proposal":
         proposal = _find_proposal(REPO_ROOT, target)
