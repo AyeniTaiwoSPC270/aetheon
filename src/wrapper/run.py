@@ -8,6 +8,7 @@ import json
 import subprocess
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any, cast
 
 from src.checks import hard_rules, lore_checker
 from src.wrapper import chapter_log, halts, log, snapshot
@@ -26,13 +27,13 @@ class RunResult:
     revision_loops: int = 0
 
 
-def _read_json(path: Path) -> object:
+def _read_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
 def _current_chapter_number(repo_root: Path, book_id: str) -> int:
-    entries = _read_json(repo_root / "books" / book_id / "chapters" / "index.json")
-    return max(entry["number"] for entry in entries)  # type: ignore[union-attr,arg-type]
+    entries: list[dict[str, Any]] = _read_json(repo_root / "books" / book_id / "chapters" / "index.json")
+    return int(max(entry["number"] for entry in entries))
 
 
 def _chapter_text(repo_root: Path, book_id: str, chapter_number: int) -> str:
@@ -64,10 +65,10 @@ def _revise(repo_root: Path, book_id: str, chapter_number: int, brief: str) -> N
     subprocess.run(cmd, cwd=repo_root, check=True)
 
 
-def _audit(repo_root: Path, book_id: str, chapter_number: int) -> dict:
+def _audit(repo_root: Path, book_id: str, chapter_number: int) -> dict[str, Any]:
     cmd = [str(repo_root / "scripts" / "inkos-gemini.sh"), "audit", book_id, str(chapter_number), "--json"]
     result = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True, check=True)
-    return json.loads(result.stdout)  # type: ignore[no-any-return]
+    return cast(dict[str, Any], json.loads(result.stdout))
 
 
 def run_once(
@@ -87,7 +88,7 @@ def run_once(
 
     try:
         book = _read_json(repo_root / "books" / book_id / "book.json")
-        _draft(repo_root, book_id, book["chapterWordCount"])  # type: ignore[index]
+        _draft(repo_root, book_id, int(book["chapterWordCount"]))
         chapter_number = _current_chapter_number(repo_root, book_id)
         log.log_event(log_path, {"event": "draft", "chapter": chapter_number})
 

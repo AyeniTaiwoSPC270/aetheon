@@ -69,13 +69,13 @@ def check_clean_tree(repo_root: Path, book_id: str) -> HaltReason | None:
 
 
 def check_all(repo_root: Path, book_id: str, config: WrapperConfig) -> HaltReason | None:
-    for check in (
-        lambda: check_backpressure(repo_root, book_id, config),
-        lambda: check_proposal_backlog(repo_root, config),
-        lambda: check_author_notes(repo_root, config),
-        lambda: check_clean_tree(repo_root, book_id),
-    ):
-        reason = check()
-        if reason is not None:
-            return reason
-    return None
+    backpressure = check_backpressure(repo_root, book_id, config)
+    if backpressure is not None:
+        return backpressure
+    proposal_backlog = check_proposal_backlog(repo_root, config)
+    if proposal_backlog is not None:
+        return proposal_backlog
+    author_notes = check_author_notes(repo_root, config)
+    if author_notes is not None:
+        return author_notes
+    return check_clean_tree(repo_root, book_id)

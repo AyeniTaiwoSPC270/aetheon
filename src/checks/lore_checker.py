@@ -69,6 +69,8 @@ def run(
     )
     client = client or genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     response = client.models.generate_content(model=MODEL, contents=full_prompt)
-    payload = json.loads(response.text)
+    response_text = response.text
+    assert response_text is not None, "Gemini returned an empty response"
+    payload = json.loads(response_text)
     issues = [LoreIssue(**issue) for issue in payload.get("issues", [])]
     return LoreCheckResult(verdict=payload["verdict"], issues=issues)
