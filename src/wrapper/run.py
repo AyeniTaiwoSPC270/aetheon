@@ -12,7 +12,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, cast
 
-from src.checks import hard_rules, lore_checker
+from src.checks import canon_proposals, hard_rules, lore_checker
 from src.wrapper import chapter_log, halts, log, snapshot
 from src.wrapper.config import load_config
 
@@ -94,7 +94,7 @@ def run_once(
         chapter_number = _current_chapter_number(repo_root, book_id)
         log.log_event(log_path, {"event": "draft", "chapter": chapter_number})
 
-        new_canon_items: list[str] = []
+        latest_lore_result: lore_checker.LoreCheckResult | None = None
         revision_loops = 0
         needs_author_eyes = True
 
@@ -120,8 +120,8 @@ def run_once(
                     chapter_text=chapter_text, saga=config.current_saga, book_id=book_id,
                     character_knowledge_states=knowledge,
                 )
+                latest_lore_result = lore_result
                 log.log_event(log_path, {"event": "lore_checker", "loop": loop_index, "verdict": lore_result.verdict})
-                new_canon_items.extend(i.rule for i in lore_result.issues if i.severity == "flag")
                 if lore_result.verdict == "CRITICAL":
                     brief = "; ".join(i.fix_instruction for i in lore_result.issues if i.severity == "critical")
                     _revise(repo_root, book_id, chapter_number, brief)
@@ -142,6 +142,25 @@ def run_once(
             if not critical_found:
                 needs_author_eyes = False
                 break
+
+        new_canon_items: list[str] = []
+        if latest_lore_result is not None:
+            for issue in latest_lore_result.issues:
+                if issue.severity != "flag":
+                    continue
+                new_canon_items.append(issue.rule)
+                if issue.new_entity is not None:
+                    proposal_path = canon_proposals.write_proposal(
+                        repo_root, chapter_number, issue.new_entity, flagged_by="lore_checker"
+                    )
+                    log.log_event(
+                        log_path,
+                        {
+                            "event": "canon_proposal",
+                            "entity": issue.new_entity.name,
+                            "written": proposal_path is not None,
+                        },
+                    )
 
         chapter_text = _chapter_text(repo_root, book_id, chapter_number)
         log_entry = chapter_log.build(

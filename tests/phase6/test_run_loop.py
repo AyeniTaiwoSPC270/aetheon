@@ -201,3 +201,88 @@ def test_run_once_rolls_back_on_exception(tmp_path, monkeypatch):
         run_module.run_once(book_id="testbook", repo_root=repo_root)
 
     assert rollback_calls == [("deadbeef", ["books/testbook/", "vault/"])]
+
+
+def test_run_once_does_not_write_a_proposal_from_a_superseded_iteration(tmp_path, monkeypatch):
+    repo_root = _build_fixture_repo(tmp_path)
+    draft_calls: list = []
+    revise_calls: list = []
+    _patch_common(monkeypatch, repo_root, "testbook", draft_calls, revise_calls)
+    monkeypatch.setattr(
+        hard_rules, "check_chapter",
+        lambda text, saga: hard_rules.CheckResult(verdict="PASS", issues=[]),
+    )
+
+    ghost_choir = lore_checker.NewEntity(
+        name="Ghost Choir", target_bible="world-bible.md", proposed_text="A spectral choir.",
+    )
+    lore_call_count = {"n": 0}
+
+    def fake_lore_run(chapter_text, saga, book_id, character_knowledge_states, client=None):
+        lore_call_count["n"] += 1
+        if lore_call_count["n"] == 1:
+            return lore_checker.LoreCheckResult(
+                verdict="FLAG",
+                issues=[lore_checker.LoreIssue(
+                    severity="flag", quote="the Ghost Choir sang", rule="no prior mention",
+                    fix_instruction="confirm intentional", new_entity=ghost_choir,
+                )],
+            )
+        return lore_checker.LoreCheckResult(verdict="PASS", issues=[])
+
+    monkeypatch.setattr(lore_checker, "run", fake_lore_run)
+
+    audit_call_count = {"n": 0}
+
+    def fake_audit(rr, bid, chapter_number):
+        audit_call_count["n"] += 1
+        if audit_call_count["n"] == 1:
+            return {"issues": [{"severity": "critical", "description": "pacing issue"}]}
+        return {"issues": []}
+
+    monkeypatch.setattr(run_module, "_audit", fake_audit)
+
+    result = run_module.run_once(book_id="testbook", repo_root=repo_root)
+
+    assert result.revision_loops == 1
+    assert result.delivered is True
+    proposals_dir = repo_root / "vault" / "04-Proposals"
+    assert list(proposals_dir.glob("*.md")) == []
+    log_entry = (repo_root / "sandbox" / "chapter_logs" / "ch2.md").read_text(encoding="utf-8")
+    assert "Ghost Choir" not in log_entry
+    assert "New canon introduced: NONE" in log_entry
+
+
+def test_run_once_writes_a_proposal_from_the_final_lore_result(tmp_path, monkeypatch):
+    repo_root = _build_fixture_repo(tmp_path)
+    draft_calls: list = []
+    revise_calls: list = []
+    _patch_common(monkeypatch, repo_root, "testbook", draft_calls, revise_calls)
+    monkeypatch.setattr(
+        hard_rules, "check_chapter",
+        lambda text, saga: hard_rules.CheckResult(verdict="PASS", issues=[]),
+    )
+
+    ashgrave = lore_checker.NewEntity(
+        name="Ashgrave Concord", target_bible="world-bible.md",
+        proposed_text="A faction that assembles at dawn.",
+    )
+    monkeypatch.setattr(
+        lore_checker, "run",
+        lambda chapter_text, saga, book_id, character_knowledge_states, client=None:
+            lore_checker.LoreCheckResult(
+                verdict="FLAG",
+                issues=[lore_checker.LoreIssue(
+                    severity="flag", quote="q", rule="no prior mention",
+                    fix_instruction="confirm", new_entity=ashgrave,
+                )],
+            ),
+    )
+
+    result = run_module.run_once(book_id="testbook", repo_root=repo_root)
+
+    assert result.delivered is True
+    proposals_dir = repo_root / "vault" / "04-Proposals"
+    written = list(proposals_dir.glob("*.md"))
+    assert len(written) == 1
+    assert written[0].name == "ch2-ashgrave-concord.md"
