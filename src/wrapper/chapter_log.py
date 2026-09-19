@@ -12,7 +12,7 @@ from src.wrapper.config import WrapperConfig
 POV_MARKER_RE = re.compile(r"^—\s*\[?([A-Za-z][\w' ]*?)\]?\s*—\s*$", re.MULTILINE)
 
 
-def _parse_row(summaries_text: str, chapter_number: int) -> dict[str, str]:
+def parse_row(summaries_text: str, chapter_number: int) -> dict[str, str]:
     for line in summaries_text.splitlines():
         line = line.strip()
         if not line.startswith("|"):
@@ -30,12 +30,17 @@ def _parse_row(summaries_text: str, chapter_number: int) -> dict[str, str]:
     raise ValueError(f"chapter {chapter_number} not found in chapter_summaries.md")
 
 
-def _pov_names(chapter_text: str, characters_column: str) -> str:
+def pov_names_list(chapter_text: str) -> list[str]:
     names: list[str] = []
     for match in POV_MARKER_RE.finditer(chapter_text):
         name = match.group(1).strip()
         if name not in names:
             names.append(name)
+    return names
+
+
+def _pov_names(chapter_text: str, characters_column: str) -> str:
+    names = pov_names_list(chapter_text)
     if names:
         return ", ".join(names)
     return characters_column.split(",")[0].strip()
@@ -50,7 +55,7 @@ def build(
     new_canon_items: list[str],
 ) -> str:
     summaries_path = repo_root / "books" / book_id / "story" / "chapter_summaries.md"
-    row = _parse_row(summaries_path.read_text(encoding="utf-8"), chapter_number)
+    row = parse_row(summaries_path.read_text(encoding="utf-8"), chapter_number)
     pov = _pov_names(chapter_text, row["characters"])
     new_canon = "; ".join(new_canon_items) if new_canon_items else "NONE"
     return (
