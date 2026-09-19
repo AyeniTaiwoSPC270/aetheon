@@ -416,6 +416,8 @@ def sync_chapter(
     chapter_path = chapters_dir / f"chapter-{chapter_number:02d}.md"
     chapter_path.write_text(f"---\n{frontmatter}---\n\n{chapter_text}", encoding="utf-8")
 
+    paths_to_add = ["vault/02-Chapters"]
+
     log_source = repo_root / "sandbox" / "chapter_logs" / f"ch{chapter_number}.md"
     if log_source.exists():
         log_dest_dir = repo_root / "vault" / "03-State" / "chapter-logs"
@@ -423,13 +425,23 @@ def sync_chapter(
         (log_dest_dir / f"ch{chapter_number}.md").write_text(
             log_source.read_text(encoding="utf-8"), encoding="utf-8"
         )
+        paths_to_add.append("vault/03-State")
 
-    subprocess.run(["git", "add", "vault/02-Chapters", "vault/03-State"], cwd=repo_root, check=True)
+    subprocess.run(["git", "add", *paths_to_add], cwd=repo_root, check=True)
     subprocess.run(
         ["git", "commit", "-m", f"vault sync: approve Ch.{chapter_number}"],
         cwd=repo_root, check=True,
     )
 ```
+
+**Found during implementation (Task 2 execution):** `git add vault/02-Chapters
+vault/03-State` unconditionally fails with `fatal: pathspec 'vault/03-State'
+did not match any files` when the Chapter Log copy was skipped (missing
+source) and `vault/03-State` was never created in that run — real repos
+already have `vault/03-State` populated with the legacy files so this
+only bit the test fixture's fresh empty vault, but the fix (only add a
+path that was actually written to) is correct in both cases and is what's
+shown above.
 
 - [ ] **Step 4: Run tests to verify they pass**
 
