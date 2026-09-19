@@ -5,14 +5,19 @@ src/wrapper modules and src/checks."""
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
+import os
 import subprocess
 import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, cast
 
+from telegram import Bot
+
 from src.checks import canon_proposals, hard_rules, lore_checker
+from src.telegram.delivery import notify_delivery
 from src.wrapper import chapter_log, halts, log, snapshot
 from src.wrapper.config import load_config
 
@@ -188,6 +193,19 @@ def run_once(
         raise
 
 
+async def _notify_result(result: RunResult, book_id: str, repo_root: Path) -> None:
+    token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    if not token or not chat_id:
+        print("Telegram not configured (TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID missing) -- skipping notification.")
+        return
+    async with Bot(token) as bot:
+        if result.halted:
+            await bot.send_message(chat_id=int(chat_id), text=f"⏸️ Halted: {result.halt_reason}")
+        else:
+            await notify_delivery(bot, int(chat_id), result, book_id, repo_root)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Run one pass of the Aethon wrapper pipeline.")
     parser.add_argument("--book-id", default="aethon", help="Book ID (default: aethon)")
@@ -202,6 +220,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     result = run_once(args.book_id, dry_run=args.dry_run)
+
+    if not args.dry_run:
+        asyncio.run(_notify_result(result, args.book_id, REPO_ROOT))
 
     if result.halted:
         print(f"Halted: {result.halt_reason}")
