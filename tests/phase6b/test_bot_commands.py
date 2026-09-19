@@ -152,6 +152,14 @@ def test_approve_chapter_callback_calls_actions_approve(monkeypatch, tmp_path):
     monkeypatch.setattr(CallbackQuery, "edit_message_text", fake_edit)
     monkeypatch.setattr(actions, "approve_chapter", lambda repo_root, book_id, chapter: called.append(chapter))
 
+    from src.wrapper import vault_sync
+    monkeypatch.setattr(vault_sync, "sync_chapter", lambda repo_root, book_id, chapter, config: None)
+    (tmp_path / "config.yaml").write_text(
+        "current_saga: 1\ncurrent_arc: 1\nbackpressure_max_unapproved: 2\n"
+        "proposal_backlog_max: 5\nmax_revision_loops: 3\n",
+        encoding="utf-8",
+    )
+
     asyncio.run(bot._callback_query_handler(_callback_update("approve_chapter:14"), _RecordingContext([])))
 
     assert called == [14]
@@ -276,3 +284,32 @@ def test_query_command_without_a_question_shows_usage(monkeypatch, tmp_path):
     asyncio.run(bot._query_command(_command_update("/query"), _RecordingContext([])))
 
     assert replies == ["Usage: /query <lore question>"]
+
+
+def test_approve_chapter_callback_also_syncs_to_vault(monkeypatch, tmp_path):
+    (tmp_path / "config.yaml").write_text(
+        "current_saga: 1\ncurrent_arc: 1\nbackpressure_max_unapproved: 2\n"
+        "proposal_backlog_max: 5\nmax_revision_loops: 3\n",
+        encoding="utf-8",
+    )
+    called = []
+
+    async def fake_answer(self, **kwargs):
+        pass
+
+    async def fake_edit(self, text, **kwargs):
+        pass
+
+    monkeypatch.setattr(CallbackQuery, "answer", fake_answer)
+    monkeypatch.setattr(CallbackQuery, "edit_message_text", fake_edit)
+    monkeypatch.setattr(actions, "approve_chapter", lambda repo_root, book_id, chapter: None)
+
+    from src.wrapper import vault_sync
+    monkeypatch.setattr(
+        vault_sync, "sync_chapter",
+        lambda repo_root, book_id, chapter, config: called.append((book_id, chapter, config.current_saga)),
+    )
+
+    asyncio.run(bot._callback_query_handler(_callback_update("approve_chapter:14"), _RecordingContext([])))
+
+    assert called == [("aethon", 14, 1)]

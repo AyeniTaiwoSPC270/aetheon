@@ -533,6 +533,16 @@ to:
 Run: `uv run pytest tests/phase6b/test_bot_commands.py -v`
 Expected: PASS (all cases, including the new one, green)
 
+**Found during implementation:** the pre-existing
+`test_approve_chapter_callback_calls_actions_approve` (sub-project 3, built
+before vault sync existed) broke — it never wrote a `config.yaml` fixture,
+and the callback branch now calls `load_config(REPO_ROOT / "config.yaml")`
+unconditionally. Fixed narrowly: that test now also mocks
+`vault_sync.sync_chapter` as a no-op (staying out of scope for a test whose
+job is only "confirm `actions.approve_chapter` gets called") and adds a
+minimal `config.yaml` to its fixture (required since `load_config` itself
+is not mocked).
+
 - [ ] **Step 5: Commit**
 
 ```bash

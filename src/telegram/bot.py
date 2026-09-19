@@ -25,6 +25,7 @@ from src.telegram import actions, lore_query, pdf_export, pending_action, propos
 from src.telegram.auth import is_authorized
 from src.telegram.pending_action import PendingAction
 from src.telegram.status import build_status_message
+from src.wrapper import vault_sync
 from src.wrapper.config import load_config
 from src.wrapper.halts import SETTLED_STATUSES
 
@@ -175,6 +176,8 @@ async def _callback_query_handler(update: Update, context: ContextTypes.DEFAULT_
 
     if action == "approve_chapter":
         actions.approve_chapter(REPO_ROOT, BOOK_ID, int(target))
+        config = load_config(REPO_ROOT / "config.yaml")
+        vault_sync.sync_chapter(REPO_ROOT, BOOK_ID, int(target), config)
         await query.edit_message_text(f"Approved Ch.{target}.")
     elif action == "revise_chapter":
         pending_action.set_pending(
