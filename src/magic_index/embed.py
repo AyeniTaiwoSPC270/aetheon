@@ -94,3 +94,10 @@ def embed_all_bibles(client: ClientAPI | None = None) -> dict[str, int]:
     for path in sorted(VAULT_BIBLES_DIR.glob("*.md")):
         counts[path.stem] = embed_bible_file(path, client)
     return counts
+
+
+if __name__ == "__main__":
+    counts = embed_all_bibles()
+    for stem, count in sorted(counts.items()):
+        print(f"{stem} {count}")
+    print(f"TOTAL {sum(counts.values())}")

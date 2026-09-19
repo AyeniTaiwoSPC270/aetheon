@@ -25,7 +25,7 @@ Everything after is the consequence of that break.
 | Arc 1   | The Village Years        | WRITTEN    | Ch. 1–5      |
 | Arc 2   | The Incident             | WRITTEN    | Ch. 6–7      |
 | Arc 3   | The Academy Application  | WRITTEN    | Ch. 8–9      |
-| Arc 4   | Early Academy Adjustment | TO WRITE   | Ch. 10–22    |
+| Arc 4   | Early Academy Adjustment | IN PROGRESS (Ch. 10–13 WRITTEN) | Ch. 10–22    |
 | Arc 5   | Escalating Conflict      | TO WRITE   | Ch. 23–36    |
 | Arc 6   | The Grand Tournament     | TO WRITE   | Ch. 37–48    |
 | Arc 7   | The Tamer                | TO WRITE   | Ch. 49–55    |
@@ -67,7 +67,14 @@ Everything after is the consequence of that break.
 
 **ARC 4 — EARLY ACADEMY ADJUSTMENT**
 
-**Chapters 10–22 \| TO WRITE**
+**Chapters 10–22 \| Ch. 10–13 WRITTEN, Ch. 14–22 TO WRITE**
+
+> *Sync correction (PROJECT_AUDIT.docx, 2026-09-18): this status line
+> previously marked the full arc TO WRITE. Ch. 10–13 exist as written,
+> canonized chapters in `books/aethon/chapters/` — titles and content
+> match the table below exactly, no prose-vs-bible drift found for these
+> four. The Chapter Log (`vault/03-State/chapter-log.md`) has been
+> back-filled for Ch. 10–13 to match.*
 
 **Arc Function:** Aldric arrives at Greyveil and learns what kind of
 place it is. The social order is established on day one. First
@@ -299,4 +306,5 @@ Functional and atmospheric.*
 **SAGA 1 BIBLE — COMPLETE**
 
 55 Chapters \| 7 Arcs \| 44 Characters \| Next chapter to write: Chapter
-10
+14 *(corrected 2026-09-18 — Ch. 10–13 are written; see Arc 4 status
+above)*

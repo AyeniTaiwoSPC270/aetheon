@@ -232,6 +232,13 @@ story roles will be documented in the Power System Bible.
 **SAGA 2 — THE WORLD BEYOND THE WALLS***(Working Title: "When Kingdoms
 Speak")*
 
+> *Full chapter-by-chapter breakdown now exists:
+> `vault/00-Bibles/saga-2-bible-complete.md` (46 chapters, 4 arcs,
+> merged from SAGA_2_BIBLE.docx). It supersedes the arc summary below
+> for planning/writing purposes, the same way the Saga 1 Bible supersedes
+> this section's original Saga 1 summary. The summary below is still
+> broadly accurate as a one-paragraph pitch.*
+
 **Arcs:** 4–5 Arcs
 
 **Estimated Chapters:** 40–55

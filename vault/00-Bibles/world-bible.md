@@ -170,11 +170,40 @@ see what he did / I felt it from here / that was not anything I've seen
 from a trained mage. Unease: what is he / does anyone know / does Maren
 know what she took in. Both in earshot of Aldric. Both filed.
 
-**The Sword School — Ironmark:** Located in a mid-sized city on
-Valdenmere's eastern border. Officially a military academy focused on
-non-magical combat arts. Less prestigious than Greyveil in social terms
-— but among sword practitioners, its reputation is absolute. Grevan Tusk
-has taught here for twenty years.
+**The Sword School — Ironmark / Forgehall:** Ironmark is the city name.
+**Forgehall** is the institution itself, formerly referred to only
+generically — new canon per NEW_CANON_DOC_2.docx. Its name is drawn
+directly from the Dual Path religion's two sacred forces: the Forge
+(sword/physical) and the Current (magic/knowledge) — Greyveil teaches
+the Current, Forgehall teaches the Forge. A formal branch of
+Valdenmere's armed forces — state/military-controlled, not an
+independent guild, owned by the kingdom. **Access:** Humans only — no
+demi-human or goblin admission, consistent with the kingdom's broader
+treatment of those groups elsewhere. **Culture:** Brutal,
+survival-of-the-fittest, high washout rates, no coddling — the sharpest
+possible contrast to Greyveil's formal, curriculum-driven culture.
+**Admission:** Open to anyone regardless of class, same principle as
+Greyveil. Entry requires clearing both a brutal physical/combat trial
+and a formal Ki aptitude assessment (see Power System Bible). No fixed
+entry age — students arrive at very different points in life, which
+makes Daran's arrival at roughly 15 unremarkable in-world despite
+reading as a late start against the academy's fixed entry age. Women:
+technically equal footing, culturally rare. **Career path after
+graduating:** No single track — Sword Units (military), bodyguard work,
+freelance mercenary contracts, or staying on as an instructor. Higher
+Blade Titles open more doors. **Physical character:** Functional
+military bones — barracks, drilling yards, severity — broken up by a
+small number of sacred spaces, most significantly a dedicated
+shrine/vault where the legendary weapon Duskmere is formally kept and
+honored (see Power System Bible, Section XI), tied to Grevan Tusk's role
+as its keeper before Daran takes it by killing him (see Character
+Bible). **Relationship to Greyveil:** Formal and respectful, grounded in
+the 350-year-old Obsidian Compact — occasional joint ceremonies or
+exchanges. **Dueling culture:** Informal only — no official ranking
+ladder; status is earned through reputation. Grevan Tusk has taught here
+for twenty years, alongside new-canon faculty Instructor Kaelin Vosk
+(Weapons & Conditioning) and Master-at-Arms Yorin Bracken (Tactics &
+Formation Combat) — see Character Bible.
 
 Assessment process — preliminary review: A preliminary mana assessment
 can be requested before the formal academy exam. Reviews are conducted
@@ -186,6 +215,10 @@ instruments. Results are not issued on the day — preliminary reviews
 feed into the formal exam process only. Formal exam correspondence
 arrives through the kingdom channel six to eight weeks after the
 preliminary review, delivered to the applicant's registered address
+
+**Wrenhollow:** New location, Saga 2 Arc 1 (NEW_CANON.docx Section A).
+Neutral border town used for the Silverwood Accord summit — the site of
+the Saga 2 sabotage (see Political Structure, above).
 
 **The Noble Quarter:** Within Valdris Prime. Old families, old money,
 old grudges. The corrupt noble thread of the story runs through here.
@@ -208,7 +241,51 @@ used and stored rather than maintained for appearance.
 - The Noble Council advises the king. Fifteen seats, held by the oldest
   noble families. Deeply resistant to any change that threatens their
   position. The faction's corruption runs through at least four of these
-  seats by Saga 3.
+  seats by Saga 3, confirmed active from Saga 2 onward.
+
+**Noble Council — named seats, new canon (NEW_CANON.docx Section A):**
+
+  - **House Veyra** — "Lord Cassian Veyra." Southern river trade wealth.
+    Chief negotiator for the Silverwood Accord summit. The real Veyra is
+    dead — this seat is held by Reyus Kade (Unbound Core, Phasite 6) in
+    disguise. See Section V and Character Bible.
+
+  - **House Halvon** — Lord Berrin Halvon (Crest Halvon's father).
+    Traditionalist hawk; opposes elven/demi-human concessions on
+    principle.
+
+  - **House Croft** — Lady Isolde Croft (Nessa Croft's mother).
+    Pragmatic centrist; votes with the prevailing power.
+
+  - **House Thane** — Lord Edmund Thane (new). Reformist minority voice;
+    genuinely invested in the treaty succeeding.
+
+**The Silverwood Accord & Saga 2 sabotage — new canon:** The Silverwood
+Accord renewal is a periodic, scheduled treaty cycle, not a sudden
+crisis. Over the year prior to Saga 2, Kade (as "Veyra") used his
+Council position to push a demi-human land reassignment clause into the
+renewal draft, manufacturing a flashpoint unconnected to the Ashford
+incident from Saga 1 — the timing is coincidental. During a negotiation
+recess at Wrenhollow (see Key Locations, below), "Veyra" pays an outside
+agitator — who does not know who is really funding him — to stage a
+break-in near the treaty hall, timed to plant a weapon in the area
+assigned to Kael Rowan's envoy party. The "breach" is framed as an
+assassination attempt on Veyra himself; security traces it to
+demi-human sympathizers before a proper investigation can occur. Result:
+Kael Rowan and the demi-human settlement are publicly discredited,
+Ambassador Thess loses faith in Valdenmere (the breach happened on the
+host kingdom's watch), and Veyra emerges looking like a victim and a
+hero. The King does not attend the summit and receives reports only; he
+privately orders a quiet Council review that proves politically
+toothless since Kade has partial visibility into how it's run.
+**Magistrate Aldous Fenn** is assigned to investigate. "Veyra" meets
+with him privately — cooperative, composed, subtly steering the
+investigation from inside it. Paladin Ysen Arral oversees Wrenhollow
+summit security — she handles the physical incident competently, and
+her own private read of the incident starts diverging from the official
+account, though the records/investigation manipulation afterward is not
+a failure on her part. See `vault/00-Bibles/saga-2-bible-complete.md`
+Arc 2, Ch. 14–15.
 
 - The Mage Assembly is a secondary political body — elected by ranked
   mages of B class and above. It has advisory power only, but its
@@ -428,6 +505,17 @@ believe the elven response to centuries of encroachment should be active
 resistance. Elyn belongs to none of these factions, which is why the
 council sent her — she is unaligned and therefore deniable.
 
+**Elven leadership, new canon (NEW_CANON.docx Section A):** **Queen
+Aelira Duskwane** rules the elven homeland — the authority Ambassador
+Thess answers to. **Princess Sae Duskwane**, her daughter, is
+established as a figure who will play a part later in the series — role
+deliberately undefined beyond that. **Ambassador Ilvane Thess** —
+Integrationist, leads the Silverwood Accord delegation at Wrenhollow;
+the Saga 2 summit's collapse is a personal blow to a position she has
+staked her career on, seeding her hardening toward Hawk sympathies
+across Saga 2–3. **Consul Vaeth Ironroot** — Hawk-faction elder; publicly
+breaks with Thess's Integrationist approach after the summit collapses.
+
 **Story Role:** A third power that has been observing. Their entry into
 the war in Saga 7 changes the balance — but their motives are never
 simple.
@@ -467,6 +555,16 @@ option that denying him became politically costly.
 in Saga 6. Their entry into the coalition in Saga 7 is on their terms —
 they are not joining the human cause, they are fighting for what comes
 after.
+
+**Eastern Valdris leadership, new canon (NEW_CANON.docx Section A):**
+**Kael Rowan** — avian demi-human elder-envoy, eastern Valdris territory
+(community connected to Pell's and Cael's families, see Character
+Bible). Represents the settlement whose land is reassigned in the Saga 2
+sabotage; present at Wrenhollow without a formal seat, and the summit's
+scapegoat (see Political Structure, above). **Warden Brask Emberclaw** —
+current strongest leader of the broader eastern Valdris demi-human
+region ("strongest leads the pack" — no formal government). Not directly
+at Wrenhollow, but the authority Kael answers to informally.
 
 **GOBLINS** *— The wound at the centre of the world*
 
@@ -555,6 +653,19 @@ is not anger as humans understand it. It is correction.
 Saga 6. One speaks a single line in Saga 8. The thread they leave open
 is deliberate — their story continues beyond the novel's ending.
 
+**THE 7 GREAT POWERS** *— new canon, NEW_CANON.docx Section D*
+
+A historical group, in the deep past (First Age, proposed placement —
+pending confirmation), that sealed the Calamity Vherith, the Hollow King
+(see Power System Bible, Section X, and Lore & Glossary Bible), each
+wielding one of the 7 legendary weapons (see Power System Bible, Section
+XI) to do it. They no longer exist today; their nature and disappearance
+are open threads.
+
+> *OPEN: what the 7 Great Powers actually were — a coalition of races,
+> an order of pre-Phasite champions, or something else — and why none
+> exist today. Do not resolve without author instruction.*
+
 **OTHER RACES OF AETHON**
 
 Aethon contains other sentient species beyond those documented above —
@@ -602,9 +713,25 @@ Saga 7 is the most visible example.
 
 ## **Structure**
 
-**The Core — The Five:** Varek and four lieutenants who know the full
-plan. Their identities are revealed progressively from Saga 4 through
-Saga 6.
+**The Core — Varek + 6, new canon:** Previously "The Five" (Varek + 4).
+Expanded by author instruction to Varek plus six named lieutenants:
+Dessa Rho, Kordas, Vampirica, Halden Corr, Reyus Kade, and Oren Vask.
+Only Kade knows Varek's full plan — the others believe in the cause
+without knowing its totality. None of the seven are revealed on-page as
+Unbound members in Saga 2. Full profiles: Character Bible. Abilities:
+Power System Bible, Section IX. Their identities are revealed
+progressively from Saga 4 through Saga 6.
+
+**Why the Phasites exist, new canon:** Varek's research revealed the 11
+Phasites were created specifically to combat the Calamities — a
+parallel, fixed-at-3 classification of world-threatening entities — should
+any go rogue. See Power System Bible, Section X, and Lore & Glossary
+Bible. This directly answers the series' planted mystery of what the
+Phasites are "a response to," and reframes the Phasite Silence as a
+period with no rising Calamity threat.
+
+**Reyus Kade's infiltration:** Embedded as "Lord Cassian Veyra" on the
+Noble Council since before Saga 2 — see Political Structure, above.
 
 **The Informed:** Mid-level operatives who know they serve the Unbound
 and broadly understand the goals. They are committed ideologically.
@@ -677,8 +804,8 @@ and become liabilities.
 ## **Consistency Rules**
 
 - Valdenmere's capital is Valdris Prime. The academy is Greyveil.
-  Aldric's village is Ashford. The sword school is Ironmark. Do not
-  rename these.
+  Aldric's village is Ashford. Ironmark is the sword school's city;
+  Forgehall is the institution itself. Do not rename these.
 
 - The world is called Aethon. The three continents are Valdris, Serath,
   and Dravenmoor.

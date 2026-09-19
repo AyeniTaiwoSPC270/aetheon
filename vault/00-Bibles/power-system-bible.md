@@ -211,6 +211,18 @@ Saga 7.
 > by Saga 4. Gold by Saga 5 (the draw with Aldric). Obsidian by Saga 7.
 > He is the fastest progression to Obsidian in recorded history.*
 
+## **Forgehall's Ki Aptitude Assessment**
+
+Forgehall — the sword school institution at Ironmark (see World Bible) —
+admits students through two gates: a brutal physical/combat trial
+testing raw potential, and a formal aptitude assessment for Ki
+potential, Forgehall's equivalent of the academy's mana-resonance
+instruments. Clearing both is required for entry. No fixed entry age —
+students arrive at very different points in life depending on
+background, which is why Daran's arrival at roughly 15 is unremarkable
+in-world despite reading as a late start against the academy's fixed
+entry age.
+
 ## **Mana vs Ki — Combat Interactions**
 
 - Ki-coated blades can physically disrupt mana circuits on contact —
@@ -430,31 +442,42 @@ she transfers in full — the pain does not dampen.
 ability is the most morally complex of the 11. She has strong opinions
 about when wound transfer to an unwilling target is justified.
 
-**PHASITE 4 — KORDAS**
+**PHASITE 4 — KORDAS, THE WAVECALLER**
 
-**Ability Name / Type:** Silence Field — the ability to create zones
-where no sound exists and no magic can be cast. Within his Silence
-Field, mana circuits cannot activate. Spells cannot be initiated or
-sustained. Ki is unaffected.
+> *SUPERSEDES the original Silence Field entry below — revised per
+> author instruction (NEW_CANON.docx). Kordas's ability is now Wave
+> Manipulation. Do not use "Silence Field" as the ability name in any
+> new material.*
 
-**Visual Signature:** Silence Fields appear as a faint darkening of the
+**Ability Name / Type:** Wave Manipulation — control over sound and
+vibrational waves. Three known applications: the Null Zone (a radius
+where sound and vibration collapse to nothing, disrupting spellcasting —
+functionally preserves the old Silence Field's role), Resonance Shatter
+(deliberate, precise triggering of the Resonance Break phenomenon — see
+Lore & Glossary Bible), and disorientation waves for non-lethal
+crowd/combat control.
+
+**Visual Signature:** The Null Zone appears as a faint darkening of the
 air — like the light has been slightly absorbed. There is no sound
-inside them at all. Not even breathing. People inside describe it as the
+inside it at all. Not even breathing. People inside describe it as the
 most unsettling experience of their lives. Kordas himself appears
 completely calm inside his own fields.
 
-**Cost & Limits:** The field radius is limited — roughly 30 metres at
-maximum strain. Maintaining it costs continuous mana. He cannot cast any
-other magic while holding a field. He is vulnerable to Ki-based attacks
-inside his own field. If his concentration breaks the field collapses
-instantly.
+**Cost & Limits:** Radius-limited, costly to sustain. The Null Zone
+still does not affect Ki. Resonance Shatter, being non-mana-based, may
+still physically affect Ki users — open question, do not resolve without
+author instruction.
+
+**Combat Tier:** Paladin-contending against mages (Calder, Ysen); far
+less effective against pure Ki fighters (Orin, Daran).
 
 **First Appearance:** Saga 6 — introduced as an enemy, shifts to neutral
 by Saga 7
 
-**Story Role:** Antagonist-turned-neutral. He serves the faction
-initially — his ability to suppress mana makes him invaluable to Varek
-Noss. His allegiance shift is one of Saga 7's key turning points.
+**Story Role:** Unbound Core member (see Section IX). His ability to
+suppress mana makes him invaluable to Varek Noss. His allegiance shift
+in Saga 7 is the moment he realises Varek valued him the way everyone
+else did — as a tool. Full backstory and personality: Character Bible.
 
 **PHASITE 5 — LENNE**
 
@@ -484,7 +507,30 @@ infiltrators, navigating political deception, and understanding what
 Varek Noss is actually planning. She and Aldric have a complicated
 relationship — she can see exactly what he is feeling at all times.
 
-**PHASITE 6 — PHASITES 6–11**
+**PHASITE 6 — REYUS KADE, "THE MIRROR"**
+
+**Ability Name / Type:** Second Skin — imprints the total physical
+appearance, voice, and mannerisms of anyone observed closely over a
+sustained period, down to fingerprints and a masked mana signature.
+
+**Cost & Limits:** Holds only one imprint at a time. A new imprint
+requires the previous subject's death, or the current imprint decays
+within days. Cannot copy memory or relationships — only surface
+identity, leaving a built-in detection gap (missed private jokes, old
+grudges, personal history).
+
+**Combat Tier:** A-rank in direct combat; wins through infiltration and
+identity, not force.
+
+**First Appearance:** Saga 2 — embedded as "Lord Cassian Veyra" on the
+Noble Council (see World Bible). Not revealed as a Phasite or Unbound
+member on-page — reveal timing is author-gated.
+
+**Story Role:** Unbound Core member (see Section IX) — the only Core
+member who knows Varek's full plan. Full backstory and personality:
+Character Bible.
+
+**PHASITES 7–11**
 
 **Ability Name / Type:** Abilities to be defined by author.
 
@@ -793,6 +839,191 @@ direction they are something else entirely.
 
 Currently only one confirmed practitioner: Drel Voss. Whether others
 exist is unknown.
+
+# **SECTION IX — THE UNBOUND CORE: ABILITIES**
+
+> *Full backstories, personalities, and story roles for these seven are
+> documented in the Character Bible. This section is mechanics only.
+> None of these seven are revealed on-page as Unbound members in Saga 2
+> — internal reference for consistency, per NEW_CANON.docx /
+> NEW_CANON_DOC_2.docx (pending-approval staging docs merged into this
+> bible).*
+
+**MASTER VAREK NOSS — Latticework**
+
+Perceives and maps the underlying structure of mana itself — how
+circuits, spells, and entire magical systems are architected. Not raw
+output — mastery and knowledge. Decades of research across virtually
+every magical tradition mean there is functionally no fighting style he
+has not already studied a counter for. **Vs. a Paladin:** wins — not
+through superior raw output, but by identifying and dismantling the
+exact shape of the opponent's ability before the fight is decided by
+force. **View of Ki:** genuine intellectual dismissiveness, not fear —
+regards Ki as pure accumulated discipline with no theoretical ceiling to
+study, nothing to "understand" the way mana architecture can be. Dessa
+Rho is his one deliberate exception.
+
+**DESSA RHO — Ashfall / The Composite Sword**
+
+Ki user, Obsidian rank (apex title, fewer than 10 confirmed at any
+time). Signature technique Ashfall: a rapid two-blade combination strike
+layering Ki output in overlapping waves, designed to overwhelm a
+defender's ability to read where the real hit is coming from.
+Abnormally massive Ki pool, closer in scale to a mage's channel than a
+typical Ki practitioner's bounded output — applies Ki at a volume most
+Ki users cannot physically sustain, which is specifically why Varek
+respects her despite his general dismissal of Ki users. Wields the
+Composite Sword (see Section XI). **Combat tier:** S-tier /
+Paladin-contending — the strongest pure combatant in the Core. Public
+title: The Sword Widow. Former Paladin III, the seat Orin Vael currently
+holds — see Character Bible.
+
+**KORDAS — Wave Manipulation:** See Phasite 4, Section V.
+
+**VAMPIRICA — Blood Manipulation**
+
+Control over blood, her own and others' once drawn or exposed. Grants
+enhanced speed and strength, rapid regeneration, and limited compulsion
+over others through blood contact. **Weakness:** sunlight —
+functionally inactive/vulnerable in daylight; her one real limit against
+otherwise near-total invincibility. **Combat tier:** Paladin-contending,
+arguably beyond one directly — conditional on darkness/time of day. She
+is a Calamity (see Section X), not a standard Phasite or mage.
+
+**HALDEN CORR — Ward Weaving**
+
+A-rank mage, Enchanting specialist. Exceptional construction of wards,
+seals, and enchanted concealment — the mechanism behind how Unbound
+safehouses and fronts stay hidden from Mana Sense and kingdom detection.
+**Combat tier:** A-rank, built for defense/concealment rather than
+offense.
+
+**REYUS KADE — Second Skin:** See Phasite 6, Section V.
+
+**OREN VASK — Threadsense**
+
+B-rank mage, Sensory affinity. Tracks mana signatures and follows
+informant networks across significant distances — the mechanism behind
+the Unbound's continent-wide recruitment, surveillance, and blackmail
+operation. Reads poorly on formal assessment instruments, so his true
+value is invisible to anyone judging him by rank alone. **Combat tier:**
+B-rank — the floor of the Core. Not a frontline fighter under any
+circumstance.
+
+# **SECTION X — THE CALAMITIES**
+
+A classification parallel in structure to the 11 Phasites but distinct:
+entities or beings that, if they go rogue or uncontrolled, are capable
+of potentially destroying the world. There are exactly 3. This number is
+fixed, the same way the Phasite count of 11 is fixed.
+
+**Why the Phasites exist:** The 11 Phasites were created specifically to
+combat the Calamities should any go rogue. This is the answer to the
+series' planted mystery of what the Phasites are "a response to." The
+Phasite Silence (see Lore & Glossary Bible) now reads as a period with
+no rising Calamity threat — the current 11 appearing together suggests
+one is stirring again.
+
+**The 3 Calamities:**
+
+1. **Vampirica** — full profile in Section IX and Character Bible.
+   Currently loyal to Varek; her Calamity status is not revealed to the
+   story's characters or reader as such yet.
+
+2. **One specific Dragonite** — a single individual among the
+   Dragonites, not the race as a whole. Identity deliberately held
+   back — TBD, to be decided closer to the Saga 7–8 Dragonite reveal. Do
+   not name or describe without author instruction.
+
+3. **Vherith, the Hollow King** — sealed, not killed, by the 7 Great
+   Powers in the deep past. Full historical entry: Lore & Glossary
+   Bible, World Bible.
+
+> *Do not invent a fourth Calamity or resolve the Dragonite Calamity's
+> identity without explicit author instruction.*
+
+# **SECTION XI — THE LEGENDARY WEAPONS**
+
+Exactly 7 legendary weapons exist in Aethon. Each was wielded by one of
+the 7 Great Powers when they sealed Vherith the Hollow King in the deep
+past (see World Bible, Lore & Glossary Bible). When the Great Powers
+vanished, the weapons scattered across the world instead of
+disappearing with them, and have been choosing new wielders across the
+ages since — never inherited or won by force in the ordinary sense.
+
+**The Ki-cost rule — applies to all 7:** Regardless of a weapon's
+outward effect, all 7 legendary weapons draw on Ki, not mana, to
+function. Meaningful use requires an abnormally large Ki reserve. This
+is why even a Ki-elite Paladin (Orin Vael) does not carry his legendary
+weapon as a primary, everyday sidearm — sustaining it draws on the same
+Ki pool he needs for baseline reflexes and physical conditioning. These
+weapons are drawn only when a fight has escalated to a level that
+justifies the cost.
+
+**Two-tier power structure — applies to all 7:** Each weapon has an
+everyday battle-use capability (safe/sustainable to use somewhat
+regularly) and a rarely-invoked true capability (full output, at real
+personal cost) — the true capability is closer to what the weapon
+actually did during the sealing of Vherith and should not be treated as
+a routine option.
+
+**Mournblade — Orin Vael (Paladin III):** Battle use: any wound it deals
+resists magical healing and regeneration, forcing even a powerful mage's
+injury to heal at ordinary human speed. True capability: at full
+commitment, can sever a being's connection to its own regenerative
+force entirely. Chooses someone who carries grief without performing
+it.
+
+**The Composite Sword — Dessa Rho:** Battle use: dispels magic attacks
+outright on contact, making her one of the most feared warriors in the
+country independent of the Unbound. True capability: at full output,
+can unravel a magical construct, curse, or transformation at its
+foundation, even mid-cast. Chooses raw, exceptional strength that has
+been underestimated or denied its due. Named for the real smithing
+technique of layering/laminating multiple materials into a single
+blade.
+
+**Hollowfang — lost:** Battle use: strikes drain a target's mana channel
+directly into the wielder, bypassing circuits entirely. True capability:
+a full strike can hollow out a target's entire magical reservoir in one
+blow. Status: lost — last confirmed sighting generations ago. Open hook
+for a future discovery.
+
+**Duskmere — Grevan Tusk, later Daran:** Battle use: cuts through any
+Ethereal Crystal ward or magical barrier as though it weren't there.
+True capability: capable of cutting a boundary into reality itself —
+likely the blade that carved the prison Vherith is sealed inside, not
+merely a tool that broke his defenses. Chooses not virtue but absolute,
+total will. **MAJOR PLOT LOCK:** Daran kills Grevan Tusk to take
+Duskmere, Saga 5–6, after the Saga 5 draw with Aldric — see Character
+Bible, Grevan Tusk and Daran entries, for the full consequence chain.
+
+**The Ember-Bound Chain:** Battle use: binds a target so any magic they
+attempt backlashes onto themselves at reduced power. True capability: at
+full extension, can forge restraints strong enough to physically bind
+something at Calamity scale — this is how the sealing of Vherith became
+physically possible at all, not just a very hard fight won. Status: tied
+to goblin Ember spiritual tradition — presumed destroyed in the Burning,
+actually smuggled out and hidden. Proposed recovery arc for the goblin
+liberation movement, Saga 6–7 — not yet locked.
+
+**Talon's Reach — currently unclaimed:** Battle use: extends its
+effective range through short, controlled force bursts on contact. True
+capability: at full extension, can pierce through to a being's true
+essence rather than just its physical form. Status: masterless. Last
+wielder generations gone. Two open directions, undecided: held by a
+Sword Unit (ties to their established resentment thread), or waiting for
+Daran later in the series. Deliberately left open rather than assigned.
+
+**The Unnamed One — not a combat weapon:** Reframed as the anchor, not a
+blade wielded in a fight — the literal lock the other six weapons' work
+on Vherith was sealed into. No name, no wielder, no combat profile,
+because it was never meant to be carried into battle again. Possibly
+still lodged wherever Vherith is sealed.
+
+> *OPEN: the 7 Great Powers' true nature and disappearance; the exact
+> mechanics of how Talon's Reach will be claimed, if ever. Do not
+> resolve without author instruction.*
 
 **END OF POWER SYSTEM BIBLE — v1.0**
 

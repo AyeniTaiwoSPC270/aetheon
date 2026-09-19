@@ -212,26 +212,71 @@ Ki title progression — Steel by end of Saga 2.
 
 ## **Arc Summary by Saga**
 
-**Saga 1:** Fails the academy exam. Watches Aldric leave. Makes his
-decision. Begins at the sword school.
+> *Full detail per NEW_CANON_DOC_2.docx Section C — Forgehall specifics
+> below supersede the short version previously here.*
 
-**Saga 2:** Occasional POV. Grinding at the sword school. Growing
-colder. A mentor notices him.
+**Saga 1:** Fails the Greyveil exam, watches Aldric leave, arrives at
+Forgehall (the sword school institution at Ironmark — see World Bible).
+Clears both the physical trial and the Ki aptitude assessment — the
+first time in his life something measures him as good at something.
 
-**Sagas 3–4:** Still in the shadows. Becoming. Brief mention when he
-hears about the principal's death — his reaction is unreadable.
+**Saga 2:** Enters Instructor Kaelin Vosk's brutal fundamentals track.
+Matched against his Saga 3 rival Corvin Aske during this phase and loses
+badly — keeps getting back up past the point of tactical sense. Grevan
+Tusk stops the match personally and, without conversation or ceremony,
+begins correcting his form the next day. Reaches Steel rank by end of
+saga.
 
-**Saga 5:** Returns. Fights Aldric to a draw in the chaos of war. Walks
-away. Says one thing.
+**Saga 3 (Iron rank):** Forgehall reputation builds around Corvin Aske —
+genuinely his equal at this stage, so his eventual dominance is earned.
+Grevan's mentorship deepens into truth-telling: the only person willing
+to tell Daran his hatred of Aldric is making him better and destroying
+him at the same time. Dessa Rho ("The Sword Widow," see Section on The
+Unbound Core) seeks him out, tests him in a real bout, and offers him a
+shortcut to power. His refusal — out of pride, not nobility — is the
+saga's central beat and the first on-page proof of his "refuses to serve
+the faction" trait. Iron rank achieved, closing the saga.
 
-**Saga 6:** Wild card. Moves through events on nobody's side. The crack
-appears.
+**Saga 4 (Silver rank):** News of Aldric reaches him indirectly — the
+academy assault, Principal Solm's death, Aldric's growing name. This is
+where his established "unreadable reaction" to the principal's death
+actually lives. The Vampirica encounter — her true first appearance in
+the series — is deliberately ordinary and unremarkable in setting, which
+is what makes it unsettling; she says or does something that lodges in
+him without explanation, then is simply gone. Neither Daran nor the
+reader know what she is at this point. Silver rank achieved, closing the
+saga.
 
-**Saga 7:** Reappears at Aldric's gathering. Sits down. Says: 'I'm not
-doing this for you.' Stays.
+**Saga 5 (Gold rank):** Reaches Gold rank. The draw with Aldric happens
+via open battlefield chaos during the inter-racial/inter-kingdom war —
+neither seeks the other out deliberately. Private admission (Aldric
+became real to him). His line to Aldric, LOCKED: "Don't die before I
+beat you."
+
+**Saga 6:** Core sequence locked — see Grevan Tusk entry above for full
+detail. Desperate for power to close the gap with Aldric, seeks out
+Grevan, who refuses to hand over Duskmere; Daran kills him and takes the
+weapon, which chooses him anyway. **NEW — fugitive status, LOCKED:**
+Daran becomes formally wanted by Valdenmere after Grevan's death and
+Duskmere's theft — a real fugitive, not just an ambiguous wild card,
+shaping his Saga 6–7 isolation. This act is the direct engine of his
+established Saga 6 hesitation upon seeing what the Unbound truly is.
+
+**Saga 7:** Reaches Obsidian rank. Reappears at Aldric's gathering, sits
+down, says "I'm not doing this for you." Stays. Underneath the line sits
+Grevan's resurfacing, unspoken words. **NEW — the Corvin Aske
+confrontation, LOCKED:** Corvin Aske, now a Sword Unit officer, is
+present with standing orders to arrest Daran on sight. He stands down —
+not out of friendship, but recognition that years since their Saga 3
+rivalry have made him the kind of officer who follows real judgment over
+a technicality. This makes Daran's return both emotionally loaded
+(Grevan) and legally loaded (a fugitive walking back into the one
+institution that would have him hanged, and staying anyway).
 
 **Saga 8:** Fights as the coalition's greatest swordsman. Saves Aldric's
-life. Takes his hand. The last line of the novel is his.
+life. Takes his hand as an equal. Per author instruction, Grevan's death
+remains a permanent, unabsolved scar through all of this, including the
+series' ending. The last line of the novel is his.
 
 DARAN — Chapter 6 state update
 
@@ -388,13 +433,21 @@ the principal's quiet confidence is what he remembers.
 
 **GREVAN TUSK** *— Daran's Mentor — The Sharpening Stone*
 
-**Role:** Sword school instructor — the person who shaped Daran after
-the split
+**Status:** DECEASED — killed by Daran, Saga 6, early. Per author
+instruction (NEW_CANON.docx Section F / NEW_CANON_DOC_2.docx Section
+C) — a major, deliberate darkening of Daran's arc. This supersedes the
+prior "Active, brief Saga 7 moment" status below.
+
+**Role:** Forgehall instructor — the person who shaped Daran after the
+split. Keeper of the Duskmere shrine/vault at Forgehall (see World
+Bible) — his death is a violation of something institutional and sacred
+at the school, not just personal.
 
 **Background:** A former soldier who survived three wars by being the
-most dangerous person in any room without magic. He retired to teach
-because killing had stopped meaning anything and teaching, he
-discovered, still did.
+most dangerous person in any room without magic — explained, per new
+canon, by his original holdership of the legendary weapon Duskmere (see
+Power System Bible, Section XI). He retired to teach because killing had
+stopped meaning anything and teaching, he discovered, still did.
 
 **Personality:** Brutal in training. Completely honest. He does not
 comfort students — he tells them the truth and lets them decide what to
@@ -404,16 +457,54 @@ control. He taught Daran to aim it instead.
 **His Role in Daran's Arc:** Grevan is the only person who ever told
 Daran the truth about himself — that his hatred of Aldric was making him
 better and destroying him at the same time. Daran did not listen. But he
-remembered. By Saga 7, when Daran chooses to join the coalition,
-Grevan's words are part of why.
+remembered.
 
-**Arc:** Appears primarily in Saga 2 POV chapters. Referenced
-throughout. Has a brief but significant moment in Saga 7 when Daran
-makes his choice.
+**Saga 2 — the intervention:** Daran, matched against his Saga 3 rival
+Corvin Aske during Instructor Kaelin Vosk's fundamentals track, loses
+badly — badly enough a normal instructor would stop the match, but keeps
+getting back up past the point of tactical sense. Grevan stops the match
+personally, not to end it but to intervene, recognizing the exact
+quality that built his own reputation decades ago. No conversation, no
+ceremony — he simply begins correcting Daran's form the next day, as if
+already decided. Daran does not ask or beg for this.
+
+**Saga 6 — the killing, LOCKED:** Desperate for power to close the gap
+with Aldric after their Saga 5 draw, Daran seeks out Grevan, who holds
+Duskmere. Grevan refuses to hand it over — not from possessiveness, but
+because he sees exactly what Daran is becoming and will not arm it.
+Daran kills him — the only person who ever told him the truth about
+himself, and the keeper of Forgehall's sacred vault — to take the
+weapon. Duskmere chooses Daran anyway afterward: not despite the
+killing, but because of the totality of will it demonstrated. This act
+is the direct engine of Daran's established Saga 6 hesitation upon
+seeing what the Unbound truly is — having just paid this price for
+power, he recognizes and is repulsed by the same hunger in Varek's
+faction. Consequence: Daran becomes formally wanted by Valdenmere after
+Grevan's death and Duskmere's theft — a real fugitive, shaping his Saga
+6–7 isolation.
+
+**Saga 7 — now a memory, not a live scene:** The prior note that Grevan
+has "a brief but significant moment in Saga 7" is superseded — he does
+not appear on-page. When Daran reappears at Aldric's gathering and says
+"I'm not doing this for you," underneath the line sits Grevan's
+resurfacing, unspoken words — the truth Daran killed a man to avoid
+hearing. It is Grevan's own words, resurfacing uninvited, that tip Daran
+toward the coalition.
+
+**Saga 8 and beyond:** Per author instruction, Grevan's death is a
+PERMANENT, UNABSOLVED scar — never cleanly forgiven or resolved,
+including at the series' end, even as Daran's established beats
+(coalition's greatest swordsman, saving Aldric's life, taking his hand
+as an equal) remain intact.
+
+**Arc:** Saga 2 (mentorship, on-page). Saga 6 (killed, on-page — early
+saga). Saga 7 (memory only, not a live scene).
 
 > *Writing note: Grevan should feel like the anti-principal — same
 > function, completely different method. Both believed in their student.
-> One with warmth, one with iron.*
+> One with warmth, one with iron. His death must carry full weight — see
+> Power System Bible's writing note on circuit severing for the
+> equivalent standard: do not use it casually.*
 
 # **SECTION IV — ALDRIC'S ADOPTIVE FAMILY**
 
@@ -514,6 +605,20 @@ This makes him far more dangerous than an enemy who simply wants to win.
 > questions. He listens. His scariest moments are when he agrees with
 > someone. Write him as someone who, in a different story, might have
 > been the hero.*
+
+**Ability, new canon — Latticework:** Perceives and maps the underlying
+structure of mana itself — how circuits, spells, and entire magical
+systems are architected. The same gift that let him first notice
+anomalous patterns in Phasite mana architecture decades ago. He is the
+strongest of the Unbound Core not through raw output but mastery and
+knowledge — Latticework lets him read how an opponent's power works in
+real time. **Vs. a Paladin:** wins by identifying and dismantling the
+exact shape of the opponent's ability before the fight is decided by
+force. **View of Ki users:** genuine intellectual dismissiveness, not
+fear or hatred — regards Ki as pure accumulated discipline with no
+theoretical ceiling to study. Dessa Rho is his one deliberate exception
+(see The Unbound Core, below). Mechanics: Power System Bible, Section
+IX.
 
 **Arc:** Revealed gradually from Saga 3 (faction hinted), fully present
 from Saga 6, transformed in Saga 7, defeated in Saga 8.
@@ -624,8 +729,10 @@ appearance: Saga 6.
 **Phasite 5 — \[TO BE NAMED\]:** Ability and role TBD by author. First
 appearance: Saga 6–7.
 
-**Phasite 6 — \[TO BE NAMED\]:** Ability and role TBD by author. First
-appearance: Saga 6–7.
+**Phasite 6 — REYUS KADE ("The Mirror"):** Second Skin — imprints total
+physical appearance and identity. Unbound Core member, embedded as "Lord
+Cassian Veyra" on the Noble Council from Saga 2. Full profile: The
+Unbound Core section below, and Power System Bible.
 
 **Phasite 7 — \[TO BE NAMED\]:** Ability and role TBD by author. First
 appearance: Saga 7.
@@ -665,7 +772,8 @@ story progresses.
 
 **Principal Edrath Solm** \| Mentor \| DECEASED — Saga 4 \| Sagas 1–4
 
-**Grevan Tusk** \| Sword Mentor \| Active \| Sagas 2, 7
+**Grevan Tusk** \| Forgehall Mentor \| DECEASED — killed by Daran, Saga 6
+(early) \| Sagas 2 (mentorship), 6 (death), 7 (memory only)
 
 **Maren Vane** \| Adoptive Mother \| Active \| Sagas 1, 7–8
 
@@ -744,11 +852,13 @@ the political sagas.
 
 ORIN VAEL — PALADIN III
 
-Age: 28. Classification: Non-mage. Sub-threshold mana channel — same
-assessment result as Daran at academy age. Ki rank: Gold, approaching
-Obsidian. He earned the king's personal respect during an assassination
-attempt twelve years ago — a palace guard, off-duty, in the wrong
-corridor at the right moment. He killed four mages with a sword and no
+Age: 34 *(corrected 2026-09-18 — was 28, which made him 16 at the time
+of the assassination attempt below; author confirmed the age shifts,
+the "twelve years ago" timing stays)*. Classification: Non-mage.
+Sub-threshold mana channel — same assessment result as Daran at academy
+age. Ki rank: Gold, approaching Obsidian. He earned the king's personal
+respect during an assassination attempt twelve years ago — a palace
+guard, off-duty, in the wrong corridor at the right moment. He killed four mages with a sword and no
 magic and walked the king to safety with an arrow in his shoulder. The
 Noble Council appointed him under sustained pressure from the king. The
 mage units of the military have never fully accepted him. He has never
@@ -761,6 +871,13 @@ at the kingdom's highest position is the first proof the world offers
 that Daran's path was not a consolation. Their eventual meeting is one
 of the series' quieter but more significant moments. He oversees the Arc
 7 Tamer capture operation.
+
+**Predecessor, new canon:** Dessa Rho — "The Sword Widow" — held Paladin
+III before him. Known capital-wide, though her current whereabouts are
+unknown to anyone in power. Her prior hold on the seat gives Orin's own
+status as a rare Ki-user Paladin real precedent — Paladin III quietly
+becomes "the seat a sword can earn." Full profile: The Unbound Core
+section below.
 
 DREL VOSS — THE MONSTER TAMER
 
@@ -896,6 +1013,154 @@ INSTRUCTOR DOVEN — Faculty member Aldric likes and trusts in Arcs 4 and
 5. Warm, engaged, genuinely good at teaching. Plant the warmth now so
 the betrayal lands correctly in Saga 3. Do not hint at faction
 allegiance yet.
+
+**SECTION XI — FORGEHALL: FACULTY & RIVALS**
+
+*New per NEW_CANON_DOC_2.docx. Forgehall is the sword school institution
+at Ironmark (Ironmark remains the city name) — see World Bible for the
+full location entry.*
+
+**INSTRUCTOR KAELIN VOSK — Weapons & Conditioning:** Runs the punishing
+physical fundamentals every new student passes through before reaching
+Grevan's tier. Unsentimental about washouts; embodies the school's
+brutal reputation day-to-day. Runs Daran's Saga 2 fundamentals track.
+
+**MASTER-AT-ARMS YORIN BRACKEN — Tactics & Formation Combat:** Older,
+former Sword Unit commander. Teaches how Ki-users function inside
+kingdom battle formations, not just one-on-one dueling — gives
+Forgehall's military-branch identity a face beyond Grevan. Plants the
+seed of Daran's future disdain for hierarchy (Saga 2, the Sword Units
+resentment thread).
+
+**CORVIN ASKE, LOCKED** — *Daran's Saga 3 Rival*
+
+**Role:** Noble-born, genuinely skilled, disciplined and well-trained
+since childhood. What separates him from Daran isn't talent — Daran
+doesn't know how to stop, and Corvin has never had to find out if he
+does. His eventual loss to Daran is earned because Corvin is genuinely
+his equal at this stage, not a straw man.
+
+**Later arc:** Resurfaces as a Sword Unit officer by Saga 7. Present at
+Aldric's gathering with standing orders to arrest the now-fugitive
+Daran on sight — and stands down, not out of friendship but recognition
+that years since their rivalry have made him the kind of officer who
+follows real judgment over a technicality. Gives a human face to the
+"other track" of Forgehall's system: someone who did everything right by
+its rules and still ended up in Daran's shadow.
+
+> *OPEN: whether Daran's final line of the novel ties back to Grevan.*
+
+**SECTION XII — THE UNBOUND CORE: FULL PROFILES**
+
+> *New per NEW_CANON.docx / NEW_CANON_DOC_2.docx — pending-approval
+> staging docs merged into this bible per author instruction. Expands
+> "The Core" from Varek + 4 ("The Five," per the World Bible's prior
+> text) to Varek + 6 named lieutenants. None of these seven are revealed
+> on-page as Unbound members in Saga 2 — internal reference only.
+> Mechanics/abilities: Power System Bible, Section IX.*
+
+**MASTER VAREK NOSS — The Leader:** See Section V above for his full
+existing entry, now augmented with his Latticework ability.
+
+**DESSA RHO — The Exception / "The Sword Widow"**
+
+**Age:** Mid-30s. **Classification:** Ki user, Obsidian rank.
+
+**Public title:** The Sword Widow. Known capital-wide, even to the
+Paladins themselves — though her current whereabouts are unknown to
+anyone in power. Former Paladin III — the seat Orin Vael currently
+holds.
+
+**What happened:** She commanded a Sword Unit alongside her closest
+friend and fellow Ki practitioner, Corran Vess. On a mission, mage
+command (Noble Council-sanctioned, not battlefield judgment) ordered the
+unit to hold a strategic position rather than break formation to
+retrieve Corran from a collapsing engagement. Corran died following that
+order. Everyone above her called it the correct call.
+
+**Her core wound:** "What's the point of power if it can't protect
+someone you love." She didn't leave because she lost a fight — she left
+because she won, and the cost was ruled acceptable by people who never
+had to bury anyone themselves. Timeline: roughly 15–18 years before the
+story begins.
+
+**Why she approaches Daran:** Old Sword Unit contacts bring word of an
+Iron-rank commoner student outperforming an established rival at an
+institution that claims equality but doesn't practice it. She sees a
+version of her own former self in him. Her offer (Saga 3) is genuine on
+her own terms, even though it also serves the Unbound's recruitment
+purposes. She half-wants him to prove her right about the world's
+unfairness, and half-wants him to prove it can still be fair without her
+interference.
+
+**Backstory:** Ex-military. Watched Ki practitioners denied command and
+treated as the military's second-class force despite being the most
+dangerous people in the room — ties directly to the Sword Units
+resentment thread (see World Bible).
+
+**Personal goal:** Wants the mage-first hierarchy gone outright;
+privately wants a real fight against a Paladin on equal terms, for her
+own sake. **Knows Varek's full plan:** No.
+
+**KORDAS — The Wavecaller (Phasite 4)**
+
+**Age:** Late 30s. **Backstory:** Feared and isolated most of his life —
+people instinctively dread what his ability does to a space. Varek is
+the first person to treat it as valuable rather than something to fear.
+**Personality:** Calm, deliberate, controlled — a lot of practice being
+alone with his own thoughts. **Personal goal:** Belonging, not ideology.
+**Knows Varek's full plan:** No. His Saga 7 shift is the moment he
+realises Varek valued him the same way everyone else did — as a tool.
+Ability: Power System Bible.
+
+**VAMPIRICA — The Calamity**
+
+**Name origin:** "Vampirica" was given to her by Varek when he took her
+in — she doesn't use or remember a birth name. **Classification:** Not
+human. Her human parents were cursed, and what they gave birth to was
+her — a Calamity in human-adjacent form, not a person born with a rare
+trait. **Personality:** Proud, quietly confident. Doesn't need to
+perform her power. **Backstory:** Abandoned and abused by her human
+parents around age five — her plain skin, white hair, and red eyes read
+by them (and by wider superstition) as a devil's mark. Varek recognized
+what she actually was on sight, due to his research reaching into
+genuinely prehistoric material most scholars never access. He took her
+in and raised her. **Personal goal:** None ideological — pure loyalty
+and love. She would follow Varek regardless of what the cause turned
+out to be. **Knows Varek's full plan:** No. Ability, Calamity status:
+Power System Bible.
+
+**HALDEN CORR — The Architect**
+
+**Age:** Early 50s. **Backstory:** A former research peer of Varek's who
+reached similar conclusions independently, around the same time — not a
+convert, an equal. **Personality:** Precise, patient, more comfortable
+with systems than people. **Personal goal:** Freedom to pursue his own
+forbidden research once the current order falls. **Knows Varek's full
+plan:** No. **Relationship with Varek:** Intellectual peerhood — the
+closest thing to an equal relationship in the Core besides Kade.
+
+**REYUS KADE — "The Mirror" (Phasite 6)**
+
+**True name:** Reyus Kade. **Age:** Late 20s–early 30s. **Backstory:**
+Caged and exploited by a noble house that discovered and couldn't
+control his ability. Varek freed him. **Personal goal:** That no one
+like him is ever caged again. **Knows Varek's full plan:** Yes — the
+only Core member who does. Genuine partnership, not belonging,
+gratitude, debt, or intellectual peerhood alone. Varek trusts him
+because Kade proved himself before being told anything. **Current
+status:** Embedded as "Lord Cassian Veyra" on the Noble Council (see
+World Bible) — the real Veyra is dead. Ability: Power System Bible.
+
+**OREN VASK — The Web**
+
+**Age:** Early 40s. **Backstory:** Owes Varek his life from a specific
+past incident — left undefined, a hook for a future flashback.
+**Personality:** Watchful, unassuming, deliberately forgettable.
+**Personal goal:** No ideology. A quiet hope that Varek's new world
+means safety for someone he loves — left open, a name/relationship to be
+defined later. **Knows Varek's full plan:** No. Ability: Power System
+Bible.
 
 **END OF CHARACTER BIBLE — v1.0**
 

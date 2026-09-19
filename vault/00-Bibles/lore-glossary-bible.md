@@ -123,7 +123,34 @@ years before the story)*
 > Elven scholars noted this absence. Varek Noss's research identified it
 > as significant — the world was not ready. The appearance of the
 > current 11 Phasites in a compressed timeframe is, in his reading, the
-> world's correction activating.
+> world's correction activating. New canon: with the Calamities defined
+> (below), the Silence now reads as a period with no rising Calamity
+> threat — the current 11 appearing together suggests one is stirring
+> again.
+
+**The Sealing of Vherith, the Hollow King** *— new canon, NEW_CANON.docx
+Section D*
+
+> A great demon-type Calamity (see "Calamity," Section II), SEALED — not
+> killed — by the 7 Great Powers (see World Bible) in the deep past,
+> proposed placement First Age, before recorded history, pending
+> confirmation. Each of the 7 Great Powers wielded one of the 7 legendary
+> weapons (see Power System Bible, Section XI) to accomplish the
+> sealing — Mournblade denied him regeneration, the Composite Sword
+> began unmaking his nature, Hollowfang stripped his reserves,
+> Duskmere carved the prison itself, the Ember-Bound Chain physically
+> bound him, and the Unnamed One anchored the whole working shut. The 7
+> Great Powers no longer exist today; their nature and disappearance are
+> open threads. The current state and stability of the seal is
+> deliberately left open as a long-game hook.
+>
+> *NAMING NOTE: an earlier working name for this figure was explicitly
+> rejected by the author as breaking world-internal naming conventions.
+> "Vherith, the Hollow King" is the confirmed replacement — do not
+> revert.*
+>
+> *OPEN: what the 7 Great Powers actually were and why none exist
+> today. Do not resolve without author instruction.*
 
 # **SECTION II — MAGICAL TERMINOLOGY & NAMED SPELLS**
 
@@ -140,6 +167,18 @@ because they have no established names in the literature.
 > describing a procedure, not a wizard casting a fantasy spell.*
 
 ## **Core Magical Terminology**
+
+**Calamity** *— new canon, NEW_CANON.docx Section D*
+
+> A classification parallel in structure to the 11 Phasites but
+> distinct: an entity or being that, if it goes rogue or uncontrolled,
+> is capable of potentially destroying the world. There are exactly 3,
+> fixed the same way the Phasite count of 11 is fixed — Vampirica, one
+> specific (unnamed) Dragonite, and Vherith, the Hollow King (see "The
+> Sealing of Vherith," Section I). The 11 Phasites were created
+> specifically to combat the Calamities should any go rogue. Full
+> mechanics: Power System Bible, Section X. Do not invent a fourth
+> Calamity without author instruction.
 
 **Mana Weave**
 
@@ -478,6 +517,11 @@ terms are introduced.
 > Phasite — Force Manipulation. First dual sword-and-magic wielder in
 > history.
 
+**Aldous Fenn**
+
+> Magistrate assigned to investigate the Saga 2 Wrenhollow breach. "Veyra"
+> (Reyus Kade) manages him privately. See World Bible.
+
 **Ashford**
 
 > Aldric's home village. Small agricultural settlement, four days from
@@ -499,6 +543,12 @@ terms are introduced.
 
 ## **C**
 
+**Calamity**
+
+> Classification parallel to the Phasites but distinct — a being that
+> could destroy the world if it goes rogue. Exactly 3: Vampirica, one
+> unnamed Dragonite, Vherith the Hollow King. See Section II.
+
 **Circuit Burn**
 
 > Overuse injury to mana circuits. Pain, heat, visible redness. Aldric's
@@ -508,6 +558,17 @@ terms are introduced.
 
 > Advanced technique of directing mana through specific circuit pathways
 > for precision effects. Solen's primary method.
+
+**The Composite Sword**
+
+> One of 7 legendary weapons. Dessa Rho's blade — dispels magic on
+> contact; true capability unravels magical constructs at their
+> foundation. See Power System Bible, Section XI.
+
+**Corvin Aske**
+
+> Daran's Saga 3 rival at Forgehall, LOCKED. Noble-born. Resurfaces as a
+> Sword Unit officer by Saga 7. See Character Bible.
 
 **Crest Halvon**
 
@@ -522,6 +583,12 @@ terms are introduced.
 > Ki practitioner. World's greatest swordsman by Saga 5. Obsidian title
 > by Saga 7.
 
+**Dessa Rho**
+
+> "The Sword Widow." Unbound Core member. Ex-Paladin III, Ki user,
+> Obsidian rank. Wields the Composite Sword. See Character Bible, Power
+> System Bible.
+
 **Dravenmoor**
 
 > The third continent. Cold, largely unexplored. Dragonite territory.
@@ -531,12 +598,26 @@ terms are introduced.
 > The apex race. Inhabit Dravenmoor. Systemic magic beyond standard
 > measurement. Do not appear until Saga 7–8. Treat as myth before then.
 
+**Duskmere**
+
+> One of 7 legendary weapons. Cuts through Ethereal Crystal wards; true
+> capability cuts a boundary into reality itself. Original holder:
+> Grevan Tusk. **MAJOR PLOT LOCK:** Daran kills Grevan to take it, Saga
+> 5–6. See Power System Bible, Section XI; Character Bible.
+
 **The Dual Path**
 
 > The dominant human spiritual tradition. The Forge (sword/physical) and
 > the Current (magic/knowledge) as equal sacred forces.
 
 ## **E**
+
+**The Ember-Bound Chain**
+
+> One of 7 legendary weapons. Binds a target so magic backlashes on
+> them; true capability can bind something at Calamity scale. Tied to
+> goblin Ember tradition — presumed destroyed in the Burning, actually
+> hidden. See Power System Bible, Section XI.
 
 **Edrath Solm**
 
@@ -571,6 +652,14 @@ terms are introduced.
 > Daran traded a week of lunches for one at the Ashford paper stall.
 > First referenced Chapter 1.
 
+## **F**
+
+**Forgehall**
+
+> The sword school institution at Ironmark (Ironmark remains the city
+> name). Formerly referred to only generically. State/military-branch,
+> human-only admission, brutal culture. See World Bible.
+
 ## **G**
 
 **Grath Confederacy**
@@ -599,6 +688,18 @@ terms are introduced.
 > Distinct from the academy grounds themselves — an administrative and
 > assessment facility. First referenced Chapter 4.
 
+## **H**
+
+**Halden Corr**
+
+> "The Architect." Unbound Core member. A-rank Enchanting specialist —
+> Ward Weaving. See Character Bible, Power System Bible.
+
+**Hollowfang**
+
+> One of 7 legendary weapons. Drains a target's mana channel on contact.
+> Status: lost. See Power System Bible, Section XI.
+
 ## **I — K**
 
 **Ignis Lance**
@@ -626,10 +727,20 @@ terms are introduced.
 
 > Aldric's technique. Redirects kinetic energy of incoming attacks.
 
+**Kael Rowan**
+
+> Avian demi-human elder-envoy, eastern Valdris. Saga 2 sabotage
+> scapegoat. See World Bible.
+
+**Kaelin Vosk**
+
+> Forgehall instructor, Weapons & Conditioning. Runs Daran's Saga 2
+> fundamentals track. See Character Bible.
+
 **Kordas**
 
-> Phasite 4. Silence Field ability. Faction member initially, neutral by
-> Saga 7.
+> Phasite 4. Wave Manipulation ability (revised from Silence Field, new
+> canon). Unbound Core member initially, neutral by Saga 7.
 
 ## **L**
 
@@ -687,6 +798,12 @@ terms are introduced.
 > The process of shaping raw mana into structured spells. Technical
 > academic term for casting.
 
+**Mournblade**
+
+> One of 7 legendary weapons. Orin Vael's blade — wounds resist magical
+> healing; true capability severs regenerative force entirely. See Power
+> System Bible, Section XI.
+
 **Maren & Josse Vane**
 
 > Aldric's adoptive parents. Maren is a herbalist. Josse is a carpenter
@@ -697,7 +814,20 @@ terms are introduced.
 > Phasite 3. Wound Transfer ability. Healer by nature. First appears
 > Saga 6.
 
+## **N**
+
+**Noble Council**
+
+> Fifteen seats advising the king, held by the oldest noble families. At
+> least four compromised by the Unbound from Saga 2 onward. See World
+> Bible.
+
 ## **O — P**
+
+**Oren Vask**
+
+> "The Web." Unbound Core member. B-rank Sensory mage — Threadsense. See
+> Character Bible, Power System Bible.
 
 **The Obsidian Compact**
 
@@ -716,6 +846,12 @@ terms are introduced.
 > pressure. Slowing at low output, lethal at maximum.
 
 ## **R — S**
+
+**Reyus Kade**
+
+> "The Mirror." Phasite 6. Unbound Core member — the only one who knows
+> Varek's full plan. Embedded as "Lord Cassian Veyra" on the Noble
+> Council. See Character Bible, Power System Bible, World Bible.
 
 **Resonance Break**
 
@@ -754,6 +890,12 @@ terms are introduced.
 
 ## **T — V**
 
+**Talon's Reach**
+
+> One of 7 legendary weapons. Extends effective range; true capability
+> pierces to a being's true essence. Status: masterless, unclaimed. See
+> Power System Bible, Section XI.
+
 **Commander Tavo**
 
 > Demi-human military leader. Lupine sub-race. First appears Saga 5.
@@ -782,12 +924,33 @@ terms are introduced.
 > Primary villain. Former Phasite researcher. Leader of the Unbound.
 > Half-Dragonite transformation in Saga 7. Title: The Transformed.
 
+**Vampirica**
+
+> Unbound Core member. A Calamity in human-adjacent form, not a person
+> with a rare trait. Blood Manipulation. Weakness: sunlight. See
+> Character Bible, Power System Bible.
+
+**Vherith, the Hollow King**
+
+> A Calamity — great demon-type — sealed by the 7 Great Powers in the
+> deep past. See "The Sealing of Vherith," Section I.
+
 **Void Casting**
 
 > Casting while in mana Stage 3 or beyond. Dangerous. Military term for
 > drawing on unsafe reserves.
 
 ## **W — Z**
+
+**Wrenhollow**
+
+> Neutral border town used for the Silverwood Accord summit. New as of
+> Saga 2 Arc 1. See World Bible.
+
+**Yorin Bracken**
+
+> Master-at-Arms, Forgehall — Tactics & Formation Combat. See Character
+> Bible.
 
 **Walkers**
 

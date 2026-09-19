@@ -574,93 +574,59 @@ sitting. The hall continues around him. Daran is already gone.**
 
 ## **Arc 4 — Academy Life**
 
-**CHAPTER \_\_\_** \| **ARC** \_\_\_ \| **SAGA** \_\_\_ \| **POV:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**CHAPTER 10** | **ARC** 4 | **SAGA** 1 | **POV:** Aldric Vane
 
-**What happened:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**What happened:** Successful candidates are transported same-day from the assessment hall to Greyveil Academy by carriage convoy. Aldric observes the noble/commoner sorting continue on the road. Greyveil resolves out of the mountain treeline — far larger than the correspondence prepared him for. Intake processing assigns him Foundation-track, Dormitory Block C, Room 14. He maps his room, notices the single-bunk absence of Daran without naming it, and lets the day end.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Character states changed:** Aldric — orientation without comfort; he has the shape of the place (exits, route, room) but not familiarity yet. The Daran-shaped absence is noticed, filed, not examined.
 
-**Character states changed:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**New canon introduced:** Greyveil intake process confirmed — receiving hall, name/room-assignment tables, printed room card with hand-drawn dormitory map. Dormitory Block C, Room 14 established as Aldric's room. Foundation-track structure named (four core modules).
 
-**New canon introduced:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Closing beat / hook:** Aldric lying on his bunk, boots still on, listening to the dark arrive. "Tomorrow he would learn the shape of the place. Tonight he would let the room be enough."
 
-**Closing beat / hook:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**CHAPTER 11** | **ARC** 4 | **SAGA** 1 | **POV:** Aldric Vane
 
-**CHAPTER \_\_\_** \| **ARC** \_\_\_ \| **SAGA** \_\_\_ \| **POV:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**What happened:** Aldric wakes before the bell, maps the dormitory route to the main building, and arrives early to the first-year assembly hall. Orientation covers rules and the Foundation year's four modules (Maret's Mana Theory, Bavel's Combat Application, Elemental Foundations, integrated Physical Conditioning). In the common space afterward, an unnamed noble girl (brown hair, practical manner) asks him a direct logistics question about block curfew — the first person at the academy to speak to him without an agenda. Aldric explores the inner courtyard alone before the next bell.
 
-**What happened:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Character states changed:** Aldric — first neutral, agenda-free interaction at the academy noted and filed as significant. Orientation (route, rules, module structure) established but not yet comfort.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**New canon introduced:** Foundation year's four core modules named. First-year assembly hall and inner courtyard described. **OPEN, unresolved (author choice, 2026-09-18):** the unnamed noble girl's curfew question here is near-identical to Nessa Croft's planned Ch. 17 beat ("first person to speak to Aldric without an agenda") — this is the "Ch. 11 vs. Ch. 17" conflict flagged in PROJECT_AUDIT.docx. Do NOT assume this girl is Nessa Croft when planning Ch. 14–17 — that would silently resolve an open question. See character-profiles.md, Nessa Croft entry, for the full flag.
 
-**Character states changed:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Closing beat / hook:** The bell rings for module assignment postings; Aldric turns and goes back inside, orientation earned but comfort still ahead of him.
 
-**New canon introduced:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**CHAPTER 12** | **ARC** 4 | **SAGA** 1 | **POV:** Aldric Vane
 
-**Closing beat / hook:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**What happened:** First Combat Application session, staging area outside the yard. Crest Halvon opens with an oblique, socially-calibrated jab about Aldric's white hair and unplaceable bloodline, drawing a calibrated laugh from his cluster. Aldric accepts the premise and extends it — "there isn't a story" — which lands as a genuine, uncalculated laugh from the wider cohort and leaves Crest with no clean follow-up. Instructor Bavel arrives and opens the yard without preamble. Seya is shown reading the exchange's result with sharp, private calculation.
 
-**CHAPTER \_\_\_** \| **ARC** \_\_\_ \| **SAGA** \_\_\_ \| **POV:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Character states changed:** Aldric — first public confrontation with Crest, handled through precision rather than aggression; establishes his read-the-room-and-answer-in-kind register on-page. Crest — first move does not land as designed; recalibrates rather than escalates in the moment. Seya — introduced on-page, filing Crest's failure as data.
 
-**What happened:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**New canon introduced:** Crest's opening social move against Aldric confirmed on-page. Seya's watchful, position-protecting character established on-page (matches Saga 1 Bible roster entry). Milo Draft's laugh registers a fraction shorter/later than Crest's cluster — first visible crack.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Closing beat / hook:** Aldric follows the cohort through the yard gate into Bavel's first session, filing Seya's expression as he goes.
 
-**Character states changed:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**CHAPTER 13** | **ARC** 4 | **SAGA** 1 | **POV:** Aldric Vane / Rynn
 
-**New canon introduced:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**What happened:** In the common space after Combat Application, Crest escalates his contempt toward "self-taught, pamphlet-and-guesswork" students — thinner deniability than Chapter 12's move. Before Aldric can respond, Rynn crosses the room in three steps and hits Crest across the jaw. Aldric steps between them and defuses the moment with a flat, practical observation about the administrative record rather than confrontation. A junior administrator arrives and takes Rynn to the office; Aldric and Rynn exchange a few words first — this is the actual "ten words" first contact between them.
 
-**Closing beat / hook:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Character states changed:** Rynn — first on-page appearance; throws the punch that starts his friendship with Aldric, is taken to the administrative office. Aldric — de-escalates a fight without physical involvement, using precision rather than force; first direct exchange with Rynn. Crest — split lip, contempt this time closer to the surface than Chapter 12; recovers his composure publicly but the anger underneath is visible to Aldric.
 
-**CHAPTER \_\_\_** \| **ARC** \_\_\_ \| **SAGA** \_\_\_ \| **POV:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**New canon introduced:** Rynn's first on-page appearance and the literal "ten words" exchange with Aldric that gives the chapter its title, matching the Saga 1 Bible's planned beat exactly. Crest's split lip and "you're going to regret being associated with this" line to Aldric established on-page.
 
-**What happened:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Closing beat / hook:** Rynn, walking to the administrative office, reflects that he hadn't planned to have a friend today — and isn't entirely certain that's still true.
 
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**ARC 4** — SAGA 1 — **WORKING TITLE:** Early Academy Adjustment
 
-**Character states changed:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Chapters covered:** Ch. 10 to Ch. 13 *(of 22 — Ch. 14–22 still TO WRITE per the Saga 1 Bible)*
 
-**New canon introduced:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Arc summary so far (Ch. 10–13 only):**
 
-**Closing beat / hook:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+> Aldric arrives at Greyveil, is processed and housed, and spends his first full day mapping the institution the way he maps every space he enters. Two social confrontations with Crest Halvon establish the academy's hierarchy and Aldric's method of handling it — precision over aggression. The first move fails to land; the second draws Rynn's punch and the real start of their friendship. An unnamed noble girl's agenda-free curfew question plants Nessa Croft's role. Arc is roughly a third complete — Solen, Instructor Maret's documentation thread, and the arc's closing Phasite-surfacing beat are all still ahead in Ch. 14–22.
 
-**ARC \_\_\_** — SAGA \_\_\_ — **WORKING TITLE:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Key character state changes (Ch. 10–13):** Aldric — orientation achieved, comfort not yet; first real social friction handled and won on his own terms; first friend acquired (Rynn) by chapter's end. Rynn — introduced, established as instinctively loyal and quick to act. Crest — two failed opening moves against Aldric, escalating personal contempt underneath a thinning public composure. Seya — introduced, watching and recalculating.
 
-**Chapters covered:** Ch. \_\_\_ to Ch. \_\_\_
+**Canon added Ch. 10–13:** Greyveil intake process and Dormitory Block C Room 14. Foundation year's four core modules. First-year assembly hall and inner courtyard. Rynn and Seya's first on-page appearances. The "ten words" exchange between Aldric and Rynn.
 
-**Arc summary (3–5 sentences):**
-
-> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
->
-> \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-**Key character state changes:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-**Canon added this arc:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-
-**Arc closing hook / saga thread advanced:**
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+**Arc closing hook / saga thread advanced:** Not yet reached — arc closes in Ch. 22, still TO WRITE.
 
 ## **Arc 5 — The Grand Tournament**
 
