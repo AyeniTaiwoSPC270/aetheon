@@ -81,6 +81,27 @@ def test_build_card_text_handles_missing_log_gracefully(tmp_path):
     assert "Lore: UNKNOWN | Audit: PASS | Hooks advanced: 0" in text
 
 
+def test_build_card_text_includes_needs_author_eyes_warning(tmp_path):
+    _write_log(tmp_path, [
+        {"event": "draft", "chapter": 14},
+        {"event": "lore_checker", "loop": 0, "verdict": "PASS"},
+        {"event": "inkos_audit", "loop": 0, "issues": 0},
+        {"event": "delivered", "chapter": 14},
+    ])
+    _write_hooks(tmp_path, "aethon", [])
+    _write_proposals(tmp_path, 0)
+    result = RunResult(halted=False, chapter_number=14, delivered=True, needs_author_eyes=True)
+
+    text = build_card_text(result, "aethon", tmp_path)
+
+    assert text == (
+        "📖 AETHON — Chapter 14 ready\n"
+        "⚠️ NEEDS AUTHOR EYES — revision loop exhausted without a clean pass\n"
+        "Lore: PASS | Audit: PASS | Hooks advanced: 0\n"
+        "📌 0 canon proposals pending"
+    )
+
+
 def test_build_card_keyboard_has_five_buttons_with_chapter_targeted_callback_data():
     keyboard = build_card_keyboard(14)
 

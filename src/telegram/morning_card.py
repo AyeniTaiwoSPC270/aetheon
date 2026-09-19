@@ -7,12 +7,14 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 from src.wrapper.log import events_for_chapter
-from src.wrapper.run import RunResult
+
+if TYPE_CHECKING:
+    from src.wrapper.run import RunResult
 
 
 def _lore_verdict(events: list[dict[str, Any]]) -> str:
@@ -49,8 +51,11 @@ def build_card_text(result: RunResult, book_id: str, repo_root: Path) -> str:
     audit_summary = "PASS" if audit_issues == 0 else f"{audit_issues} issue(s)"
     hooks_advanced = _hooks_advanced_count(repo_root, book_id, result.chapter_number)
     proposals_pending = _proposals_pending_count(repo_root)
+    header = f"📖 AETHON — Chapter {result.chapter_number} ready"
+    if result.needs_author_eyes:
+        header += "\n⚠️ NEEDS AUTHOR EYES — revision loop exhausted without a clean pass"
     return (
-        f"📖 AETHON — Chapter {result.chapter_number} ready\n"
+        f"{header}\n"
         f"Lore: {lore_verdict} | Audit: {audit_summary} | Hooks advanced: {hooks_advanced}\n"
         f"📌 {proposals_pending} canon proposals pending"
     )

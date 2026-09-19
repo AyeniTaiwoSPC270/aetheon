@@ -4,10 +4,12 @@ after a successful delivery (docs/superpowers/specs/
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from src.telegram.morning_card import build_card_keyboard, build_card_text
-from src.wrapper.run import RunResult
+
+if TYPE_CHECKING:
+    from src.wrapper.run import RunResult
 
 
 async def notify_delivery(
