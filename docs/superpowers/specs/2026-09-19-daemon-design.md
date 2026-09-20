@@ -184,3 +184,35 @@ assistant), make `scripts/cron-run.sh` executable, add the crontab entry
 | `tests/phase6/test_lore_checker.py`, `tests/phase6b/test_morning_card.py`, `tests/phase6b/test_delivery.py` (unchanged) | Confirm the `TYPE_CHECKING` import fix (Decision 2) didn't change observable behavior — must still pass exactly as-is |
 | `tests/phase6b/test_morning_card.py` (extended) | One new case: `needs_author_eyes=True` produces the warning line; existing cases (all `needs_author_eyes=False` by default) stay green unmodified |
 | `tests/phase6/test_run_cli.py` (extended) | `_notify_result` sends the plain halted message; sends the morning card (via a mocked `Bot`, never a real one) on delivery; skips silently and prints when Telegram env vars are missing; `main()` calls `_notify_result` on a real (non-dry-run) invocation and does not on `--dry-run`. **Every pre-existing test in this file gets `_notify_result` mocked too** (Decision 4) — including ones that don't otherwise care about notification, purely for network-call safety |
+
+## Addendum (2026-09-20): hosting decision changed to Windows Task Scheduler
+
+Oracle Cloud Always Free's signup requires a card for identity
+verification plus a possible manual review hold — friction the author
+decided wasn't worth it, especially after confirming Railway/Render's
+*free* tiers still don't solve the persistence requirement either (their
+paid tiers, ~$5-10/mo, would — a real alternative, not pursued here).
+Landed on **Windows Task Scheduler** on the author's own machine instead:
+zero accounts, zero cost, fully reversible, at the cost of only running
+while the machine is on (mitigated with `-WakeToRun` so a sleeping, not
+shut-down, machine still fires).
+
+None of this changes any code in this spec — `run_once()`, `main()`, and
+`_notify_result()` are host-agnostic. Only the trigger mechanism changed:
+`scripts/cron-run.sh` and `docs/deployment-runbook.md` (Oracle-specific)
+stay in the repo as unused reference material, not deleted, in case Oracle
+is revisited later. The actual trigger is now:
+
+- `scripts/task-scheduler-run.ps1` — sets `PATH` explicitly (Task
+  Scheduler's environment is minimal, same reasoning as the cron script),
+  loads `.env` directly, runs `uv run python -m src.wrapper.run --once`,
+  logs to `sandbox/task-scheduler.log`.
+- A registered Task Scheduler entry, `AethonNightlyChapter`, daily at
+  3:00 AM, `-WakeToRun`, `-StartWhenAvailable` (catches up if the machine
+  was off at 3 AM rather than skipping the day). Registered directly via
+  `Register-ScheduledTask` (local machine, no external account needed, so
+  — unlike the Oracle VM — this was something Claude could actually set
+  up rather than only document).
+- To disable: `Disable-ScheduledTask -TaskName AethonNightlyChapter`. To
+  remove entirely: `Unregister-ScheduledTask -TaskName AethonNightlyChapter`.
+- To change the time: `Set-ScheduledTask -TaskName AethonNightlyChapter -Trigger (New-ScheduledTaskTrigger -Daily -At <time>)`.
