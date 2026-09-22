@@ -7,26 +7,19 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 
+from src.wrapper.inkos_cli import inkos_command
+
 
 def approve_chapter(repo_root: Path, book_id: str, chapter: int) -> None:
-    cmd = [
-        str(repo_root / "scripts" / "inkos-gemini.sh"), "review", "approve",
-        book_id, str(chapter), "--json",
-    ]
+    cmd = inkos_command("review", "approve", book_id, str(chapter), "--json")
     subprocess.run(cmd, cwd=repo_root, check=True)
 
 
 def revise_chapter(repo_root: Path, book_id: str, chapter: int, brief: str) -> None:
-    cmd = [
-        str(repo_root / "scripts" / "inkos-gemini.sh"), "revise", book_id, str(chapter),
-        "--mode", "spot-fix", "--brief", brief,
-    ]
+    cmd = inkos_command("revise", book_id, str(chapter), "--mode", "spot-fix", "--brief", brief)
     subprocess.run(cmd, cwd=repo_root, check=True)
 
 
 def regen_chapter(repo_root: Path, book_id: str, chapter: int) -> None:
-    cmd = [
-        str(repo_root / "scripts" / "inkos-gemini.sh"), "revise", book_id, str(chapter),
-        "--mode", "rewrite",
-    ]
+    cmd = inkos_command("revise", book_id, str(chapter), "--mode", "rewrite")
     subprocess.run(cmd, cwd=repo_root, check=True)
