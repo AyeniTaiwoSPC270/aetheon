@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from pathlib import Path
 from typing import Any
 
@@ -75,6 +76,20 @@ async def _resume_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         await message.reply_text("Wasn't paused.")
 
 
+_FILENAME_UNSAFE = re.compile(r'[\\/:*?"<>|]')
+
+
+def _load_book_title(repo_root: Path, book_id: str) -> str:
+    book_path = repo_root / "books" / book_id / "book.json"
+    title = json.loads(book_path.read_text(encoding="utf-8"))["title"]
+    return str(title)
+
+
+def _chapter_pdf_filename(book_title: str, chapter_number: int, chapter_title: str) -> str:
+    name = f"{book_title}, Chapter {chapter_number} {chapter_title}.pdf"
+    return _FILENAME_UNSAFE.sub("-", name)
+
+
 def _load_index(repo_root: Path, book_id: str) -> list[dict[str, Any]]:
     index_path = repo_root / "books" / book_id / "chapters" / "index.json"
     result: list[dict[str, Any]] = json.loads(index_path.read_text(encoding="utf-8"))
@@ -121,7 +136,9 @@ async def _chapter_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -
     pdf_bytes = pdf_export.build_chapter_pdf(
         chapter_number, entry["title"], text_path.read_text(encoding="utf-8")
     )
-    await message.reply_document(document=InputFile(pdf_bytes, filename=f"ch{chapter_number}.pdf"))
+    book_title = _load_book_title(REPO_ROOT, BOOK_ID)
+    filename = _chapter_pdf_filename(book_title, chapter_number, entry["title"])
+    await message.reply_document(document=InputFile(pdf_bytes, filename=filename))
 
 
 async def _book_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -218,9 +235,11 @@ async def _callback_query_handler(update: Update, context: ContextTypes.DEFAULT_
         pdf_bytes = pdf_export.build_chapter_pdf(
             int(target), entry["title"], text_path.read_text(encoding="utf-8")
         )
+        book_title = _load_book_title(REPO_ROOT, BOOK_ID)
+        filename = _chapter_pdf_filename(book_title, int(target), entry["title"])
         message = query.message
         if isinstance(message, Message):
-            await message.reply_document(document=InputFile(pdf_bytes, filename=f"ch{target}.pdf"))
+            await message.reply_document(document=InputFile(pdf_bytes, filename=filename))
     elif action == "approve_proposal":
         proposal = _find_proposal(REPO_ROOT, target)
         if proposal is not None:

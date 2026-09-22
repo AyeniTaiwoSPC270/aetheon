@@ -18,6 +18,12 @@ def _index_json(repo_root: Path, book_id: str, entries: list[dict]) -> None:
     (chapters_dir / "index.json").write_text(json.dumps(entries), encoding="utf-8")
 
 
+def _book_json(repo_root: Path, book_id: str, title: str) -> None:
+    book_dir = repo_root / "books" / book_id
+    book_dir.mkdir(parents=True, exist_ok=True)
+    (book_dir / "book.json").write_text(json.dumps({"id": book_id, "title": title}), encoding="utf-8")
+
+
 def _chapter_file(repo_root: Path, book_id: str, number: int, text: str) -> None:
     (repo_root / "books" / book_id / "chapters" / f"{number:04d}_Test.md").write_text(
         text, encoding="utf-8"
@@ -43,6 +49,7 @@ class _RecordingContext:
 
 
 def test_chapter_command_sends_pdf_for_an_approved_chapter(monkeypatch, tmp_path):
+    _book_json(tmp_path, "aethon", "Aethon")
     _index_json(tmp_path, "aethon", [{"number": 1, "title": "The Pour", "status": "approved"}])
     _chapter_file(tmp_path, "aethon", 1, "# Chapter 1: The Pour\n\nBody text.")
     sent = []
@@ -56,6 +63,7 @@ def test_chapter_command_sends_pdf_for_an_approved_chapter(monkeypatch, tmp_path
 
     assert len(sent) == 1
     assert isinstance(sent[0], InputFile)
+    assert sent[0].filename == "Aethon, Chapter 1 The Pour.pdf"
 
 
 def test_chapter_command_refuses_a_not_yet_settled_chapter(monkeypatch, tmp_path):
@@ -357,6 +365,37 @@ def test_resume_command_when_not_paused(monkeypatch, tmp_path):
     asyncio.run(bot._resume_command(_command_update("/resume"), _RecordingContext([])))
 
     assert replies == ["Wasn't paused."]
+
+
+def test_chapter_pdf_filename_is_book_comma_chapter_number_then_title():
+    assert bot._chapter_pdf_filename("Aethon", 11, "The Shape of the Place") == (
+        "Aethon, Chapter 11 The Shape of the Place.pdf"
+    )
+
+
+def test_chapter_pdf_filename_sanitizes_filesystem_unsafe_characters():
+    assert bot._chapter_pdf_filename("A/B", 1, 'Ti:tle"') == "A-B, Chapter 1 Ti-tle-.pdf"
+
+
+def test_read_chapter_callback_sends_pdf_named_book_chapter_title(monkeypatch, tmp_path):
+    _book_json(tmp_path, "aethon", "Aethon")
+    _index_json(tmp_path, "aethon", [{"number": 11, "title": "The Shape of the Place", "status": "approved"}])
+    _chapter_file(tmp_path, "aethon", 11, "# Chapter 11\n\nBody text.")
+    sent = []
+
+    async def fake_answer(self, **kwargs):
+        pass
+
+    async def fake_reply_document(self, document, **kwargs):
+        sent.append(document)
+
+    monkeypatch.setattr(CallbackQuery, "answer", fake_answer)
+    monkeypatch.setattr(Message, "reply_document", fake_reply_document)
+
+    asyncio.run(bot._callback_query_handler(_callback_update("read_chapter:11"), _RecordingContext([])))
+
+    assert len(sent) == 1
+    assert sent[0].filename == "Aethon, Chapter 11 The Shape of the Place.pdf"
 
 
 def test_build_bot_commands_covers_every_registered_command():
