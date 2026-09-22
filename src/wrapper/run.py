@@ -20,6 +20,7 @@ from src.checks import canon_proposals, hard_rules, lore_checker
 from src.telegram.delivery import notify_delivery
 from src.wrapper import chapter_log, halts, log, snapshot
 from src.wrapper.config import load_config
+from src.wrapper.inkos_cli import inkos_command
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 
@@ -60,20 +61,19 @@ def _draft(repo_root: Path, book_id: str, word_count: int) -> None:
     # No --dry-run flag exists on `inkos draft` (confirmed via `inkos draft
     # --help`) -- dry_run's effect in run_once() is narrower than the
     # spec's one-liner suggests; see this plan's Global Constraints ruling.
-    cmd = [str(repo_root / "scripts" / "inkos-gemini.sh"), "draft", book_id, "--words", str(word_count)]
+    cmd = inkos_command("draft", book_id, "--words", str(word_count))
     subprocess.run(cmd, cwd=repo_root, check=True)
 
 
 def _revise(repo_root: Path, book_id: str, chapter_number: int, brief: str) -> None:
-    cmd = [
-        str(repo_root / "scripts" / "inkos-gemini.sh"), "revise", book_id, str(chapter_number),
-        "--mode", "spot-fix", "--brief", brief,
-    ]
+    cmd = inkos_command(
+        "revise", book_id, str(chapter_number), "--mode", "spot-fix", "--brief", brief,
+    )
     subprocess.run(cmd, cwd=repo_root, check=True)
 
 
 def _audit(repo_root: Path, book_id: str, chapter_number: int) -> dict[str, Any]:
-    cmd = [str(repo_root / "scripts" / "inkos-gemini.sh"), "audit", book_id, str(chapter_number), "--json"]
+    cmd = inkos_command("audit", book_id, str(chapter_number), "--json")
     result = subprocess.run(cmd, cwd=repo_root, capture_output=True, text=True, check=True)
     return cast(dict[str, Any], json.loads(result.stdout))
 
