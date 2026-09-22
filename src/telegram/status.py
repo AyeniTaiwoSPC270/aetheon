@@ -11,8 +11,10 @@ def build_status_message(book_id: str, repo_root: Path) -> str:
     index_path = repo_root / "books" / book_id / "chapters" / "index.json"
     chapters = json.loads(index_path.read_text(encoding="utf-8"))
 
+    paused_line = "⏸️ Paused\n" if (repo_root / "sandbox" / "paused").exists() else ""
+
     if not chapters:
-        return "📖 AETHON — status\nNo chapters yet."
+        return f"{paused_line}📖 AETHON — status\nNo chapters yet."
 
     latest = max(chapters, key=lambda chapter: chapter["number"])
     unapproved = sum(1 for chapter in chapters if chapter["status"] != "approved")
@@ -21,6 +23,7 @@ def build_status_message(book_id: str, repo_root: Path) -> str:
     proposals_pending = len(list(proposals_dir.glob("*.md")))
 
     return (
+        f"{paused_line}"
         "📖 AETHON — status\n"
         f"Latest: Ch.{latest['number']} ({latest['status']})\n"
         f"Unapproved chapters: {unapproved}\n"

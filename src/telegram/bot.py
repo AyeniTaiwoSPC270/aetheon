@@ -25,7 +25,7 @@ from src.telegram import actions, lore_query, pdf_export, pending_action, propos
 from src.telegram.auth import is_authorized
 from src.telegram.pending_action import PendingAction
 from src.telegram.status import build_status_message
-from src.wrapper import vault_sync
+from src.wrapper import halts, vault_sync
 from src.wrapper.config import load_config
 from src.wrapper.halts import SETTLED_STATUSES
 
@@ -54,6 +54,25 @@ async def _status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
     if message is None:
         return
     await message.reply_text(build_status_message(BOOK_ID, REPO_ROOT))
+
+
+async def _pause_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    message = update.effective_message
+    if message is None:
+        return
+    halts.pause(REPO_ROOT)
+    await message.reply_text("⏸️ Paused. Nightly runs will halt until /resume.")
+
+
+async def _resume_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    message = update.effective_message
+    if message is None:
+        return
+    was_paused = halts.resume(REPO_ROOT)
+    if was_paused:
+        await message.reply_text("▶️ Resumed. Nightly runs will proceed normally.")
+    else:
+        await message.reply_text("Wasn't paused.")
 
 
 def _load_index(repo_root: Path, book_id: str) -> list[dict[str, Any]]:
@@ -246,6 +265,8 @@ def build_application(token: str) -> Application[Any, Any, Any, Any, Any, Any]:
     application.add_handler(CommandHandler("skip", _skip_command))
     application.add_handler(CommandHandler("regen", _regen_command))
     application.add_handler(CommandHandler("query", _query_command))
+    application.add_handler(CommandHandler("pause", _pause_command))
+    application.add_handler(CommandHandler("resume", _resume_command))
     application.add_handler(CallbackQueryHandler(_callback_query_handler))
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, _pending_note_handler))
     return application

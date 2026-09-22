@@ -223,8 +223,9 @@ def test_build_application_wires_all_new_handlers():
     application = bot.build_application("123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11")
 
     handlers = [h for group in application.handlers.values() for h in group]
-    # auth gate (-1) + status, chapter, book, skip, regen, query, callback query, pending-note = 9
-    assert len(handlers) == 9
+    # auth gate (-1) + status, chapter, book, skip, regen, query, pause, resume,
+    # callback query, pending-note = 11
+    assert len(handlers) == 11
 
 
 def test_auth_gate_still_runs_in_its_own_group_ahead_of_every_new_handler():
@@ -238,7 +239,7 @@ def test_auth_gate_still_runs_in_its_own_group_ahead_of_every_new_handler():
     assert list(application.handlers.keys()) == [-1, 0]
     assert len(application.handlers[-1]) == 1
     assert application.handlers[-1][0].callback is bot._auth_gate
-    assert len(application.handlers[0]) == 8
+    assert len(application.handlers[0]) == 10
 
 
 def test_query_command_replies_with_the_lore_query_result(monkeypatch, tmp_path):
@@ -313,3 +314,46 @@ def test_approve_chapter_callback_also_syncs_to_vault(monkeypatch, tmp_path):
     asyncio.run(bot._callback_query_handler(_callback_update("approve_chapter:14"), _RecordingContext([])))
 
     assert called == [("aethon", 14, 1)]
+
+
+def test_pause_command_creates_marker_and_confirms(monkeypatch, tmp_path):
+    replies = []
+
+    async def fake_reply_text(self, text, **kwargs):
+        replies.append(text)
+
+    monkeypatch.setattr(Message, "reply_text", fake_reply_text)
+
+    asyncio.run(bot._pause_command(_command_update("/pause"), _RecordingContext([])))
+
+    assert (tmp_path / "sandbox" / "paused").exists()
+    assert replies == ["⏸️ Paused. Nightly runs will halt until /resume."]
+
+
+def test_resume_command_removes_marker_and_confirms(monkeypatch, tmp_path):
+    from src.wrapper import halts
+    halts.pause(tmp_path)
+    replies = []
+
+    async def fake_reply_text(self, text, **kwargs):
+        replies.append(text)
+
+    monkeypatch.setattr(Message, "reply_text", fake_reply_text)
+
+    asyncio.run(bot._resume_command(_command_update("/resume"), _RecordingContext([])))
+
+    assert not (tmp_path / "sandbox" / "paused").exists()
+    assert replies == ["▶️ Resumed. Nightly runs will proceed normally."]
+
+
+def test_resume_command_when_not_paused(monkeypatch, tmp_path):
+    replies = []
+
+    async def fake_reply_text(self, text, **kwargs):
+        replies.append(text)
+
+    monkeypatch.setattr(Message, "reply_text", fake_reply_text)
+
+    asyncio.run(bot._resume_command(_command_update("/resume"), _RecordingContext([])))
+
+    assert replies == ["Wasn't paused."]

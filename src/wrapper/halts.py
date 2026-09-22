@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import subprocess
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 
 from src.wrapper.config import WrapperConfig
@@ -68,7 +69,31 @@ def check_clean_tree(repo_root: Path, book_id: str) -> HaltReason | None:
     return None
 
 
+def check_paused(repo_root: Path) -> HaltReason | None:
+    marker = repo_root / "sandbox" / "paused"
+    if marker.exists():
+        return HaltReason("paused", "paused via /pause -- run /resume to continue")
+    return None
+
+
+def pause(repo_root: Path) -> None:
+    marker = repo_root / "sandbox" / "paused"
+    marker.parent.mkdir(parents=True, exist_ok=True)
+    marker.write_text(f"paused at {datetime.now(timezone.utc).isoformat()}\n", encoding="utf-8")
+
+
+def resume(repo_root: Path) -> bool:
+    marker = repo_root / "sandbox" / "paused"
+    if marker.exists():
+        marker.unlink()
+        return True
+    return False
+
+
 def check_all(repo_root: Path, book_id: str, config: WrapperConfig) -> HaltReason | None:
+    paused = check_paused(repo_root)
+    if paused is not None:
+        return paused
     backpressure = check_backpressure(repo_root, book_id, config)
     if backpressure is not None:
         return backpressure

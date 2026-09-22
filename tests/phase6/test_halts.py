@@ -10,7 +10,10 @@ from src.wrapper.halts import (
     check_author_notes,
     check_backpressure,
     check_clean_tree,
+    check_paused,
     check_proposal_backlog,
+    pause,
+    resume,
 )
 
 CONFIG = WrapperConfig(
@@ -117,3 +120,49 @@ def test_check_all_passes_clean_repo(tmp_path):
     (tmp_path / "vault" / "01-Sagas" / "Saga-1").mkdir(parents=True)
     _init_repo_with_book(tmp_path, "testbook")
     assert check_all(tmp_path, "testbook", CONFIG) is None
+
+
+def test_check_paused_returns_none_when_no_marker(tmp_path):
+    assert check_paused(tmp_path) is None
+
+
+def test_check_paused_returns_halt_reason_when_marker_exists(tmp_path):
+    (tmp_path / "sandbox").mkdir()
+    (tmp_path / "sandbox" / "paused").write_text("paused at ...\n", encoding="utf-8")
+
+    result = check_paused(tmp_path)
+
+    assert result is not None
+    assert result.check == "paused"
+
+
+def test_pause_creates_marker_file(tmp_path):
+    pause(tmp_path)
+
+    assert (tmp_path / "sandbox" / "paused").exists()
+
+
+def test_resume_removes_marker_and_returns_true_when_was_paused(tmp_path):
+    pause(tmp_path)
+
+    was_paused = resume(tmp_path)
+
+    assert was_paused is True
+    assert not (tmp_path / "sandbox" / "paused").exists()
+
+
+def test_resume_returns_false_when_not_paused(tmp_path):
+    was_paused = resume(tmp_path)
+
+    assert was_paused is False
+
+
+def test_check_all_returns_paused_before_any_other_check(tmp_path):
+    # Even with backpressure also violated, paused must win (checked first).
+    _write_index(tmp_path, "testbook", ["ready-for-review", "ready-for-review"])
+    pause(tmp_path)
+
+    result = check_all(tmp_path, "testbook", CONFIG)
+
+    assert result is not None
+    assert result.check == "paused"

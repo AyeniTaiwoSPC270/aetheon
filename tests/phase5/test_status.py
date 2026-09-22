@@ -72,3 +72,20 @@ def test_status_with_no_chapters_yet(tmp_path: Path) -> None:
     message = build_status_message("aethon", tmp_path)
 
     assert message == "📖 AETHON — status\nNo chapters yet."
+
+
+def test_status_shows_paused_line_when_paused(tmp_path: Path) -> None:
+    _write_index(tmp_path, "aethon", [{"number": 13, "status": "approved"}])
+    _make_proposals(tmp_path, 0)
+    (tmp_path / "sandbox").mkdir(parents=True)
+    (tmp_path / "sandbox" / "paused").write_text("paused at ...\n", encoding="utf-8")
+
+    message = build_status_message("aethon", tmp_path)
+
+    assert message == (
+        "⏸️ Paused\n"
+        "📖 AETHON — status\n"
+        "Latest: Ch.13 (approved)\n"
+        "Unapproved chapters: 0\n"
+        "Canon proposals pending: 0"
+    )

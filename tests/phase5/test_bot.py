@@ -54,7 +54,7 @@ def test_build_application_wires_status_handler_without_network_call() -> None:
 
     assert isinstance(application, Application)
     handlers = [h for group in application.handlers.values() for h in group]
-    assert len(handlers) == 9  # auth gate (-1) + status/chapter/book/skip/regen/query/callback/pending-note
+    assert len(handlers) == 11  # auth gate (-1) + status/chapter/book/skip/regen/query/pause/resume/callback/pending-note
 
 
 def test_auth_gate_raises_when_chat_id_does_not_match(monkeypatch: pytest.MonkeyPatch) -> None:
