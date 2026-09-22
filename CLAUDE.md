@@ -173,11 +173,50 @@ aethon-pipeline/
 > before (Ch.1-13 import, `chapter-analyzer` silently defaulted to
 > Sonnet). Gemini's free tier makes this lower-stakes than an Anthropic
 > mis-route, but still check.
+>
+> **2026-09-22: `scripts/inkos-gemini.sh`/`.ps1` are no longer the live
+> routing path for automation.** `subprocess.run()` can't invoke a `.sh`
+> file on Windows (`OSError: WinError 193`, hit as a real Task Scheduler
+> crash) — `src/wrapper/inkos_cli.py`'s `inkos_command()` now resolves
+> `inkos` directly off PATH and builds the same four routing flags
+> in-process. The `.ps1`/`.sh` scripts still work for manual/interactive
+> use (`./scripts/inkos-gemini.ps1 doctor` etc.) but nothing in the
+> pipeline shells out to them anymore.
+>
+> **2026-09-22: added `GEMINI_API_KEY_2`** (separate Google Cloud
+> project/key) to spread rate-limit load, since the single-key setup was
+> observed hitting 429s under normal use. `inkos_command()` routes the
+> `draft` subcommand (the writer agent's call, by far the heaviest
+> prose-generation traffic) through `GEMINI_API_KEY_2`; every other
+> subcommand (`audit`, `revise`, `review`, etc.) stays on
+> `GEMINI_API_KEY`. This is done via the subcommand string, **not**
+> InkOS's per-agent `config set-model --api-key-env` override — verified
+> by reading `inkos-core`'s `pipeline/runner.js`: `resolveOverride()`
+> only builds a new client (and thus only honors `apiKeyEnv`) when the
+> override *also* sets a `baseUrl`; a bare `--api-key-env` on its own
+> silently falls back to the primary client's key. That's the same class
+> of bug as the `service`-inheritance one above, just on a different
+> field — per-agent overrides in this InkOS version are not a safe way
+> to vary only the API key.
+>
+> Also confirmed live at the same time: `gemini-2.5-flash` hard-404s on
+> **both** keys ("no longer available to new users") — same failure this
+> file already logged for the original key back on 2026-07-12, now
+> reproduced fresh on the new key too. `gemini-flash-latest` remains the
+> only confirmed-working choice; don't pin a dated snapshot name again
+> without testing it live first.
+>
+> `GEMINI_API_KEY_2` was a newly created key/project as of 2026-09-22 —
+> if it looks flaky (503 "high demand", or `doctor`/`audit` hanging
+> through repeated empty-response retries) soon after being added,
+> that's consistent with a fresh project's low default rate-limit tier
+> still warming up, not necessarily a broken key. Re-test live before
+> assuming it's actually broken.
 
 | Component | Model | Notes |
 |---|---|---|
-| InkOS writer agent | `gemini-flash-latest` | via `scripts/inkos-gemini.sh`/`.ps1`; only Gemini key in use |
-| InkOS auditor/architect/radar/chapter-analyzer | `gemini-flash-latest` | same wrapper, same model — no per-agent overrides configured (see note above) |
+| InkOS writer agent (`draft`) | `gemini-flash-latest` | via `src/wrapper/inkos_cli.py`; routed through `GEMINI_API_KEY_2` |
+| InkOS auditor/reviser/architect/radar/chapter-analyzer | `gemini-flash-latest` | same module, same model, routed through `GEMINI_API_KEY` — no per-agent model overrides configured (see notes above) |
 | Lore Checker (ours) | `gemini-flash-latest` | not yet built (Phase 3 design deferred it — see docs/superpowers/specs); this is InkOS-specific, unrelated to our own future Lore Checker's model choice |
 | Embeddings | local sentence-transformers (bge-small) | $0 |
 
