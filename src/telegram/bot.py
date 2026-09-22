@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from dotenv import load_dotenv
-from telegram import InputFile, Message, Update
+from telegram import BotCommand, InputFile, Message, Update
 from telegram.ext import (
     Application,
     ApplicationHandlerStop,
@@ -256,8 +256,25 @@ async def _pending_note_handler(update: Update, context: ContextTypes.DEFAULT_TY
         await message.reply_text(f"Modified canon proposal: {action.target}.")
 
 
+def build_bot_commands() -> list[BotCommand]:
+    return [
+        BotCommand("status", "Show pipeline status"),
+        BotCommand("chapter", "Get a chapter as PDF -- /chapter <n>"),
+        BotCommand("book", "Get the full book so far as PDF"),
+        BotCommand("skip", "Skip the pending chapter for now"),
+        BotCommand("regen", "Regenerate the pending chapter"),
+        BotCommand("query", "Ask a lore question -- /query <question>"),
+        BotCommand("pause", "Pause nightly runs"),
+        BotCommand("resume", "Resume nightly runs"),
+    ]
+
+
+async def _post_init(application: Application[Any, Any, Any, Any, Any, Any]) -> None:
+    await application.bot.set_my_commands(build_bot_commands())
+
+
 def build_application(token: str) -> Application[Any, Any, Any, Any, Any, Any]:
-    application = Application.builder().token(token).build()
+    application = Application.builder().token(token).post_init(_post_init).build()
     application.add_handler(MessageHandler(filters.ALL, _auth_gate), group=-1)
     application.add_handler(CommandHandler("status", _status_command))
     application.add_handler(CommandHandler("chapter", _chapter_command))

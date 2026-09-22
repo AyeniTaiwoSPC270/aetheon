@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 import pytest
-from telegram import CallbackQuery, Chat, InputFile, Message, Update, User
+from telegram import BotCommand, CallbackQuery, Chat, InputFile, Message, Update, User
 
 from src.telegram import actions, bot, pending_action
 from src.telegram.pending_action import PendingAction
@@ -357,3 +357,31 @@ def test_resume_command_when_not_paused(monkeypatch, tmp_path):
     asyncio.run(bot._resume_command(_command_update("/resume"), _RecordingContext([])))
 
     assert replies == ["Wasn't paused."]
+
+
+def test_build_bot_commands_covers_every_registered_command():
+    commands = bot.build_bot_commands()
+
+    names = {c.command for c in commands}
+    assert names == {
+        "status", "chapter", "book", "skip", "regen", "query", "pause", "resume",
+    }
+    assert all(isinstance(c, BotCommand) for c in commands)
+    assert all(c.description for c in commands)
+
+
+def test_build_application_registers_post_init_hook_that_sets_bot_commands():
+    application = bot.build_application("123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11")
+
+    assert application.post_init is bot._post_init
+
+    calls = []
+
+    class FakeBot:
+        async def set_my_commands(self, commands):
+            calls.append(commands)
+
+    application.bot = FakeBot()
+    asyncio.run(bot._post_init(application))
+
+    assert calls == [bot.build_bot_commands()]
