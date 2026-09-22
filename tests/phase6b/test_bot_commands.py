@@ -30,6 +30,20 @@ def _chapter_file(repo_root: Path, book_id: str, number: int, text: str) -> None
     )
 
 
+def _print_metadata(repo_root: Path, book_id: str, author: str, volume_label: str) -> None:
+    story_dir = repo_root / "books" / book_id / "story"
+    story_dir.mkdir(parents=True, exist_ok=True)
+    (story_dir / "print_metadata.json").write_text(
+        json.dumps({"author": author, "volumeLabel": volume_label}), encoding="utf-8"
+    )
+
+
+def _back_cover_blurb(repo_root: Path, book_id: str, blurb: str) -> None:
+    story_dir = repo_root / "books" / book_id / "story"
+    story_dir.mkdir(parents=True, exist_ok=True)
+    (story_dir / "back_cover_blurb.md").write_text(blurb, encoding="utf-8")
+
+
 @pytest.fixture(autouse=True)
 def _patch_repo_root(monkeypatch, tmp_path):
     monkeypatch.setattr(bot, "REPO_ROOT", tmp_path)
@@ -81,6 +95,9 @@ def test_chapter_command_refuses_a_not_yet_settled_chapter(monkeypatch, tmp_path
 
 
 def test_book_command_includes_only_settled_chapters_in_order(monkeypatch, tmp_path):
+    _book_json(tmp_path, "aethon", "Aethon")
+    _print_metadata(tmp_path, "aethon", "lusther", "Volume One")
+    _back_cover_blurb(tmp_path, "aethon", "A boy with a pressure he cannot name.")
     _index_json(tmp_path, "aethon", [
         {"number": 2, "title": "Second", "status": "approved"},
         {"number": 1, "title": "First", "status": "imported"},
@@ -91,8 +108,12 @@ def test_book_command_includes_only_settled_chapters_in_order(monkeypatch, tmp_p
     _chapter_file(tmp_path, "aethon", 3, "# Chapter 3: Draft\n\nThree.")
     captured = {}
 
-    def fake_build_book_pdf(chapters):
+    def fake_build_book_pdf(chapters, *, book_title, volume_label, author, blurb):
         captured["chapters"] = chapters
+        captured["book_title"] = book_title
+        captured["volume_label"] = volume_label
+        captured["author"] = author
+        captured["blurb"] = blurb
         return b"%PDF-fake"
 
     async def fake_reply_document(self, document, **kwargs):
@@ -105,6 +126,10 @@ def test_book_command_includes_only_settled_chapters_in_order(monkeypatch, tmp_p
     asyncio.run(bot._book_command(_command_update("/book"), _RecordingContext([])))
 
     assert [c[0] for c in captured["chapters"]] == [1, 2]  # chapter 3 excluded, ordered ascending
+    assert captured["book_title"] == "Aethon"
+    assert captured["volume_label"] == "Volume One"
+    assert captured["author"] == "lusther"
+    assert captured["blurb"] == "A boy with a pressure he cannot name."
 
 
 def test_skip_command_makes_no_inkos_call(monkeypatch, tmp_path):

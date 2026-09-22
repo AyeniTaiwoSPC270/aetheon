@@ -85,6 +85,17 @@ def _load_book_title(repo_root: Path, book_id: str) -> str:
     return str(title)
 
 
+def _load_print_metadata(repo_root: Path, book_id: str) -> tuple[str, str]:
+    metadata_path = repo_root / "books" / book_id / "story" / "print_metadata.json"
+    metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+    return str(metadata["author"]), str(metadata["volumeLabel"])
+
+
+def _load_back_cover_blurb(repo_root: Path, book_id: str) -> str:
+    blurb_path = repo_root / "books" / book_id / "story" / "back_cover_blurb.md"
+    return blurb_path.read_text(encoding="utf-8").strip()
+
+
 def _chapter_pdf_filename(book_title: str, chapter_number: int, chapter_title: str) -> str:
     name = f"{book_title}, Chapter {chapter_number} {chapter_title}.pdf"
     return _FILENAME_UNSAFE.sub("-", name)
@@ -157,7 +168,12 @@ async def _book_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         text_path = _chapter_text_path(REPO_ROOT, BOOK_ID, entry["number"])
         assert text_path is not None
         chapters.append((entry["number"], entry["title"], text_path.read_text(encoding="utf-8")))
-    pdf_bytes = pdf_export.build_book_pdf(chapters)
+    book_title = _load_book_title(REPO_ROOT, BOOK_ID)
+    author, volume_label = _load_print_metadata(REPO_ROOT, BOOK_ID)
+    blurb = _load_back_cover_blurb(REPO_ROOT, BOOK_ID)
+    pdf_bytes = pdf_export.build_book_pdf(
+        chapters, book_title=book_title, volume_label=volume_label, author=author, blurb=blurb
+    )
     await message.reply_document(document=InputFile(pdf_bytes, filename="aethon_full.pdf"))
 
 
