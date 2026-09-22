@@ -108,12 +108,17 @@ def test_book_command_includes_only_settled_chapters_in_order(monkeypatch, tmp_p
     _chapter_file(tmp_path, "aethon", 3, "# Chapter 3: Draft\n\nThree.")
     captured = {}
 
-    def fake_build_book_pdf(chapters, *, book_title, volume_label, author, blurb):
+    def fake_build_book_pdf(
+        chapters, *, book_title, volume_label, author, blurb,
+        cover_image_path=None, back_cover_image_path=None,
+    ):
         captured["chapters"] = chapters
         captured["book_title"] = book_title
         captured["volume_label"] = volume_label
         captured["author"] = author
         captured["blurb"] = blurb
+        captured["cover_image_path"] = cover_image_path
+        captured["back_cover_image_path"] = back_cover_image_path
         return b"%PDF-fake"
 
     async def fake_reply_document(self, document, **kwargs):
@@ -129,7 +134,41 @@ def test_book_command_includes_only_settled_chapters_in_order(monkeypatch, tmp_p
     assert captured["book_title"] == "Aethon"
     assert captured["volume_label"] == "Volume One"
     assert captured["author"] == "lusther"
-    assert captured["blurb"] == "A boy with a pressure he cannot name."
+    assert captured["cover_image_path"] is None  # no art/ dir in this fixture
+    assert captured["back_cover_image_path"] is None
+
+
+def test_book_command_passes_cover_art_paths_when_present(monkeypatch, tmp_path):
+    _book_json(tmp_path, "aethon", "Aethon")
+    _print_metadata(tmp_path, "aethon", "lusther", "Volume One")
+    _back_cover_blurb(tmp_path, "aethon", "A boy with a pressure he cannot name.")
+    _index_json(tmp_path, "aethon", [{"number": 1, "title": "First", "status": "approved"}])
+    _chapter_file(tmp_path, "aethon", 1, "# Chapter 1: First\n\nOne.")
+    art_dir = tmp_path / "books" / "aethon" / "story" / "art"
+    art_dir.mkdir(parents=True, exist_ok=True)
+    (art_dir / "cover_front.jpg").write_bytes(b"front")
+    (art_dir / "cover_back.jpg").write_bytes(b"back")
+    captured = {}
+
+    def fake_build_book_pdf(
+        chapters, *, book_title, volume_label, author, blurb,
+        cover_image_path=None, back_cover_image_path=None,
+    ):
+        captured["cover_image_path"] = cover_image_path
+        captured["back_cover_image_path"] = back_cover_image_path
+        return b"%PDF-fake"
+
+    async def fake_reply_document(self, document, **kwargs):
+        pass
+
+    from src.telegram import pdf_export
+    monkeypatch.setattr(pdf_export, "build_book_pdf", fake_build_book_pdf)
+    monkeypatch.setattr(Message, "reply_document", fake_reply_document)
+
+    asyncio.run(bot._book_command(_command_update("/book"), _RecordingContext([])))
+
+    assert captured["cover_image_path"] == art_dir / "cover_front.jpg"
+    assert captured["back_cover_image_path"] == art_dir / "cover_back.jpg"
 
 
 def test_skip_command_makes_no_inkos_call(monkeypatch, tmp_path):

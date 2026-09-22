@@ -96,6 +96,13 @@ def _load_back_cover_blurb(repo_root: Path, book_id: str) -> str:
     return blurb_path.read_text(encoding="utf-8").strip()
 
 
+def _cover_art_paths(repo_root: Path, book_id: str) -> tuple[Path | None, Path | None]:
+    art_dir = repo_root / "books" / book_id / "story" / "art"
+    front = art_dir / "cover_front.jpg"
+    back = art_dir / "cover_back.jpg"
+    return (front if front.is_file() else None, back if back.is_file() else None)
+
+
 def _chapter_pdf_filename(book_title: str, chapter_number: int, chapter_title: str) -> str:
     name = f"{book_title}, Chapter {chapter_number} {chapter_title}.pdf"
     return _FILENAME_UNSAFE.sub("-", name)
@@ -171,8 +178,15 @@ async def _book_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     book_title = _load_book_title(REPO_ROOT, BOOK_ID)
     author, volume_label = _load_print_metadata(REPO_ROOT, BOOK_ID)
     blurb = _load_back_cover_blurb(REPO_ROOT, BOOK_ID)
+    cover_image_path, back_cover_image_path = _cover_art_paths(REPO_ROOT, BOOK_ID)
     pdf_bytes = pdf_export.build_book_pdf(
-        chapters, book_title=book_title, volume_label=volume_label, author=author, blurb=blurb
+        chapters,
+        book_title=book_title,
+        volume_label=volume_label,
+        author=author,
+        blurb=blurb,
+        cover_image_path=cover_image_path,
+        back_cover_image_path=back_cover_image_path,
     )
     await message.reply_document(document=InputFile(pdf_bytes, filename="aethon_full.pdf"))
 

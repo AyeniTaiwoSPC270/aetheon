@@ -1,5 +1,6 @@
 import io
 
+from PIL import Image
 from pypdf import PdfReader
 
 from src.telegram.pdf_export import build_book_pdf, build_chapter_pdf
@@ -11,6 +12,22 @@ BOOK_TITLE = "Aethon"
 VOLUME_LABEL = "Volume One"
 AUTHOR = "lusther"
 BLURB = "A boy with a pressure he cannot name walks into an academy that only sorts the gifted."
+REALISTIC_LENGTH_BLURB = (
+    "Aldric Vane grew up ordinary, a healer's son in a village four days from "
+    "anywhere that mattered, carrying a pressure under his skin he never let "
+    "himself examine too closely. Then it surfaced: a shimmer between his "
+    "fingers that his best friend couldn't look at without flinching.\n\n"
+    "Now Aldric has passed every exam Greyveil Academy could put in front of "
+    "him. Daran, the friend who grew up beside him, did not, and has already "
+    "vanished into the city rather than watch Aldric go on without him.\n\n"
+    "Greyveil doesn't reward the gifted. It sorts them, by bloodline, by "
+    "output, by how well they perform the parts of themselves that can be "
+    "measured. Aldric is walking in alone, carrying something the instructors "
+    "don't have a name for yet, in a world that has never been kind to "
+    "students who don't fit the frame.\n\n"
+    "He's about to find out what the academy does with a pressure it can't "
+    "explain."
+)
 
 
 def _extract_text(pdf_bytes: bytes) -> str:
@@ -139,3 +156,104 @@ def test_build_book_pdf_back_cover_shows_blurb_and_genre_tag():
     back_cover_text = " ".join(reader.pages[-1].extract_text().split())
     assert BLURB in back_cover_text
     assert "EPIC FANTASY" in back_cover_text
+
+
+def test_build_book_pdf_without_images_has_no_embedded_images():
+    result = _build_book()
+
+    reader = PdfReader(io.BytesIO(result))
+    assert len(reader.pages[0].images) == 0
+    assert len(reader.pages[-1].images) == 0
+
+
+def test_build_book_pdf_embeds_cover_image_when_provided(tmp_path):
+    image_path = tmp_path / "cover.jpg"
+    Image.new("RGB", (100, 150), "blue").save(image_path)
+
+    result = build_book_pdf(
+        [(1, "The Pour", CHAPTER_1_TEXT)],
+        book_title=BOOK_TITLE,
+        volume_label=VOLUME_LABEL,
+        author=AUTHOR,
+        blurb=BLURB,
+        cover_image_path=image_path,
+    )
+
+    reader = PdfReader(io.BytesIO(result))
+    assert len(reader.pages[0].images) == 1
+
+
+def test_build_book_pdf_cover_image_page_still_shows_title_and_author(tmp_path):
+    image_path = tmp_path / "cover.jpg"
+    Image.new("RGB", (100, 150), "blue").save(image_path)
+
+    result = build_book_pdf(
+        [(1, "The Pour", CHAPTER_1_TEXT)],
+        book_title=BOOK_TITLE,
+        volume_label=VOLUME_LABEL,
+        author=AUTHOR,
+        blurb=BLURB,
+        cover_image_path=image_path,
+    )
+
+    reader = PdfReader(io.BytesIO(result))
+    cover_text = reader.pages[0].extract_text()
+    assert BOOK_TITLE in cover_text
+    assert AUTHOR in cover_text
+
+
+def test_build_book_pdf_embeds_back_cover_image_when_provided(tmp_path):
+    image_path = tmp_path / "back.jpg"
+    Image.new("RGB", (100, 150), "red").save(image_path)
+
+    result = build_book_pdf(
+        [(1, "The Pour", CHAPTER_1_TEXT)],
+        book_title=BOOK_TITLE,
+        volume_label=VOLUME_LABEL,
+        author=AUTHOR,
+        blurb=BLURB,
+        back_cover_image_path=image_path,
+    )
+
+    reader = PdfReader(io.BytesIO(result))
+    assert len(reader.pages[-1].images) == 1
+
+
+def test_build_book_pdf_realistic_blurb_with_image_stays_on_one_back_cover_page(tmp_path):
+    image_path = tmp_path / "back.jpg"
+    Image.new("RGB", (100, 150), "red").save(image_path)
+
+    result = build_book_pdf(
+        [(1, "The Pour", CHAPTER_1_TEXT)],
+        book_title=BOOK_TITLE,
+        volume_label=VOLUME_LABEL,
+        author=AUTHOR,
+        blurb=REALISTIC_LENGTH_BLURB,
+        back_cover_image_path=image_path,
+    )
+
+    reader = PdfReader(io.BytesIO(result))
+    assert len(reader.pages) == 5  # cover, copyright, toc, ch1, back cover -- no overflow page
+    back_cover_text = " ".join(reader.pages[-1].extract_text().split())
+    assert "EPIC FANTASY" in back_cover_text
+    assert " ".join(REALISTIC_LENGTH_BLURB.split()) in back_cover_text
+
+
+def test_build_book_pdf_page_count_unaffected_by_images(tmp_path):
+    cover_path = tmp_path / "cover.jpg"
+    back_path = tmp_path / "back.jpg"
+    Image.new("RGB", (100, 150), "blue").save(cover_path)
+    Image.new("RGB", (100, 150), "red").save(back_path)
+
+    result = build_book_pdf(
+        [(1, "The Pour", CHAPTER_1_TEXT), (2, "The Thermal Break", CHAPTER_2_TEXT)],
+        book_title=BOOK_TITLE,
+        volume_label=VOLUME_LABEL,
+        author=AUTHOR,
+        blurb=BLURB,
+        cover_image_path=cover_path,
+        back_cover_image_path=back_path,
+    )
+
+    reader = PdfReader(io.BytesIO(result))
+    assert len(reader.pages) == 6
