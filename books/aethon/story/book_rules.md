@@ -1,7 +1,7 @@
 ## Forbidden
 - Never name a 12th Phasite or imply a new unique-ability mage
-- Never physically describe Dragonites (before Saga 7)
-- Never have any character say or know "The Unbound" (before Saga 4)
+- Never physically describe Dragonites (before Act 3/4 reveal — new canon, was "Saga 7"; exact saga TBD)
+- Never have any character say or know "The Unbound" (before Act 2 — new canon, was "Saga 4")
 - No stat screens, system windows, or game UI
 - No character death/rename/repower without plan authorization
 - Circuit severing never casual — requires plan authorization
