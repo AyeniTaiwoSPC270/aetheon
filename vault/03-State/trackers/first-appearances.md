@@ -66,6 +66,9 @@ Built 2026-09-26 from the Chapter Log (Ch. 1–17); VERIFY rows checked against 
 | Unnamed farm boy, goat, young officer and search party | Ch. 49 (NEW) | Single-scene atmospheric/functional. Not expected to recur. |
 | Unnamed records clerk | Ch. 50 (NEW) | Single-scene functional; overheard talking with Bavel. |
 | Unnamed post-house clerk | Ch. 52 (NEW) | Single-scene functional; takes Aldric's letter home. |
+| Hask (first spoken words) | Ch. 60 | Speaks a full sentence for the first time: his cousin's cart goes south Thursday. Previously silent (Ch. 34). |
+| Unnamed records clerk (Ch. 56) | Ch. 56 (NEW) | Tardiness-ledger stickler; explains issue slips and cushions. Single scene; may or may not be the Ch. 50 clerk. |
+| Unnamed stonemason | Ch. 59 (NEW) | Let Aldric into the empty arena for an hour. Single scene. |
 
 Not yet on-page (by name): Varen (named to Aldric Ch. 31, not yet re-encountered in a live scene through Ch. 48), Yolan (saved for his own beat).
 
@@ -91,6 +94,9 @@ Not yet on-page (by name): Varen (named to Aldric Ch. 31, not yet re-encountered
 | The east stair landing (night) | Ch. 25 |
 | A narrow flagstone cut-through behind the library's east wall, between the library and the kitchen block | Ch. 32 |
 | An unnamed stable yard three towns south (Hask's) | Ch. 34 |
+| Records office (administrative wing) | Ch. 56 |
+| The ninth seat, third row back from the envoy's box, Noble Council tier (printed as an approved blank on the official chart) | Ch. 56 (chart); Ch. 42/44 (occupied); Ch. 59 (Aldric sits in it) |
+| Empty Grand Arena at dusk (end of term) | Ch. 59 |
 | A small stone practice courtyard behind Greyveil's east wing | Ch. 36 |
 | Greyveil's Grand Arena — dedicated stone amphitheater | Ch. 37 |
 | The faculty dais and the east cloister, both extensions of the post-tournament gathering grounds within the Grand Arena precinct | Ch. 46 (background/atmospheric only, not a new named location) |
@@ -134,3 +140,7 @@ This batch closes Arc 6 in full. New on-page characters: an unnamed guard (Ch. 4
 ## Ch. 49–53 update note (2026-09-29) — opens Arc 7
 
 New on-page named characters: Drel Voss (Ch. 49 POV), Orin Vael (Ch. 53 POV; unnamed figure in Ch. 52), Captain Aris (Ch. 53). Atmospheric only: the correspondence-leave errand and the town post house (Ch. 52), the assumed name "Corran", the farm, culvert and unnamed village (Ch. 49). No new spells, Phasite Applications or Ki techniques appear on the page (Voss's Beast Resonance is shown only as passive animal awareness). The Council-tier watcher and "Lord Cassian Veyra" are not referenced.
+
+## Ch. 54–60 update note (2026-09-29) — closes Arc 7 and Saga 1
+
+New on-page named characters: none. Hask speaks for the first time (Ch. 60). Single-scene unnamed: a records clerk (Ch. 56), a stonemason (Ch. 59). New places/objects are texture only: the records office, the issue-slip seating record, and the unassigned ninth seat. No new spells, Phasite Applications or Ki techniques. Daran's seventh form (a reverse cut from a crouch) is training texture, not a registry item. The watcher thread is not connected to "Lord Cassian Veyra".

@@ -1,6 +1,6 @@
 # Arc 7 Re-plan — "The Tamer" (Ch. 49–60)
 
-**STATUS: APPROVED (author, 2026-09-28). Ch. 49–53 written and approved 2026-09-29; next: Ch. 54.** This replan reflects the author's decisions from 2026-09-28 (see below). Nothing here is canon until approved. Once approved, this is ready to move to /plan on Ch. 49.
+**STATUS: COMPLETE. Ch. 49–60 written and approved 2026-09-29; Saga 1 is finished at 60 chapters.** This replan reflects the author's decisions from 2026-09-28 (see below). Nothing here is canon until approved. Once approved, this is ready to move to /plan on Ch. 49.
 
 Read alongside: CHAPTER_LOG-1.docx, all four trackers, SAGA_1_BIBLE_COMPLETE.docx (original Arc 7 outline, Ch. 49–55), claude/ACT1_ALL_SAGA_BIBLES.md, CHARACTER_BIBLE.docx (Drel Voss, Orin Vael, Daran, Lirien entries), claude/SPELL_REGISTRY.md, and claude/PENDING_REVIEW_ARC6_BATCH3_AND_ARC7_SKELETON.md (the prior skeleton proposal this replan formalizes).
 

@@ -794,7 +794,7 @@ When opening a new Claude session, just type:
 
 **Arc closing hook / saga thread advanced: **A fleeing attacker's look at Aldric, held a beat too long to be accidental, and Solm's own unsent letter, locked away rather than finished — two adults' and near-adults' worth of unresolved private knowledge, carried directly into Arc 7 ("The Tamer").
 
-**ARC 7 — THE TAMER** *(Ch. 49–60; in progress — Ch. 49–53 written)*
+**ARC 7 — THE TAMER** *(Ch. 49–60; complete)*
 
 **CHAPTER 49**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Drel Voss
 
@@ -866,9 +866,119 @@ When opening a new Claude session, just type:
 
 **Closing beat / hook: **Orin signs the closure himself and does not, for one moment, believe it.
 
+**CHAPTER 54**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Aldric Vane
+
+**Title (per manuscript): **What He Carries Back
+
+**Word count (measured): **2,058  |  **Ending hook type: **Reversal  |  **Reader rating (1–5): **not yet given
+
+**What happened: **Back from the hillside, Aldric can't tell Rynn and Solen what he saw, because they would want a story with an ending and he only has a face. Solen retires the question and leaves him a door that closes. In the library corner he finds Lirien already there and realises this is not the first time; she moves the far chair out four inches with her foot, they sit in silence, and he leaves carrying the same weight with the sense that someone held the other end.
+
+**Character states changed: **Aldric — consciously registers, for the first time, that Lirien keeps being wherever he goes to be alone; neither asks nor explains. Solen — retires the question and offers a door that closes. Lirien — one small physical increment, and three short spoken lines.
+
+**New canon introduced: **NONE (texture: a drainage-survey book as a running gag; the library corner's lamp).
+
+**Closing beat / hook: **The far chair stays out where she moved it. He came to carry a thing alone and leaves having set it down beside someone who never asked what it weighed.
+
+**CHAPTER 55**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Aldric Vane
+
+**Title (per manuscript): **Two Things
+
+**Word count (measured): **2,052  |  **Ending hook type: **Threat  |  **Reader rating (1–5): **not yet given
+
+**What happened: **Set to rake the old sand from the closed yard before the resurfacing crew arrives at noon, Aldric sets the captured man's relieved face beside the armored figure's authority and finds they point in opposite directions: the face a warning of how people are used and discarded, the armor a permission that there is a place in the world for someone who stands up straight with a plain blade. Rynn brings bread and quietly offers to listen. Aldric lets himself believe, without guilt, that Daran's path was never a dead end. Then the same fact turns over: a world with room for Daran also has room for people to be hollowed out.
+
+**Character states changed: **Aldric — lets go of the guilt over Daran for the first time; ends unable to know how close to the machinery he already is. Rynn — offers, plainly, to listen without needing an ending.
+
+**New canon introduced: **NONE.
+
+**Closing beat / hook: **He finishes the last row, perfectly straight, as the crew's cart arrives: it doesn't help at all.
+
+**CHAPTER 56**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Aldric Vane
+
+**Title (per manuscript): **The Seat With No Name
+
+**Word count (measured): **2,007  |  **Ending hook type: **Reveal  |  **Reader rating (1–5): **not yet given
+
+**What happened: **Returning his tournament materials to the records office, Aldric finds the Council tier's seating chart tucked into his packet and reads it while counting, as he does with any room. The ninth seat, three rows behind the envoy's box, where the watcher in expensive grey sat, is printed as a deliberate dash on both the semifinal and Final charts, initialed by the Steward's office. The clerk explains every seat is issued against a slip and no slip means no print, and that nobody sits without one.
+
+**Character states changed: **Aldric — learns the academy's own record says nobody sat in a seat he watched someone occupy; realises the watcher was never meant to be officially seen watching. Solen — again offers to be somewhere with a door that closes.
+
+**New canon introduced: **NONE named. Texture: the issue-slip seating rule, the cushions, the records clerk (unnamed), the Steward's office and its deputy's initials. No link to "Lord Cassian Veyra".
+
+**Closing beat / hook: **The paper does not say "I don't know who that was." It says, in a firm and unremarkable hand, "there was no one there."
+
+**CHAPTER 57**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Aldric Vane
+
+**Title (per manuscript): **What the Kingdom Filed
+
+**Word count (measured): **2,015  |  **Ending hook type: **Question  |  **Reader rating (1–5): **not yet given
+
+**What happened: **Maret reads the Crown's notice on the Voss investigation aloud: one individual in custody, offences sealed, the earliest predating the present session, the matter closed. Nessa Croft relays her mother's view that the shorter the notice, the bigger the file. Maret underlines a line in his notebook twice and looks at Aldric for a single breath, then tells him only that his third branch is correct. Aldric can't place the word "redirection" and never connects any of it to Ashford.
+
+**Character states changed: **Aldric — a word he cannot place lodges in him. Maret — reacts, for the first time, with a double underline rather than nothing. Nessa — voices the notice's shape aloud.
+
+**New canon introduced: **NONE (the text of the Crown notice is new texture; it names no one).
+
+**Closing beat / hook: **A word he can't place, and the sense that Maret, who reads everything, read it first.
+
+**CHAPTER 58**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Aldric Vane
+
+**Title (per manuscript): **The Last Ordinary Week
+
+**Word count (measured): **2,031  |  **Ending hook type: **Setback  |  **Reader rating (1–5): **not yet given
+
+**What happened: **In the last week of term, with trunks half-packed and nobody sure how to speak about the year, Aldric, Rynn and Solen spend a deliberately purposeless evening on the dormitory steps with a stolen cake, an argument about wool and a hypothetical goat. Torval passes carrying a wardrobe. Rynn's awards game tips toward the attack and he defuses it with a speech in praise of the goat. Afterward Aldric realises the three have become something sturdier than the group of Ch. 21, and the evening ends.
+
+**Character states changed: **Aldric — recognises the friendship as settled and real, and feels the small grief of its ending. Rynn — keeps the most important secret of the year by being ridiculous, with unsteady hands. Solen — laughs in his own way. Torval — warm goodbye for the term.
+
+**New canon introduced: **NONE (texture: the cake, the goat gag, Torval's cousin's wardrobe).
+
+**Closing beat / hook: **He folds his coat far slower than it needs, knowing there's no way to keep a night like that except to have had it.
+
+**CHAPTER 59**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Aldric Vane
+
+**Title (per manuscript): **What the Year Made of Him
+
+**Word count (measured): **2,039  |  **Ending hook type: **Threat  |  **Reader rating (1–5): **not yet given
+
+**What happened: **On the last evening of term, Aldric slips into the empty Grand Arena to take honest stock: the broken promise, Ashford and what answered in him, what he is, what they think he is. A fifth thing, his friends, arrives unbidden. He waits for the floor to go out from under him and it doesn't; instead he finds an honest quiet, and the plain fact that the boy who left Ashford is gone. He sits in the unassigned Council seat and looks at the whole academy, and is for the first time not afraid.
+
+**Character states changed: **Aldric — closes the year at peace with what he has become, and without fear of being watched; the promise, Ashford, his nature and his reputation are all looked at squarely and left open.
+
+**New canon introduced: **NONE (texture: an unnamed stonemason at the arena arch).
+
+**Closing beat / hook: **Lighter than all year, certain he has looked at every threat he can name, and unaware that the ones worth fearing are the ones he hasn't yet learned to name.
+
+**CHAPTER 60**  |  **ARC 7**  |  **SAGA 1**  |  **POV: **Daran
+
+**Title (per manuscript): **The Decision, Acted On
+
+**Word count (measured): **2,040  |  **Ending hook type: **Question  |  **Reader rating (1–5): **not yet given
+
+**What happened: **Hask says a full sentence: his cousin's cart goes south on Thursday. Daran wakes without the number he has carried all year, and understands his private deadline has quietly run out. He trains through the day; a reverse-cut form that resisted him for most of the year finally lands, and meets the same flat non-feeling as before. He does not think about the road east, the academy or the promise, and notices only that he hasn't. He stands at the well thinking about tomorrow, and looks south.
+
+**Character states changed: **Daran — the deadline runs out unsaid; the promise becomes a finished thing he can set down; he stops needing a new failure to measure himself against. Hask — speaks for the first time, and shows he had been counting too.
+
+**New canon introduced: **NONE (texture: the cart south on Thursday; the seventh form, a reverse cut from a crouch).
+
+**Closing beat / hook: **Daran looks south toward the yard he means to reach, and finds he is curious to hear what the man there will ask him first.
+
+**ARC 7**  —  SAGA 1  —  **WORKING TITLE: **The Tamer
+
+**Chapters covered: **Ch. 49 to Ch. 60 (complete)
+
+**Arc summary (3–5 sentences): **The arc steps outside the academy to show Drel Voss's capture from the inside, then follows how little of it reaches Aldric: a heard fragment, a hillside, a Crown notice that says almost nothing. Orin Vael signs the investigation closed and doesn't believe it. Aldric watches the capture from a distance and finds, in the days after, a warning in the captured man's face and a permission in the armored figure's authority; a records chart shows the watcher's seat approved as a blank. The arc closes with Aldric at honest peace with the year, and Daran's deadline quietly running out.
+
+**Key character state changes: **Aldric — releases his guilt over Daran, notices Lirien's pattern, finds the watcher's seat unrecorded, and closes the year unafraid. Daran — his one-year deadline ends unsaid and he prepares to walk south. Orin Vael and Drel Voss — each gets one POV chapter. Solm — seen only from outside, carefully warm.
+
+**Canon added this arc: **Drel Voss and Orin Vael on the page; Captain Aris (single scene); the unassigned Council seat; the Crown notice; Hask speaking; the cart south on Thursday.
+
+**Arc closing hook / saga thread advanced: **Daran looking south toward the yard he means to reach, with no resolution attached.
+
 **  SAGA 1 COMPLETE — OVERALL SUMMARY  **
 
-**Total chapters written: **53 (of 60)
+**Total chapters written: **60 (of 60)
 
 **Where Aldric ends Saga 1: **_______________________________________________________________________________
 

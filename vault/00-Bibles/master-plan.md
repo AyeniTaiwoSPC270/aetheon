@@ -235,7 +235,7 @@ Territory: the final war, every character's payoff, the boss defeated, the world
 | World Bible | ✅ Merged (v1.3) | Full Atlas geography, expanded military structure, Unbound base/founding/timeline locked (sigil, founding date, physical base, funding model), cosmology note added |
 | Lore & Glossary Bible | ✅ Merged (v1.2) | Founding Myth, First Age Societies, fuller Second–Fourth Age narrative, 7 Great Powers table, Series Timeline Anchor added |
 | Chapter Character Sheet Template | ⏳ Not yet started | Likely minimal changes; needs verification pass only |
-| Saga 1 Bible | ✅ Complete (pre-existing) | No changes needed |
+| Saga 1 Bible | ✅ Complete — Saga 1 fully written (Ch. 1–60, 2026-09-29) | Arc 7 written and approved |
 | Saga 2 Bible | ✅ Complete (pre-existing) | No changes needed |
 | Saga 3 Bible | ✅ Reworked (Ch. 74–75 hook) | Saved into the project as claude/SAGA_3_BIBLE.md |
 | Saga 4 Bible ("Mortar and Stone") | ✅ Complete | Saved into the project as claude/SAGA_4_BIBLE.md |

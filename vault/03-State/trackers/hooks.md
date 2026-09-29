@@ -58,6 +58,13 @@ Rule (v5.4): rotate hook types, and never use the same type in two chapters in a
 | 51 | Aldric lets Solm's rehearsed carefulness go, at a cost he can feel but not name (2,101 words; click-next rating 3) (APPROVED 2026-09-29) | Setback |
 | 52 | A captured man's ordinary, frightened, relieved face and Orin Vael's white-and-iron-grey armour: Aldric understands the story has moved somewhere he can't follow yet, and will come looking for him (2,359 words; click-next rating 3) (APPROVED 2026-09-29) | Reveal |
 | 53 | Orin signs the investigation's closure himself and does not, for one moment, believe it (2,058 words; click-next rating 3) (APPROVED 2026-09-29) | Question |
+| 54 | The library corner: the thing he came to carry alone quietly isn't being carried alone (2,058 words; rating not yet given) (APPROVED 2026-09-29) | Reversal |
+| 55 | The comfort about Daran also means the world has room for people to be used, and Aldric can't know how close to the machinery he already is (2,052 words; rating not yet given) (APPROVED 2026-09-29) | Threat |
+| 56 | The Council seating chart shows the watcher's seat as an approved blank: "there was no one there" (2,007 words; rating not yet given) (APPROVED 2026-09-29) | Reveal |
+| 57 | A word he can't place, and Maret, who reads everything, read it first (2,015 words; rating not yet given) (APPROVED 2026-09-29) | Question |
+| 58 | The evening ends well, and ends; Aldric folds a coat slowly (2,031 words; rating not yet given) (APPROVED 2026-09-29) | Setback |
+| 59 | Aldric at peace, sitting in the unassigned seat; the reader knows how much is still converging (2,039 words; rating not yet given) (APPROVED 2026-09-29) | Threat |
+| 60 | Daran looks south toward the yard he means to reach, curious rather than afraid. Closes Arc 7 and Saga 1 (2,040 words; rating not yet given) (APPROVED 2026-09-29) | Question |
 
 The Web Novel Chapter Contract starts at Ch. 14. A light hook pass on Ch. 1–13 is decided: minimal fixes only, done (2026-09-26); no new endings.
 
@@ -94,3 +101,7 @@ This batch (Ch. 47–48) was drafted and self-reviewed in one pass under a sched
 ## Ch. 49–53 note (2026-09-29) — opens Arc 7
 
 This batch (Ch. 49–53, opening Arc 7 "The Tamer") was drafted and self-reviewed in one pass under a scheduled draft-and-hold run, then approved by the author on 2026-09-29; all five chapters rated 3/5 by the author. Hook sequence Ch. 46–53: Reversal → Reveal → Question → Reveal → Question → Setback → Reveal → Question — no back-to-back repeats, matching the locked Arc 7 sequence in `vault/03-State/arc7-replan.md`. Next: Ch. 54 ("What He Carries Back") — Reversal, then Threat (55). Full self-review detail: `docs/approved-batches/pending-review-arc7-batch1.md`.
+
+## Ch. 54–60 note (2026-09-29) — closes Arc 7 and Saga 1
+
+This batch (Ch. 54–60) was drafted and self-reviewed in one pass at the author's request, then approved by the author on 2026-09-29. No ratings were given; they are logged "not yet given" (ask once at the next /plan). Hook sequence Ch. 53–60: Question → Reversal → Threat → Reveal → Question → Setback → Threat → Question, with no back-to-back repeats, matching `vault/03-State/arc7-replan.md`. Zero repeats across the whole Ch. 14–60 contract-governed run. Saga 1 is complete at 60 chapters. Full self-review detail: `docs/approved-batches/pending-review-arc7-batch2.md`.

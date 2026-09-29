@@ -67,7 +67,7 @@ aethon-pipeline/
 │   ├── telegram/          # approval bot (Phase 5)
 │   ├── sync/              # vault ↔ InkOS (Phase 5)
 │   └── wrapper/           # orchestrates: inkos draft → checks → lore → inkos audit → revise loop → deliver
-├── docs/approved-batches/ # approved draft-and-hold batch self-reviews (Arc 7 batch 1, Ch. 49–53)
+├── docs/approved-batches/ # approved draft-and-hold batch self-reviews (Arc 7, Ch. 49–60)
 ├── docs/author-project-instructions-v5.4.md  # verbatim original author instructions
 ├── prompts/               # all agent prompts as versioned .md — never inline in code
 ├── tests/                 # every test T0.1–T6.5 + Gauntlet, as pytest
@@ -313,11 +313,11 @@ all project files for full context.**
 | Spell Registry (Spell Gate) | `vault/03-State/spell-registry.md` |
 | Trackers | `vault/03-State/trackers/{first-appearances,knowledge,hooks}.md` |
 | Voice sheets | `vault/05-Voice/character-voice-sheets.md` |
-| Current arc plan (Arc 7, Ch. 49–60) | `vault/03-State/arc7-replan.md` |
+| Arc 7 plan (complete; Ch. 49–60) | `vault/03-State/arc7-replan.md` |
 | Canon bibles | `vault/00-Bibles/*.md` (master-plan, character-bible, character-profiles, power-system-bible, world-bible, lore-glossary-bible, saga-1…5-bible-complete) |
 | Staging canon | `vault/00-Bibles/staging/*.md` (history, geography, phasites/weapons/unbound, calamities, military, new-canon compilations) |
 | Approved chapters (read-only history) | `vault/02-Chapters/Saga-N/chapter-NN.md` **and** `books/aethon/chapters/00NN_Title.md` (+ `index.json`) |
-| Approved batch self-reviews (reference) | `docs/approved-batches/` (Arc 7 batch 1, Ch. 49–53) |
+| Approved batch self-reviews (reference) | `docs/approved-batches/` (Arc 7 batches 1–2, Ch. 49–60) |
 
 `vault/01-Sagas/` is author-edited only — never write there. Ch. 1–13 are closed
 (golden fixtures) — do not edit. (The ACT1 all-saga compilation was truncated
@@ -442,10 +442,11 @@ own rule — proposals in `vault/04-Proposals/`, bible appended only on APPROVE.
 
 ### Current project status (updated 2026-09-29)
 
-- Saga 1: Arcs 1–6 complete (Ch. 1–48). Arc 7 ("The Tamer", Ch. 49–60, 12 chapters) is in progress: **Ch. 49–53 written and approved 2026-09-29** (Voss POV; Aldric overhears "concluded"; Solm's carefulness; Aldric watches the capture from a hillside; Orin Vael POV, signs the closure and doesn't believe it). Click-next ratings for Ch. 49–53: all 3/5.
-- Plan: `vault/03-State/arc7-replan.md`. **Next chapter to write: Chapter 54, "What He Carries Back"** (hook Reversal, then Threat at 55). Saga 1 total is 60 chapters.
+- **Saga 1 is complete: Ch. 1–60 written and approved** (Arc 7 "The Tamer", Ch. 49–60, approved 2026-09-29). The saga closes on Daran (Ch. 60).
+- Click-next ratings: Ch. 49–53 rated 3/5 by the author; Ch. 54–60 not yet given (ask once at the next /plan).
+- **Next step: Saga 2 planning** (Ch. 61 onward). `vault/00-Bibles/saga-2-bible-complete.md` is the outline; per the Hard Rules, read all project files before planning any saga or arc.
 - Sagas 2–5 fully planned, not written. Sagas 6–20 not planned.
-- Bibles/trackers current through Ch. 53. InkOS is paused; its state lags at Ch. 13 (see KNOWN DRIFT).
+- Bibles/trackers current through Ch. 60. InkOS is paused; its state lags at Ch. 13 (see KNOWN DRIFT).
 
 ---
 

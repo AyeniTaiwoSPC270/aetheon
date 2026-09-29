@@ -1,4 +1,4 @@
-# Who Knows What (as of Ch. 53, approved — Arc 7 Ch. 49–53 written)
+# Who Knows What (as of Ch. 60, approved — Arc 7 and Saga 1 complete)
 
 Purpose: enforce "never give a character information they do not have yet." Read at /plan; update at /summary. UNSET means the record doesn't say. Those need an author decision before a chapter depends on them.
 
@@ -17,6 +17,11 @@ Built 2026-09-26 from the Chapter Log and Ch. 14–17 text; updated 2026-09-27 f
 - **Ch. 51 (new):** Suspects, but cannot confirm, that Solm is being carefully rehearsed with him specifically. Solen admits he noticed nothing. Nothing about Solm's letter is known to Aldric.
 - **Ch. 52 (new):** From a hillside, sees an unnamed man taken into custody and an unnamed figure in white armour with iron-grey trim. Does not know who either is, nor the operation's purpose. Writes home to Maren and Josse. Now certain the story "will come looking for him."
 - **Ch. 53 (Orin's POV, Aldric not on-page):** Aldric learns nothing here; Orin notices a white-haired boy on the rise and decides it means nothing.
+- **Ch. 54 (new):** Realises Lirien keeps being where he goes to be alone. Has not told Rynn or Solen what he saw on the hillside; Solen has retired the question. Lirien knows only that he is carrying something.
+- **Ch. 55 (new):** Concludes the captured man's face is a warning and the armored figure a permission; infers Daran's path was never a dead end (still does not know where Daran is).
+- **Ch. 56 (new):** Knows the official Council seating record shows the watcher's seat as a deliberate dash initialed by the Steward's office. Does not know who sat there.
+- **Ch. 57 (new):** Has heard the Crown notice (offences sealed, earliest predating the session). Does **not** connect it to Ashford. Saw Maret underline something twice and look at him.
+- **Ch. 58–59 (new):** Knows his friends are a settled thing. Has taken honest stock of the promise, Ashford, what he is and what they think he is; resolves none of them. Not afraid of being watched.
 - **Suspects (through Ch. 41, unchanged):** Bavel watched every shot. Lirien isn't as unmoved as she's let on. Solen's tournament-skipping reason isn't the real one. Maret's silence means the pattern is fully accounted for. Sable's warning connects to whatever Varen wants. Greyveil has some established way of dealing with students who "notice things." The unrecognized second-years watching the bracket are connected to Varen.
 - **Ch. 42–47 new suspicions:** Suspects, without proof, that the unrecognized Council-tier watcher's interest in him (Ch. 42) and his early departure (Ch. 44) mean something, though he has no name and no theory. Does not connect this watcher to "Lord Cassian Veyra," named later at the ceremony (Ch. 45) — nothing on the page draws that line for him. As of Ch. 47, is now certain (not merely suspicious) that at least one person connected to tonight's attack knows who he is specifically — a confirmed fact rather than a suspicion, though its meaning is still completely open.
 - **Doesn't know (through Ch. 41, unchanged):** The word "Phasite" is now known to him as of the Saga 3 reassessment — this is locked, no longer a flag, though the word is not used in his own interiority in Ch. 42–48 prose (stylistic choice). What the Unbound is. What Maret and Bavel have written. Varen's actual reasons. What happened to the one other person Sable mentioned. What caused the scorch smell.
@@ -54,6 +59,10 @@ Built 2026-09-26 from the Chapter Log and Ch. 14–17 text; updated 2026-09-27 f
 - **Captain Aris (Ch. 53, new):** Knows only the operational facts of the capture and closure paperwork.
 - **Unnamed records clerk (Ch. 50), post-house clerk (Ch. 52):** Single-scene functional; know nothing beyond their immediate task.
 - **Solm (Ch. 51, from outside):** Ch. 48 knowledge unchanged; on the page he is only seen being warm, correct and careful. His letter's content, recipient and subject remain unstated.
+- **Maret (Ch. 57):** Reads the Crown notice, underlines one line twice, and looks at Aldric for a breath. What he knows or infers is never stated.
+- **Daran (Ch. 60):** Knows his private deadline has run out and his cart south leaves Thursday. Knows nothing of Aldric's year or the tournament.
+- **Hask (Ch. 60):** Knows Daran has been training toward something and that it is nearly time; has been counting too. Nothing more stated.
+- **The records clerk (Ch. 56):** Believes every Council seat is issued against a slip and that nobody sits without one.
 
 ---
 
@@ -72,3 +81,7 @@ Full per-character deltas for Ch. 47–48 are folded inline into each character'
 ## Ch. 49–53 update note (2026-09-29) — opens Arc 7
 
 Key deltas: **Voss** and **Orin Vael** are now on the page with their own POV chapters. The reader learns, from Voss's inside view, that he was coerced by something he cannot name; Aldric learns none of it. Aldric's only new information is a heard fragment (Ch. 50) and a distant sight of the capture (Ch. 52), neither connected by him to Ashford. The Council-tier watcher and "Lord Cassian Veyra" are not referenced.
+
+## Ch. 54–60 update note (2026-09-29) — closes Arc 7 and Saga 1
+
+Aldric's key open unknowns at the close of Saga 1: who the Council-tier watcher is (the seat is officially unrecorded), why Maret underlined the notice, what Solm's letter is, who sent the Ch. 46 attackers, and that the Ashford Greyback and the Voss case are the same case (the reader knows from Ch. 49; Aldric does not). UNSET rows still needing an author decision before a chapter depends on them: what, if anything, Maret infers from "redirection"; whether Lirien knows what Aldric saw.
