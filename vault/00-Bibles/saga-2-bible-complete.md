@@ -6,51 +6,31 @@
 
 46 Chapters | 4 Arcs | Continued POV: Aldric Vane, Daran, Ensemble
 
-> *Merged from SAGA_2_BIBLE.docx per author instruction. Matches the
-> Saga 1 Bible's format for consistency. Once approved, this bible
-> governs /plan and /write for Saga 2 chapters, the same way the Saga 1
-> Bible does for Saga 1. Chapter titles are proposed and can be freely
-> changed during drafting — only the beats themselves are meant to
-> hold.*
+*PENDING AUTHOR APPROVAL — not yet canon. Matches the Saga 1 Bible**'**s format for consistency.*
 
-**PART 1 — SAGA OVERVIEW & STRUCTURE**
+# PART 1 — SAGA OVERVIEW & STRUCTURE
 
-Saga 2 opens a few months after Saga 1's ending — Year 12 of the Fifth
-Age, Aldric's second year at Greyveil. Where Saga 1 was contained (a
-village, an academy, a tournament), Saga 2 is where the wider world —
-kingdoms, races, politics — first presses in on Aldric's life instead of
-staying background noise. A diplomatic summit collapses through
-deliberate sabotage engineered by an Unbound infiltrator embedded on the
-Noble Council, and the fallout — racial tension, diplomatic breakdown,
-academy discrimination — is the saga's real subject. In parallel,
-rival-POV chapters follow Daran's grind at Forgehall, his mentorship
-under Grevan Tusk, and the first stirrings of his eventual path toward
-power.
+Saga 2 opens a few months after Saga 1's ending — Year 12 of the Fifth Age, Aldric's second year at Greyveil. Where Saga 1 was contained (a village, an academy, a tournament), Saga 2 is where the wider world — kingdoms, races, politics — first presses in on Aldric's life instead of staying background noise. A diplomatic summit collapses through deliberate sabotage engineered by an Unbound infiltrator embedded on the Noble Council, and the fallout — racial tension, diplomatic breakdown, academy discrimination — is the saga's real subject. In parallel, rival-POV chapters follow Daran's grind at Forgehall, his mentorship under Grevan Tusk, and the first stirrings of his eventual path toward power.
 
-Saga 2 closes with a faction agent quietly moving an unseen piece — the
-reader's first real hint that something larger is coordinating events,
-though The Unbound's name stays unspoken until Saga 4, per the series'
-hard rules.
+Saga 2 closes with a faction agent quietly moving an unseen piece — the reader's first real hint that something larger is coordinating events, though The Unbound's name stays unspoken until Saga 4, per the series' hard rules.
 
-**ARCS AT A GLANCE**
+## ARCS AT A GLANCE
 
-|         |                             |             |              |
-|---------|-----------------------------|-------------|--------------|
-| **Arc** | **Title**                   | **Status**  | **Chapters** |
-| Arc 1   | The Summit                  | PLANNED     | Ch. 1–13     |
-| Arc 2   | The Sabotage                | PLANNED     | Ch. 14–23    |
-| Arc 3   | Rival POV: The Sword School | PLANNED     | Ch. 24–35    |
-| Arc 4   | Ripples                     | PLANNED     | Ch. 36–46    |
+| **Arc** | **Title** | **Status** | **Chapters** |
+| --- | --- | --- | --- |
+| Arc 1 | The Summit | PLANNED | Ch. 1-13 |
+| Arc 2 | The Sabotage | PLANNED | Ch. 14-23 |
+| Arc 3 | Rival POV: The Sword School | PLANNED | Ch. 24-35 |
+| Arc 4 | Ripples | PLANNED | Ch. 36-46 |
 
 **Saga 2 total: 46 chapters**
 
-**ARC 1 — THE SUMMIT**
+# ARC 1 — THE SUMMIT
 
-**Chapters 1–13**
+Chapters 1-13
 
-|  |  |  |  |
-|----|----|----|----|
 | **Ch** | **Title** | **POV** | **What Happens** |
+| --- | --- | --- | --- |
 | 1 | Second Year | Aldric | Time skip established — a few months post-Saga 1, into Year 12 of the Fifth Age. Second academy year opens; quick state-check on Rynn, Solen, Lirien, Crest. |
 | 2 | Word From Wrenhollow | Aldric/Ensemble | News reaches the academy that the Silverwood Accord renewal is underway. Noble students' families directly involved (Halvon, Croft especially). |
 | 3 | The Silverwood Accord | Ambassador Thess | The elven delegation arrives at Wrenhollow. The land-reassignment clause "Veyra" quietly engineered over the past year is on the table. |
@@ -65,13 +45,12 @@ hard rules.
 | 12 | A Letter From Ashford | Aldric | Interlude — Maren Vane's letter to Aldric, village-life warmth against the political tension. |
 | 13 | What Doesn't Add Up | Aldric | Closing hook — Aldric senses the "breach" doesn't add up, with no way to prove it. |
 
-**ARC 2 — THE SABOTAGE**
+# ARC 2 — THE SABOTAGE
 
-**Chapters 14–23**
+Chapters 14-23
 
-|  |  |  |  |
-|----|----|----|----|
 | **Ch** | **Title** | **POV** | **What Happens** |
+| --- | --- | --- | --- |
 | 14 | The Quiet Review | Political/Ensemble | The King's quiet Council review opens. Magistrate Aldous Fenn assigned to investigate. Ysen Arral's own read of the incident starts diverging from the official account. |
 | 15 | A Discreet Conversation | Reyus Kade | "Veyra" meets privately with Magistrate Fenn — cooperative, composed, subtly steering the investigation. Dramatic irony: the reader watches him manage the cover-up of his own crime. |
 | 16 | The Scapegoat | Political/Ensemble | Kael Rowan formally stripped of standing among his own people. Consul Vaeth Ironroot publicly breaks with Thess's Integrationist line. |
@@ -83,13 +62,12 @@ hard rules.
 | 22 | Something in the Dark | Unnamed/Ambiguous | The anonymous interlude — pure atmosphere and dread. No payoff character, no reveal. |
 | 23 | Two Faces | Aldric | Arc closes unresolved: Ysen's suspicion has nowhere to go, Kael Rowan's fate is sealed, Crest's punishment meant nothing, and the reader has now seen Veyra operate twice. |
 
-**ARC 3 — RIVAL POV: THE SWORD SCHOOL**
+# ARC 3 — RIVAL POV: THE SWORD SCHOOL
 
-**Chapters 24–35**
+Chapters 24-35
 
-|  |  |  |  |
-|----|----|----|----|
 | **Ch** | **Title** | **POV** | **What Happens** |
+| --- | --- | --- | --- |
 | 24 | The Grind | Daran | Forgehall, present day. Daily grind under Instructor Kaelin Vosk's brutal fundamentals track. His refusal to perform effort for anyone watching. |
 | 25 | Corvin Aske | Daran | Introduces his future rival properly — a real chapter establishing him as a person, not just an obstacle. |
 | 26 | Getting Back Up | Daran | The match — Daran loses badly, keeps getting back up long past the point of tactical sense. |
@@ -103,13 +81,12 @@ hard rules.
 | 34 | Steel | Daran | Steel rank trial — achieved, without ceremony or celebration. |
 | 35 | Somewhere Out There | Daran | Closing beat — a brief, unreadable moment acknowledging Aldric's world exists somewhere out there. |
 
-**ARC 4 — RIPPLES**
+# ARC 4 — RIPPLES
 
-**Chapters 36–46**
+Chapters 36-46
 
-|  |  |  |  |
-|----|----|----|----|
 | **Ch** | **Title** | **POV** | **What Happens** |
+| --- | --- | --- | --- |
 | 36 | The Hawk Rises | Political/Ensemble | Consul Vaeth Ironroot's break with Thess hardens into a real shift — his Hawk faction gains ground among elven leadership. |
 | 37 | The Border Ignites | Eastern Valdris | The first real consequence of the collapsed summit: border tension in eastern Valdris turns into actual skirmishes. |
 | 38 | Cracks in the Circle | Aldric | Academy social fractures widen — different students' families reacting visibly differently. The friend group feels real strain. |
@@ -122,11 +99,4 @@ hard rules.
 | 45 | A Letter, A Breath | Interlude | A second, quieter interlude — village-life or personal-letter texture, mirroring Arc 1's Maren Vane letter. |
 | 46 | An Unseen Piece | Faction/closing hook | Oren Vask's network quietly moves an unseen piece. No name, no confirmation of what it means. Closes Saga 2. |
 
-**SAGA 2 BIBLE — PENDING FULL DETAIL**
-
-This document covers the chapter-by-chapter skeleton merged from
-SAGA_2_BIBLE.docx. It does not yet include a full character roster,
-long-arc seed tracker, or arc emotional-spine notes in the format the
-Saga 1 Bible uses — those were not present in the source document. Add
-them here as they're developed, following the Saga 1 Bible's structure
-for consistency.
+*Once approved, this bible governs /plan and /write for Saga 2 chapters, the same way the Saga 1 Bible does for Saga 1. Chapter titles are proposed and can be freely changed during drafting — only the beats themselves are meant to hold.*

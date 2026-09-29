@@ -130,7 +130,11 @@ runs hot and instinctive — hard to control, mirrors his personality.
 
 **Combat Tier:** Not yet formally ranked as of Ch. 13 (still Foundation
 year); by the war sagas a genuinely formidable fighter per his existing
-arc summary.
+arc summary. **New canon, rank filled in
+(ACT1_POWER_PROGRESSION_TREE.md):** C-rank entering Saga 4, grows to
+high-C/low-B by the Saga 4 Branded climax — one step behind Aldric's
+B-rank, genuinely capable against Tier 3 Warped incidents, not yet
+elite. Combat role: offense-lean, matching his hothead characterization.
 
 **Appearance:** *Proposed — not yet established.* Reads as
 physically warm/flushed easily (per Ch. 13's "running warm from the
@@ -175,6 +179,11 @@ most controlled.
 **Combat Tier:** *Proposed — not yet ranked on-page;* elects the
 alternative assessment track and does not enter the Arc 6 tournament
 per the Saga 1 Bible, so his combat rank stays untested in Saga 1.
+**New canon, rank filled in (ACT1_POWER_PROGRESSION_TREE.md):** C-rank
+entering Saga 4, same tier as Rynn — ahead of him on control, behind
+him on raw output. Combat role: containment/support (barrier work,
+mana surgery) in the Warped incidents — a natural division of labor
+with Rynn.
 
 **Appearance:** *Proposed — not yet established.*
 
@@ -216,6 +225,14 @@ almost uncomfortable accuracy.
 
 **Combat Tier:** *Proposed — not yet ranked on-page.* Becomes one of the
 coalition's most capable fighters by the war sagas per existing canon.
+**New canon, rank filled in (ACT1_POWER_PROGRESSION_TREE.md):** B-rank
+entering Saga 4 — a tier ahead of Rynn/Solen, roughly matching Aldric's
+own B-rank. Consistent with her established Saga 1 characterization
+(sharp, assessing, already watching Aldric) and her later-series status
+as one of the coalition's most capable fighters. Magic type classified
+as **physical enhancement (fighter, not primarily a caster)** — cross-
+reference against her existing Ice/precision entry above; flag to
+author if these read as inconsistent.
 
 **Appearance:** *Proposed — not yet established beyond "cold and
 sharp" as a persona descriptor.*
@@ -252,10 +269,13 @@ your confirmation) and appearance.
 **Classification:** Noble — House Halvon. Son of Lord Berrin Halvon
 (Noble Council, Saga 2).
 
-**Ability:** *Proposed — magic type not yet established on-page.*
+**Ability:** **New canon, filled in (ACT1_POWER_PROGRESSION_TREE.md):**
+lightning affinity — fast, sharp, matches his noble arrogance.
 
 **Combat Tier:** Competes in the Saga 1 tournament, eliminated in the
 quarterfinal — "not a collapse, a recalibration" per the Saga 1 Bible.
+**New canon:** C-rank entering Saga 4 — genuinely talented, which is
+part of why the academy lets his behavior slide.
 
 **Appearance:** *Proposed — not yet established.*
 
@@ -304,7 +324,8 @@ Council seat by tradition.
 the role, unconfirmed.
 
 **Combat Tier:** N/A — not established as a combatant on-page. Dies
-Saga 4 defending the academy, not in single combat.
+**Saga 5, new canon (was Saga 4)** defending the academy against the
+kingdom-wide monster invasion, not in single combat.
 
 **Appearance:** *Proposed — not yet established.*
 
@@ -313,9 +334,11 @@ complex, not a contradiction he's uncomfortable with. Quiet confidence
 rather than speeches.
 
 **Backstory:** Admitted Aldric against institutional resistance,
-without making a show of it. Dies Saga 4 defending the academy during
-the faction's assault — arrives too late for Aldric to help. Posthumous
-title: The Warden.
+without making a show of it. Dies **Saga 5, new canon (was Saga 4)**
+defending the academy during a Sovereign-tier monster's assault —
+arrives too late for Aldric to help (he's engaged elsewhere, saved by
+Instructor Doven). Posthumous title: The Warden. Full mechanics: Master
+Plan, Saga 5.
 
 **Relationships:** Aldric (first authority figure who saw him without
 prejudice).
@@ -323,8 +346,8 @@ prejudice).
 **Personal Goal:** To run an institution that lives up to its own
 founding charter, quietly, against constant pressure not to.
 
-**Story Role / Arc:** Mentor. Status: DECEASED, Saga 4.
-character-bible.md, Section III.
+**Story Role / Arc:** Mentor. Status: DECEASED, **Saga 5 (new canon,
+was Saga 4)**. character-bible.md, Section III.
 
 **New in this profile:** Age and appearance (both proposed/flagged).
 
@@ -497,12 +520,24 @@ in the Core.
 **Personality:** Wants the mage-first hierarchy gone outright; privately
 wants a real fight against a Paladin on equal terms, for her own sake.
 
-**Backstory:** Commanded a Sword Unit alongside Corran Vess; lost him
-when mage command chose to hold a position rather than retrieve him.
-Left the Paladins over it — not because she lost, but because she won
-and the cost was ruled acceptable by people who never buried anyone
-themselves. Approaches Daran in Saga 3, offers him a shortcut to power;
-he refuses.
+**Backstory:** Commanded a Sword Unit alongside Corran Vess — new canon:
+this was **the Ashenguard** (World Bible, Section II), her and Corran's
+unit, whose reputation still carries the weight of what happened to
+them. Lost him when mage command (Noble Council-sanctioned, not
+battlefield judgment) chose to hold a position rather than retrieve
+him. Left the Paladins over it — not because she lost, but because she
+won and the cost was ruled acceptable by people who never buried anyone
+themselves. Core wound, verbatim: "What's the point of power if it
+can't protect someone you love." Timeline: roughly 15–18 years before
+Saga 1 — long enough to be a genuine legend by Saga 3. **Public title:
+The Sword Widow — known capital-wide, even to the Paladins themselves,
+though her current whereabouts are unknown to anyone in power.** Old
+Sword Unit contacts bring her word of an Iron-rank commoner student
+(Daran) outperforming an established rival at an institution that
+claims equality but doesn't practice it — she sees a version of her own
+former self in him, someone the hierarchy will eventually deny the way
+it denied her. Approaches Daran in Saga 3, offers him a shortcut to
+power; he refuses.
 
 **Relationships:** Corran Vess (dead friend, the wound underneath her
 whole arc — deliberately left as an open hook), Daran (sees her former
@@ -571,9 +606,13 @@ human parents and wider superstition as a devil's mark.
 power.
 
 **Backstory:** Abandoned and abused by her human parents around age
-five. Varek recognized what she actually was on sight and raised her.
-First true on-page appearance is Saga 4 — a deliberately ordinary,
-unsettling encounter with Daran, unresolved.
+five. Varek recognized what she actually was on sight and raised her
+(~28 years before Saga 1). **First true on-page appearance saga is now
+OPEN — do not resolve without author instruction:** previously placed
+in old-Saga-4; the handoff explicitly flags this needs "a new saga home
+under the new structure." Whenever it lands: a deliberately ordinary,
+unsettling encounter with Daran — she doesn't yet know she's found him,
+he doesn't yet know what she is, unresolved.
 
 **Relationships:** Varek (father-figure, sole loyalty).
 
@@ -696,7 +735,11 @@ someone he loves.
 **Classification:** Phasite 2.
 
 **Ability:** Echo Magic — replays a witnessed event up to three times,
-at the cost of his own mana. Power System Bible, Section V.
+at the cost of his own mana. Power System Bible, Section V. **OPEN —
+author decision needed:** a later session proposed redefining this
+entirely as causality/time manipulation (replaying the last few
+seconds, altered); explicitly flagged unresolved in the session
+handoff. Do not use the redefined version without author confirmation.
 
 **Combat Tier:** Not formally ranked — categorically outside the mage
 system, like all Phasites.
@@ -718,64 +761,185 @@ unestablished.
 
 ---
 
-## **MIRA SOLH (Phasite 3)**
+## **MIRA SOLH — RETIRED (formerly Phasite 3)**
 
-**Age:** *Proposed — not yet established.*
-
-**Classification:** Phasite 3.
-
-**Ability:** Wound Transfer — moves injury/pain between people,
-including to herself. Power System Bible, Section V.
-
-**Combat Tier:** Not formally ranked.
-
-**Appearance:** Hands glow deep crimson when transferring wounds;
-otherwise unestablished.
-
-**Personality:** Healer by nature, weapon by necessity. Strong opinions
-on when transferring to an unwilling target is justified.
-
-**Backstory:** First appearance Saga 6.
-
-**Relationships:** Aldric (ally).
-
-**Personal Goal:** *Proposed — not yet established.*
-
-**Story Role / Arc:** Ally — the most morally complex of the 11.
-
-**New in this profile:** Age and personal goal (unestablished, flagged).
+> **RETIRED from the Phasite roster — new canon, roster correction
+> (AETHON_MASTER_NEW_CANON.md, Part 0). Do not use as active canon or
+> reassign slot 3.** Preserved for reference only: Wound Transfer —
+> moved injury/pain between people, including to herself. Slot 3 now
+> belongs to **Princess Sae Duskwane** — see Section XIII, below.
 
 ---
 
-## **LENNE (Phasite 5)**
+## **CORIN MERCER (Phasite 5)**
 
 **Age:** *Proposed — not yet established.*
 
-**Classification:** Phasite 5.
+**Classification:** Phasite 5. **New canon — roster correction:** takes
+this slot from the retired Lenne (below).
 
-**Ability:** True Sight — sees through all illusions, disguises,
-concealments, lies; cannot be turned off. Power System Bible, Section
-V.
+**Ability:** Phase Shift — full space manipulation: phasing through
+matter, short-range teleportation, controlled pocket spaces, and
+swapping the position of two objects/people instantly. Everyday use:
+phasing, short teleports, small-scale swaps, a modest pocket space.
+True scale: a full pocket dimension under total control, or swapping an
+army's position with another location. Cost: physical toll from
+phasing/teleporting, risk of being lost "between" if overextended; a
+maintained pocket space demands continuous exertion, and a broken
+concentration risks dangerous collapse for anything trapped inside.
+Power System Bible, Section V.
 
-**Combat Tier:** Not formally ranked.
+**Combat Tier:** Not formally ranked — categorically outside the mage
+system, like all Phasites.
 
-**Appearance:** Pale, almost colourless grey eyes from birth; turn
-fully white at full intensity.
+**Appearance:** *To be established on-page.*
 
-**Personality:** Burdened by permanent unfiltered perception. Has never
-been able to pretend not to see what she sees.
+**Personality:** *Proposed — not yet established beyond her defining
+trait: despises nobles and the current system.*
 
-**Backstory:** First appearance Saga 7.
+**Backstory:** Human — a thief working Valdris Prime. No saga yet
+assigned; an open Act 1 thread (Master Plan, Sagas 4–5 open items).
 
-**Relationships:** Aldric (complicated — she can see exactly what he's
-feeling at all times).
+**Relationships:** None yet established on-page.
 
-**Personal Goal:** *Proposed — not yet established.*
+**Personal Goal:** *Proposed — not yet established beyond her general
+antagonism toward nobility and the system.*
 
-**Story Role / Arc:** Ally — crucial in the endgame for identifying
+**Story Role / Arc:** A wildcard outside the Council/Unbound/academy
+power structures entirely — despises nobles and the system on her own
+terms, not the Unbound's.
+
+**New in this profile:** Entire entry — new canon, PENDING confirmation
+(NEW_CANON_PHASITES_WEAPONS_UNBOUND.md).
+
+---
+
+## **LENNE — RETIRED (formerly Phasite 5)**
+
+> **RETIRED from the Phasite roster — new canon, roster correction
+> (AETHON_MASTER_NEW_CANON.md, Part 0). Do not use as active canon or
+> reassign slot 5.** Preserved for reference only: True Sight — saw
+> through all illusions, disguises, concealments, lies; could not be
+> deceived by any magical means. Slot 5 now belongs to **Corin Mercer**,
+> above. Worth remembering: this leaves no established mechanism for
+> detecting Reyus Kade's Second Skin or Juno Vasker's double life — see
+> Power System Bible, Section V, roster-correction note.
+
+---
+
+## **ASHEN ROOK (Phasite 7)**
+
+**Ability:** Wither — entropy/decay; accelerates decay and aging on
+contact. True scale: could collapse a fortress or wither a region's
+crops, a famine weapon. Cost: using it on living things visibly ages
+the user's own body in tandem. Power System Bible, Section V.
+
+**Race / Origin:** Demi-human, Central Serath.
+
+**Story Role / Arc:** Undefined beyond concept — first appearance not
+yet assigned.
+
+**New in this profile:** Entire entry — new canon, PENDING confirmation
+(NEW_CANON_PHASITES_WEAPONS_UNBOUND.md).
+
+---
+
+## **TOREN LARKE (Phasite 8)**
+
+**Ability:** Fatethread — probability/fate manipulation. Everyday:
+subtly tilts small outcomes. True scale: kingdom-shaping probability
+manipulation. Cost: mental/will erosion — forcing fate at scale costs
+his own sanity. Power System Bible, Section V.
+
+**Race / Origin:** Human.
+
+**Backstory:** Varek Noss's own institutionally-funded research exposed
+a way to forcibly override a Phasite's will; the crown seized that
+discovery and weaponized Toren as a state asset — the direct trigger
+for Varek's break with the institutions he served (Lore & Glossary
+Bible, Section I).
+
+**Status:** STILL ALIVE, STILL WEAPONIZED — a live plot thread,
+available for use from Saga 4 onward.
+
+**Story Role / Arc:** A weaponized state asset of Valdenmere, his
+ability seized and directed by the crown against his own will.
+
+**New in this profile:** Entire entry — new canon, PENDING confirmation
+(NEW_CANON_HISTORY_OF_AETHON.md, Section 6).
+
+---
+
+## **JUNO VASKER (Phasite 9)**
+
+**Classification:** Phasite 9. Second Council Phasite — House Vasker,
+one of the 15 old noble seats (World Bible, Section II); her seat is
+genuinely hers by birth, unlike Reyus Kade's stolen identity as "Lord
+Veyra" — a deliberate contrast between the Council's two Phasite
 infiltrators.
 
-**New in this profile:** Age and personal goal (unestablished, flagged).
+**Ability:** Splitform — duplication; creates a genuine, physically
+real temporary copy of an object or of herself, not illusion. True
+scale: duplicates massive resources or fields an army of real duplicate
+selves for a short, decisive window. Cost: all copies draw from the
+same finite source — overextending risks permanently splitting the
+original. Power System Bible, Section V.
+
+**Radicalization:** Having grown up inside the same power structure the
+Unbound wants dismantled, she witnessed institutional cruelty firsthand
+from within — closer to guilt than ideology.
+
+**Recruitment:** ~6 years before Saga 1, by Reyus Kade personally —
+World Bible, Section V, for the full account.
+
+**Unbound tier:** Informed, not Core — Kade remains the only Phasite in
+Core leadership. Her duplicate is a real, independent instance of
+herself — the "Council Juno" and "Unbound Juno" can genuinely act and
+think independently, even disagree, within Splitform's shared-reserve
+cost.
+
+**Story Role / Arc:** Unbound Informed-tier asset embedded on the Noble
+Council.
+
+**New in this profile:** Entire entry — new canon, PENDING confirmation
+(NEW_CANON_PHASITES_WEAPONS_UNBOUND.md).
+
+---
+
+## **BRAM OSTLEY (Phasite 10)**
+
+**Ability:** Magnify — scale/size manipulation; shrinks or enlarges
+objects. True scale: shrinks an army's equipment to uselessness, or
+magnifies a single strike to city-levelling force. Cost: violent
+backlash if a large-scale effect breaks. Power System Bible, Section V.
+
+**Race / Origin:** Human, based in Kessari (World Bible, Southern
+Valdris).
+
+**Story Role / Arc:** Undefined beyond concept — first appearance not
+yet assigned.
+
+**New in this profile:** Entire entry — new canon, PENDING confirmation
+(NEW_CANON_PHASITES_WEAPONS_UNBOUND.md).
+
+---
+
+## **ROAN ASHCOMBE (Phasite 11)**
+
+**Ability:** Overdrive — self-amplification; multiplies his own
+existing physical/mental capabilities by a scalable, formula-governed
+factor (duration and life-force cost scale inversely — see Power
+System Bible, Section V, for the full multiplier table).
+
+**Race / Origin:** From Verai, a Valdris-rooted kingdom with a colonial
+foothold in western Serath (World Bible, Section I); an adventurer
+currently operating within Valdenmere.
+
+**Story Role / Arc:** Undefined beyond concept — first appearance not
+yet assigned.
+
+**New in this profile:** Entire entry — new canon, PENDING confirmation
+(NEW_CANON_PHASITES_WEAPONS_UNBOUND.md).
 
 ---
 
@@ -957,7 +1121,13 @@ existing new canon, reformatted.
 **Age:** 34 *(corrected — was 28 in the original character-bible.md
 entry, which made him 16 during the assassination-attempt beat below;
 author confirmed the fix on 2026-09-18: age shifts older, "twelve years
-ago" stays).*
+ago" stays).* **CONFLICT — flag for author, do not silently resolve:**
+a separate staging session (NEW_CANON_PHASITES_WEAPONS_UNBOUND.md,
+NEW_CANON_MILITARY_STRUCTURE.md) independently "fixed" the same
+underlying math problem by setting his age to **41** instead. Both
+fixes solve the same 28-made-him-16 issue but land on different
+numbers — this profile's 34 (dated fix, already applied here) is kept
+as the active value until the author picks one.*
 
 **Classification:** Non-mage. Sub-threshold mana channel — same result
 as Daran. Ki rank: Gold, approaching Obsidian.
@@ -1031,6 +1201,45 @@ with what he was made to do (not yet stated on-page).*
 deployment. His unexplained coercion is a Saga 2 open thread.
 
 **New in this profile:** Personal goal (flagged, low-confidence).
+
+---
+
+## **MARSHAL KAELEN ROURKE — Military Commander**
+
+**Classification:** A-class mage, career military — the Military
+Commander, between the Paladins and the fighting force (World Bible,
+Section II).
+
+**Ability:** A mage himself, leads from the front — not a pure
+strategist/non-combatant.
+
+**Combat Tier:** A-rank, matching Principal Solm's tier but on the
+military side.
+
+**Appearance:** *Proposed — not yet established.*
+
+**Personality:** Not cruel or biased by intent — has perpetuated the
+Mage-over-Sword status quo through decades of institutional inertia
+rather than malice. Fits the saga's theme: nobody in this structure is
+actively villainous, the system just isn't looking hard enough at its
+own imbalances.
+
+**Backstory:** Informed of Doven's coercion once Principal Solm reports
+it up the chain (`saga-3-bible-complete.md`, Ch. 44–45); takes the
+threat seriously and mobilizes the Duskwatch/Ironline response rather
+than treating it as a minor academy matter — gets a dedicated POV
+chapter (Ch. 45, "Rourke's Answer").
+
+**Relationships:** Principal Solm (reports to him formally), the
+Duskwatch and Ironline (commands, indirectly).
+
+**Personal Goal:** *Proposed — not yet established.*
+
+**Story Role / Arc:** The professional backbone of Valdenmere's
+military hierarchy; first significant on-page appearance in Saga 3.
+
+**New in this profile:** Entire entry — new canon, PENDING confirmation
+(NEW_CANON_MILITARY_STRUCTURE.md).
 
 ---
 
@@ -1622,9 +1831,11 @@ what to do about it.
 
 **Classification:** Greyveil faculty.
 
-**Ability:** *Proposed — not yet established.*
+**Ability:** **New canon, filled in (ACT1_POWER_PROGRESSION_TREE.md):**
+precision/technical affinity — fits his instructor role.
 
-**Combat Tier:** N/A — not established as a combatant.
+**Combat Tier:** N/A — not established as a combatant. **New canon:**
+B-rank — competent and trusted enough to teach, a step below Solm.
 
 **Appearance:** *Proposed — not yet established.*
 
@@ -1718,12 +1929,22 @@ Daran.
 **Age:** *Proposed — 15–16 at Saga 2 Arc 3, Daran's age.*
 
 **Classification:** Noble-born, Forgehall student → Sword Unit officer
-by Saga 7.
+by Saga 7 (old numbering — saga TBD post-restructure). **New canon:
+wields the Legendary Weapon Talon's Reach** (Power System Bible,
+Section XI) — resolves that weapon's previously-unclaimed status.
 
 **Ability:** Ki swordsmanship, well-trained since childhood.
 
 **Combat Tier:** Genuinely Daran's equal at the Saga 3 stage — the
-point of his character.
+point of his character. **Rank progression, new canon
+(ACT1_POWER_PROGRESSION_TREE.md):** runs slightly ahead of Daran
+through Act 1 — Iron by Saga 3 (as established), Gold by Saga 4–5. His
+author-stated "top 5 swordsman in the world" status and Obsidian-
+adjacent rank are explicitly Act 2+ threads tied to his rise as a Sword
+Unit officer — this protects Daran's "fastest to Obsidian in recorded
+history" distinction; if Corvin were already top-5 during Act 1, Daran
+would just be catching up to a settled hierarchy instead of making
+history.
 
 **Appearance:** *Proposed — not yet established.*
 
@@ -1911,11 +2132,22 @@ undeveloped in the source doc.
 **Age:** *Proposed — elven lifespan; reads as young relative to the
 Queen given her "later role" framing.*
 
-**Classification:** Elven royalty.
+**Classification:** Elven royalty. **New canon, roster correction
+(AETHON_MASTER_NEW_CANON.md, Part 0): also Phasite 3 — Genesis.** Her
+Phasite status is known within elven leadership generally, but hidden
+from Valdenmere and humans entirely.
 
-**Ability:** *Proposed — not yet established.*
+**Ability:** Genesis — willpower given physical form. Creates solid,
+functional constructs of pure magical energy shaped by will and
+imagination, not by controlling existing matter or energy. Everyday
+use: small, simple constructs (a blade, a shield). True scale: massive
+constructs capable of reshaping a battlefield. Cost: sustaining larger
+constructs drains willpower and focus intensely; losing concentration
+can collapse a large construct dangerously. Power System Bible,
+Section V.
 
-**Combat Tier:** *Proposed — not yet established.*
+**Combat Tier:** Not formally ranked — categorically outside the mage
+system, like all Phasites.
 
 **Appearance:** *Proposed — not yet established.*
 
@@ -1923,17 +2155,22 @@ Queen given her "later role" framing.*
 doc.*
 
 **Backstory:** Established as a figure who'll play a part later in the
-series — role deliberately left open.
+series — role deliberately left open. No saga yet assigned for her
+introduction — an open Act 1 thread (Master Plan, Sagas 4–5 open
+items).
 
 **Relationships:** Queen Aelira Duskwane (mother).
 
 **Personal Goal:** *Deliberately undefined — do not invent, per
 NEW_CANON.docx's own instruction.*
 
-**Story Role / Arc:** Future significance flagged, not yet written.
+**Story Role / Arc:** Future significance flagged, not yet written. Her
+Phasite status is a significant diplomatic secret on top of her
+existing political role.
 
-**New in this profile:** Nothing — correctly left blank per your own
-source document's instruction not to define her yet.
+**New in this profile:** Phasite 3 status and ability (new canon, roster
+correction) — everything else correctly left blank per the source
+document's instruction not to define her further yet.
 
 ---
 
